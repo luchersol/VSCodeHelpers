@@ -1,0 +1,34 @@
+{
+    "Line" : {
+        "scope": "java",
+        "prefix": "line",
+        "description": "Create a commented line.",
+        "body": [
+            "// ---------------------------------------------------------"
+        ],
+    },
+    "Section" : {
+        "scope": "java",
+        "prefix": "section",
+        "description": "Create a commented line with a placeholder to indicate a section.",
+        "body": [
+            "// ------------------------- $1 -----------------------------",
+        ],
+    },
+    "TODO" : {
+        "scope": "java",
+        "prefix": "TODO, todo",
+        "description": "Create a TODO commented line",
+        "body": [
+            "// TODO: $1"
+        ]
+    },
+    "FIXME" : {
+        "scope": "java",
+        "prefix": "FIXME, fixme",
+        "description": "Create a FIXME commented line",
+        "body": [
+            "// FIXME: $1"
+        ]
+    }
+}
