@@ -1,22 +1,22 @@
 {
-  "Django ModelForm Template": {
-    "scope": "python",
-    "prefix": "dj:modelform",
-    "isFileTemplate": true,
-    "description": "ModelForm with custom validation",
-    "body": [
-      "from django import forms",
-      "from .models import ${1:ModelName}",
-      "",
-      "class ${1:ModelName}Form(forms.ModelForm):",
-      "    class Meta:",
-      "        model = ${1:ModelName}",
-      "        fields = ['${2:field1}', '${3:field2}']",
-      "",
-      "    def clean_${2:field1}(self):",
-      "        data = self.cleaned_data['${2:field1}']",
-      "        ${4:# Add validation here}",
-      "        return data"
-    ]
-  }
+    "Django ModelForm Template": {
+        "scope": "python",
+        "prefix": "dj:modelform",
+        "isFileTemplate": true,
+        "description": "ModelForm with custom validation",
+        "body": [
+            "from django import forms",
+            "from .models import ${1:ModelName}",
+            "",
+            "class ${1:ModelName}Form(forms.ModelForm):",
+            "\tclass Meta:",
+            "\t\tmodel = ${1:ModelName}",
+            "\t\tfields = ['${2:field1}', '${3:field2}']",
+            "",
+            "\tdef clean_${2:field1}(self):",
+            "\t\tdata = self.cleaned_data['${2:field1}']",
+            "\t\t${4:# Add validation here}",
+            "\t\treturn data"
+        ]
+    }
 }

@@ -1,20 +1,20 @@
 {
-  "Django Model Template": {
-    "scope": "python",
-    "prefix": "dj:model",
-    "isFileTemplate": true,
-    "description": "Django model template with timestamps and __str__ method",
-    "body": [
-      "from django.db import models",
-      "",
-      "class ${1:ModelName}(models.Model):",
-      "    ${2:field_name} = models.${3:CharField}(max_length=${4:100})",
-      "    ${5:another_field} = models.${6:TextField}(blank=True)",
-      "    created = models.DateTimeField(auto_now_add=True)",
-      "    updated = models.DateTimeField(auto_now=True)",
-      "",
-      "    def __str__(self):",
-      "        return self.${2:field_name}"
-    ]
-  }
+    "Django Model Template": {
+        "scope": "python",
+        "prefix": "dj:model",
+        "isFileTemplate": true,
+        "description": "Django model template with timestamps and __str__ method",
+        "body": [
+            "from django.db import models",
+            "",
+            "class ${1:ModelName}(models.Model):",
+            "\t${2:field_name} = models.${3:CharField}(max_length=${4:100})",
+            "\t${5:another_field} = models.${6:TextField}(blank=True)",
+            "\tcreated = models.DateTimeField(auto_now_add=True)",
+            "\tupdated = models.DateTimeField(auto_now=True)",
+            "",
+            "\tdef __str__(self):",
+            "\t\treturn self.${2:field_name}"
+        ]
+    }
 }

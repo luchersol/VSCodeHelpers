@@ -1,16 +1,16 @@
 {
-  "Django URL Pattern": {
-    "scope": "python",
-    "prefix": "dj:url",
-    "isFileTemplate": true,
-    "description": "URL pattern for Django CBV",
-    "body": [
-      "from django.urls import path",
-      "from .views import ${1:ViewName}",
-      "",
-      "urlpatterns = [",
-      "    path('${2:path}/', ${1:ViewName}.as_view(), name='${3:name}'),",
-      "]"
-    ]
-  }
+    "Django URL Pattern": {
+        "scope": "python",
+        "prefix": "dj:url",
+        "isFileTemplate": true,
+        "description": "URL pattern for Django CBV",
+        "body": [
+            "from django.urls import path",
+            "from .views import ${1:ViewName}",
+            "",
+            "urlpatterns = [",
+            "\tpath('${2:path}/', ${1:ViewName}.as_view(), name='${3:name}'),",
+            "]"
+        ]
+    }
 }

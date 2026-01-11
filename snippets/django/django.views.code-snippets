@@ -1,47 +1,45 @@
 {
-  "Django ListView Template": {
-    "scope": "python",
-    "prefix": "dj:listview",
-    "isFileTemplate": true,
-    "description": "Django generic ListView template",
-    "body": [
-      "from django.views.generic import ListView",
-      "from .models import ${1:ModelName}",
-      "",
-      "class ${1:ModelName}ListView(ListView):",
-      "    model = ${1:ModelName}",
-      "    template_name = '${2:app_name}/${1:ModelName_lower}_list.html'",
-      "    context_object_name = '${1:ModelName_lower}_list'"
-    ]
-  },
-
-  "Django DetailView Template": {
-    "scope": "python",
-    "prefix": "dj:detailview",
-    "isFileTemplate": true,
-    "description": "Django generic DetailView template",
-    "body": [
-      "from django.views.generic import DetailView",
-      "from .models import ${1:ModelName}",
-      "",
-      "class ${1:ModelName}DetailView(DetailView):",
-      "    model = ${1:ModelName}",
-      "    template_name = '${2:app_name}/${1:ModelName_lower}_detail.html'"
-    ]
-  },
-
-  "Django Login Required Decorator": {
-    "scope": "python",
-    "prefix": "dj:login",
-    "isFileTemplate": true,
-    "description": "View protected with login_required decorator",
-    "body": [
-      "from django.contrib.auth.decorators import login_required",
-      "",
-      "@login_required",
-      "def ${1:view_name}(request):",
-      "    ${2:# View code here}",
-      "    return render(request, '${3:template}.html')"
-    ]
-  }
+    "Django ListView Template": {
+        "scope": "python",
+        "prefix": "dj:listview",
+        "isFileTemplate": true,
+        "description": "Django generic ListView template",
+        "body": [
+            "from django.views.generic import ListView",
+            "from .models import ${1:ModelName}",
+            "",
+            "class ${1:ModelName}ListView(ListView):",
+            "\tmodel = ${1:ModelName}",
+            "\ttemplate_name = '${2:app_name}/${1:ModelName_lower}_list.html'",
+            "\tcontext_object_name = '${1:ModelName_lower}_list'"
+        ]
+    },
+    "Django DetailView Template": {
+        "scope": "python",
+        "prefix": "dj:detailview",
+        "isFileTemplate": true,
+        "description": "Django generic DetailView template",
+        "body": [
+            "from django.views.generic import DetailView",
+            "from .models import ${1:ModelName}",
+            "",
+            "class ${1:ModelName}DetailView(DetailView):",
+            "\tmodel = ${1:ModelName}",
+            "\ttemplate_name = '${2:app_name}/${1:ModelName_lower}_detail.html'"
+        ]
+    },
+    "Django Login Required Decorator": {
+        "scope": "python",
+        "prefix": "dj:login",
+        "isFileTemplate": true,
+        "description": "View protected with login_required decorator",
+        "body": [
+            "from django.contrib.auth.decorators import login_required",
+            "",
+            "@login_required",
+            "def ${1:view_name}(request):",
+            "\t${2:# View code here}",
+            "\treturn render(request, '${3:template}.html')"
+        ]
+    }
 }
