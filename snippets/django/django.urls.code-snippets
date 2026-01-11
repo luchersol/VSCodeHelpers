@@ -2,7 +2,7 @@
   "Django URL Pattern": {
     "scope": "python",
     "prefix": "dj:url",
-    "isFileTemplate": false,
+    "isFileTemplate": true,
     "description": "URL pattern for Django CBV",
     "body": [
       "from django.urls import path",

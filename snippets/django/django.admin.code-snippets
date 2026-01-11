@@ -2,7 +2,7 @@
     "Django Admin Register": {
         "scope": "python",
         "prefix": "dj:admin",
-        "isFileTemplate": false,
+        "isFileTemplate": true,
         "description": "Quick register a model in Django admin",
         "body": [
         "from django.contrib import admin",

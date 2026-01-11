@@ -2,7 +2,7 @@
   "Django Model Template": {
     "scope": "python",
     "prefix": "dj:model",
-    "isFileTemplate": false,
+    "isFileTemplate": true,
     "description": "Django model template with timestamps and __str__ method",
     "body": [
       "from django.db import models",

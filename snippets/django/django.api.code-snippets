@@ -2,7 +2,7 @@
   "Django DRF Serializer": {
     "scope": "python",
     "prefix": "dj:serializer",
-    "isFileTemplate": false,
+    "isFileTemplate": true,
     "description": "Basic Django Rest Framework serializer",
     "body": [
       "from rest_framework import serializers",

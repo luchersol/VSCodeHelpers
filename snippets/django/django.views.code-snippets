@@ -2,7 +2,7 @@
   "Django ListView Template": {
     "scope": "python",
     "prefix": "dj:listview",
-    "isFileTemplate": false,
+    "isFileTemplate": true,
     "description": "Django generic ListView template",
     "body": [
       "from django.views.generic import ListView",
@@ -18,7 +18,7 @@
   "Django DetailView Template": {
     "scope": "python",
     "prefix": "dj:detailview",
-    "isFileTemplate": false,
+    "isFileTemplate": true,
     "description": "Django generic DetailView template",
     "body": [
       "from django.views.generic import DetailView",
@@ -33,7 +33,7 @@
   "Django Login Required Decorator": {
     "scope": "python",
     "prefix": "dj:login",
-    "isFileTemplate": false,
+    "isFileTemplate": true,
     "description": "View protected with login_required decorator",
     "body": [
       "from django.contrib.auth.decorators import login_required",

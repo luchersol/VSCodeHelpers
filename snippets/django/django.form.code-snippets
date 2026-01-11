@@ -2,7 +2,7 @@
   "Django ModelForm Template": {
     "scope": "python",
     "prefix": "dj:modelform",
-    "isFileTemplate": false,
+    "isFileTemplate": true,
     "description": "ModelForm with custom validation",
     "body": [
       "from django import forms",
