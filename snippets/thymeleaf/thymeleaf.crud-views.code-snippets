@@ -1,0 +1,115 @@
+{
+  "Thymeleaf List View": {
+    "scope": "html",
+    "prefix": "thyme:list",
+    "isFileTemplate": true,
+    "description": "Create a Thymeleaf list view for a given entity",
+    "body": [
+      "<!DOCTYPE html>",
+      "<html xmlns:th=\"http://www.thymeleaf.org\">",
+      "<head>",
+      "\t<title>List of ${1:MyEntity}</title>",
+      "</head>",
+      "<body>",
+      "\t<h1>List of ${1:MyEntity}</h1>",
+      "\t<a th:href=\"@{'/${2:entidades}/new'}\">Create New ${1:MyEntity}</a>",
+      "\t<table>",
+      "\t\t<thead>",
+      "\t\t\t<tr>",
+      "\t\t\t\t<!-- Add table headers for entity attributes -->",
+      "\t\t\t\t<th>ID</th>",
+      "\t\t\t\t<th>Name</th>",
+      "\t\t\t\t<th>Actions</th>",
+      "\t\t\t</tr>",
+      "\t\t</thead>",
+      "\t\t<tbody>",
+      "\t\t\t<tr th:each=\"item : ${items}\">",
+      "\t\t\t\t<td th:text=\"${item.id}\"></td>",
+      "\t\t\t\t<td th:text=\"${item.name}\"></td>",
+      "\t\t\t\t<td>",
+      "\t\t\t\t\t<a th:href=\"@{'/${2:entidades}/' + ${item.id}}\">View</a> |",
+      "\t\t\t\t\t<a th:href=\"@{'/${2:entidades}/' + ${item.id} + '/edit'}\">Edit</a> |",
+      "\t\t\t\t\t<form th:action=\"@{'/${2:entidades}/' + ${item.id} + '/delete'}\" method=\"post\" style=\"display:inline\">",
+      "\t\t\t\t\t\t<button type=\"submit\">Delete</button>",
+      "\t\t\t\t\t</form>",
+      "\t\t\t\t</td>",
+      "\t\t\t</tr>",
+      "\t\t</tbody>",
+      "\t</table>",
+      "</body>",
+      "</html>"
+    ]
+  },
+
+  "Thymeleaf Detail View": {
+    "scope": "html",
+    "prefix": "thyme:detail",
+    "isFileTemplate": true,
+    "description": "Create a Thymeleaf detail view for a given entity",
+    "body": [
+      "<!DOCTYPE html>",
+      "<html xmlns:th=\"http://www.thymeleaf.org\">",
+      "<head>",
+      "\t<title>${1:MyEntity} Details</title>",
+      "</head>",
+      "<body>",
+      "\t<h1>${1:MyEntity} Details</h1>",
+      "\t<p>ID: <span th:text=\"${item.id}\"></span></p>",
+      "\t<p>Name: <span th:text=\"${item.name}\"></span></p>",
+      "\t<!-- Add other attributes here -->",
+      "\t<a th:href=\"@{'/${2:entidades}'}\">Back to List</a>",
+      "</body>",
+      "</html>"
+    ]
+  },
+
+  "Thymeleaf Create View": {
+    "scope": "html",
+    "prefix": "thyme:create",
+    "isFileTemplate": true,
+    "description": "Create a Thymeleaf form for creating a new entity",
+    "body": [
+      "<!DOCTYPE html>",
+      "<html xmlns:th=\"http://www.thymeleaf.org\">",
+      "<head>",
+      "\t<title>Create ${1:MyEntity}</title>",
+      "</head>",
+      "<body>",
+      "\t<h1>Create ${1:MyEntity}</h1>",
+      "\t<form th:action=\"@{'/${2:entidades}'}\" th:object=\"${item}\" method=\"post\">",
+      "\t\t<label for=\"name\">Name:</label>",
+      "\t\t<input type=\"text\" id=\"name\" th:field=\"*{name}\" />",
+      "\t\t<!-- Add other attributes here -->",
+      "\t\t<button type=\"submit\">Save</button>",
+      "\t</form>",
+      "\t<a th:href=\"@{'/${2:entidades}'}\">Cancel</a>",
+      "</body>",
+      "</html>"
+    ]
+  },
+
+  "Thymeleaf Edit View": {
+    "scope": "html",
+    "prefix": "thyme:edit",
+    "isFileTemplate": true,
+    "description": "Create a Thymeleaf form for editing an entity",
+    "body": [
+      "<!DOCTYPE html>",
+      "<html xmlns:th=\"http://www.thymeleaf.org\">",
+      "<head>",
+      "\t<title>Edit ${1:MyEntity}</title>",
+      "</head>",
+      "<body>",
+      "\t<h1>Edit ${1:MyEntity}</h1>",
+      "\t<form th:action=\"@{'/${2:entidades}/' + ${item.id}}\" th:object=\"${item}\" method=\"post\">",
+      "\t\t<label for=\"name\">Name:</label>",
+      "\t\t<input type=\"text\" id=\"name\" th:field=\"*{name}\" />",
+      "\t\t<!-- Add other attributes here -->",
+      "\t\t<button type=\"submit\">Update</button>",
+      "\t</form>",
+      "\t<a th:href=\"@{'/${2:entidades}'}\">Cancel</a>",
+      "</body>",
+      "</html>"
+    ]
+  }
+}

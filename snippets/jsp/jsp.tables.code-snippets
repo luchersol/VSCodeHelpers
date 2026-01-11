@@ -1,0 +1,30 @@
+{
+  "JSP Table Basic": {
+    "scope": "jsp",
+    "prefix": "jsp:table",
+    "description": "Basic table with headers and looped rows",
+    "body": [
+      "<table border=\"1\">",
+      "\t<thead>",
+      "\t\t<tr>",
+      "\t\t\t<th>${1:Columna 1}</th>",
+      "\t\t\t<th>${2:Columna 2}</th>",
+      "\t\t\t<th>${3:Acciones}</th>",
+      "\t\t</tr>",
+      "\t</thead>",
+      "\t<tbody>",
+      "\t\t<c:forEach var=\"${4:item}\" items=\"${5:items}\">",
+      "\t\t\t<tr>",
+      "\t\t\t\t<td>${item.prop1}</td>",
+      "\t\t\t\t<td>${item.prop2}</td>",
+      "\t\t\t\t<td>",
+      "\t\t\t\t\t<a href=\"${item.id}\">Ver</a> |",
+      "\t\t\t\t\t<a href=\"${item.id}/edit\">Editar</a>",
+      "\t\t\t\t</td>",
+      "\t\t\t</tr>",
+      "\t\t</c:forEach>",
+      "\t</tbody>",
+      "</table>"
+    ]
+  }
+}

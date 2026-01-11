@@ -1,0 +1,54 @@
+{
+  "Thymeleaf Form": {
+    "scope": "html",
+    "prefix": "thyme:form",
+    "isFileTemplate": true,
+    "description": "Create a form with th:object",
+    "body": [
+      "<form th:action=\"@{${1:/action}}\" th:object=\"${2:object}\" method=\"post\">",
+      "\t${3:<!-- Inputs -->}",
+      "\t<button type=\"submit\">${4:Submit}</button>",
+      "</form>"
+    ]
+  },
+  "Thymeleaf Input": {
+    "scope": "html",
+    "prefix": "thyme:input",
+    "isFileTemplate": true,
+    "description": "Input field for a Thymeleaf form",
+    "body": [
+      "<label for=\"${1:field}\">${2:Label}:</label>",
+      "<input type=\"text\" id=\"${1:field}\" th:field=\"*{${1:field}}\" />"
+    ]
+  },
+  "Thymeleaf Select": {
+    "scope": "html",
+    "prefix": "thyme:select",
+    "isFileTemplate": true,
+    "description": "Select box with dynamic options",
+    "body": [
+      "<label for=\"${1:select}\">${2:Label}:</label>",
+      "<select id=\"${1:select}\" th:field=\"*{${1:select}}\">",
+      "\t<option th:each=\"option : ${3:options}\" th:value=\"${option.value}\" th:text=\"${option.label}\"></option>",
+      "</select>"
+    ]
+  },
+  "Thymeleaf Checkbox": {
+    "scope": "html",
+    "prefix": "thyme:checkbox",
+    "isFileTemplate": true,
+    "description": "Checkbox input",
+    "body": [
+      "<input type=\"checkbox\" th:field=\"*{${1:field}}\" /> ${2:Label}"
+    ]
+  },
+  "Thymeleaf Radio": {
+    "scope": "html",
+    "prefix": "thyme:radio",
+    "isFileTemplate": true,
+    "description": "Radio input",
+    "body": [
+      "<input type=\"radio\" th:field=\"*{${1:field}}\" th:value=\"${2:value}\" /> ${3:Label}"
+    ]
+  }
+}

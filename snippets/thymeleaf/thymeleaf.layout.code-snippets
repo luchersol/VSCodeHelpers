@@ -1,0 +1,35 @@
+{
+  "Thymeleaf Layout": {
+    "scope": "html",
+    "prefix": "thyme:layout",
+    "isFileTemplate": true,
+    "description": "Basic Thymeleaf layout with header and footer",
+    "body": [
+      "<header th:replace=\"${1:fragments/header} :: header\"></header>",
+      "<main>",
+      "\t${2:<!-- Main content -->}",
+      "</main>",
+      "<footer th:replace=\"${3:fragments/footer} :: footer\"></footer>"
+    ]
+  },
+  "Thymeleaf Fragment": {
+    "scope": "html",
+    "prefix": "thyme:fragment",
+    "isFileTemplate": true,
+    "description": "Define a reusable Thymeleaf fragment",
+    "body": [
+      "<div th:fragment=\"${1:fragmentName}\">",
+      "\t${2:<!-- Fragment content -->}",
+      "</div>"
+    ]
+  },
+  "Thymeleaf Include": {
+    "scope": "html",
+    "prefix": "thyme:include",
+    "isFileTemplate": true,
+    "description": "Include a fragment in another template",
+    "body": [
+      "<div th:replace=\"${1:fragments/${2:fragmentName}} :: ${3:fragmentName}\"></div>"
+    ]
+  }
+}

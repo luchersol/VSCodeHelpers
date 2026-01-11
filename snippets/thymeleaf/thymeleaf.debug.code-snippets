@@ -1,0 +1,20 @@
+{
+  "Thymeleaf Comment": {
+    "scope": "html",
+    "prefix": "thyme:comment",
+    "isFileTemplate": true,
+    "description": "Thymeleaf comment",
+    "body": [
+      "<!--/* ${1:Comment} */-->"
+    ]
+  },
+  "Thymeleaf Debug": {
+    "scope": "html",
+    "prefix": "thyme:debug",
+    "isFileTemplate": true,
+    "description": "Debug a field or expression",
+    "body": [
+      "<span th:text=\"${#fields.hasErrors('${1:field}')} ? 'Error' : 'OK'\"></span>"
+    ]
+  }
+}

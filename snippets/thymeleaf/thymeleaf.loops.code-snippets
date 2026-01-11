@@ -1,0 +1,35 @@
+{
+  "Thymeleaf Each": {
+    "scope": "html",
+    "prefix": "thyme:each",
+    "isFileTemplate": true,
+    "description": "Iterate over a collection",
+    "body": [
+      "<div th:each=\"${1:item} : ${2:items}\">",
+      "\t${3:<!-- Content for each item -->}",
+      "</div>"
+    ]
+  },
+  "Thymeleaf If": {
+    "scope": "html",
+    "prefix": "thyme:if",
+    "isFileTemplate": true,
+    "description": "Conditional block if true",
+    "body": [
+      "<div th:if=\"${1:condition}\">",
+      "\t${2:<!-- Content if true -->}",
+      "</div>"
+    ]
+  },
+  "Thymeleaf Unless": {
+    "scope": "html",
+    "prefix": "thyme:unless",
+    "isFileTemplate": true,
+    "description": "Conditional block if false",
+    "body": [
+      "<div th:unless=\"${1:condition}\">",
+      "\t${2:<!-- Content if false -->}",
+      "</div>"
+    ]
+  }
+}

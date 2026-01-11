@@ -1,0 +1,40 @@
+{
+  "Thymeleaf HTML Base": {
+    "scope": "html",
+    "prefix": "thyme:html",
+    "isFileTemplate": true,
+    "description": "Basic Thymeleaf HTML template",
+    "body": [
+      "<!DOCTYPE html>",
+      "<html xmlns:th=\"http://www.thymeleaf.org\">",
+      "<head>",
+      "\t<meta charset=\"UTF-8\">",
+      "\t<title>${1:Title}</title>",
+      "</head>",
+      "<body>",
+      "\t${2:<!-- Content here -->}",
+      "</body>",
+      "</html>"
+    ]
+  },
+  "Thymeleaf Title": {
+    "scope": "html",
+    "prefix": "thyme:title",
+    "isFileTemplate": true,
+    "description": "Set a title dynamically",
+    "body": [
+      "<title th:text=\"${1:pageTitle}\">${1:pageTitle}</title>"
+    ]
+  },
+  "Thymeleaf Doctype": {
+    "scope": "html",
+    "prefix": "thyme:doctype",
+    "isFileTemplate": true,
+    "description": "HTML doctype with Thymeleaf namespace",
+    "body": [
+      "<!DOCTYPE html>",
+      "<html xmlns:th=\"http://www.thymeleaf.org\">",
+      "</html>"
+    ]
+  }
+}

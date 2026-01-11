@@ -1,0 +1,30 @@
+{
+  "JSP Anchor Link": {
+    "scope": "jsp",
+    "prefix": "jsp:link",
+    "description": "Anchor link using EL",
+    "body": [
+      "<a href=\"${1:/ruta}\">${2:Texto}</a>"
+    ]
+  },
+
+  "JSP Button Form Submit": {
+    "scope": "jsp",
+    "prefix": "jsp:button",
+    "description": "Submit button inside a form",
+    "body": [
+      "<button type=\"submit\">${1:Enviar}</button>"
+    ]
+  },
+
+  "JSP Delete Button Form": {
+    "scope": "jsp",
+    "prefix": "jsp:deletebtn",
+    "description": "Delete button inside a form for POST",
+    "body": [
+      "<form action=\"${1:/delete}\" method=\"post\" style=\"display:inline\">",
+      "\t<button type=\"submit\">${2:Eliminar}</button>",
+      "</form>"
+    ]
+  }
+}

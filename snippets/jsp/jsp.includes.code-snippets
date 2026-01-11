@@ -1,0 +1,19 @@
+{
+  "JSP Include Header": {
+    "scope": "jsp",
+    "prefix": "jsp:header",
+    "description": "Include a header JSP fragment",
+    "body": [
+      "<%@ include file=\"${1:/header.jsp}\" %>"
+    ]
+  },
+
+  "JSP Include Footer": {
+    "scope": "jsp",
+    "prefix": "jsp:footer",
+    "description": "Include a footer JSP fragment",
+    "body": [
+      "<%@ include file=\"${1:/footer.jsp}\" %>"
+    ]
+  }
+}

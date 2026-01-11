@@ -1,0 +1,12 @@
+{
+  "JSP ForEach Loop": {
+    "scope": "jsp",
+    "prefix": "jsp:foreach",
+    "description": "JSTL forEach loop over a collection",
+    "body": [
+      "<c:forEach var=\"${1:item}\" items=\"${2:items}\">",
+      "\t${3:item.propiedad}",
+      "</c:forEach>"
+    ]
+  },
+}

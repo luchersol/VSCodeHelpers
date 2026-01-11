@@ -15,7 +15,6 @@
       "}"
     ]
   },
-
   "Spring JPA Entity Class": {
     "scope": "java",
     "prefix": "spring:entity",
@@ -39,7 +38,6 @@
       "}"
     ]
   },
-
   "Spring JPA Repository": {
     "scope": "java",
     "prefix": "spring:repository",
@@ -58,7 +56,6 @@
       "}"
     ]
   },
-
   "Spring Service Class": {
     "scope": "java",
     "prefix": "spring:service",
@@ -109,7 +106,6 @@
       "}"
     ]
   },
-
   "Spring REST Controller": {
     "scope": "java",
     "prefix": "spring:rest",
@@ -165,7 +161,92 @@
       "}"
     ]
   },
-
+  "Spring MVC Full CRUD Controller": {
+    "scope": "java",
+    "prefix": "spring:controller",
+    "isFileTemplate": true,
+    "description": "Create a Spring MVC Controller with full CRUD endpoints for Thymeleaf/JSP",
+    "body": [
+      "package ${1:com.example.demo.controller};",
+      "",
+      "import org.springframework.stereotype.Controller;",
+      "import org.springframework.ui.Model;",
+      "import org.springframework.web.bind.annotation.*;",
+      "import org.springframework.beans.factory.annotation.Autowired;",
+      "import ${2:com.example.demo.service.${3:MyService}};",
+      "import ${4:com.example.demo.model.${5:MyEntity}};",
+      "import java.util.List;",
+      "import java.util.Optional;",
+      "",
+      "@Controller",
+      "@RequestMapping(\"/${6:entidades}\")",
+      "public class ${7:${5/^(.*)/$1Controller/}} {",
+      "",
+      "\t@Autowired",
+      "\tprivate ${3:MyService} ${8:service};",
+      "",
+      "\t// List all entities",
+      "\t@GetMapping",
+      "\tpublic String listAll(Model model) {",
+      "\t\tList<$5> items = ${8:service}.findAll();",
+      "\t\tmodel.addAttribute(\"items\", items);",
+      "\t\treturn \"${6:list}\";",
+      "\t}",
+      "",
+      "\t// Show one entity by id",
+      "\t@GetMapping(\"/{id}\")",
+      "\tpublic String getById(@PathVariable Long id, Model model) {",
+      "\t\tOptional<$5> item = ${8:service}.findById(id);",
+      "\t\tif(item.isPresent()) {",
+      "\t\t\tmodel.addAttribute(\"item\", item.get());",
+      "\t\t\treturn \"${6:detail}\";",
+      "\t\t} else {",
+      "\t\t\treturn \"redirect:/${6}\"; // redirect to list if not found",
+      "\t\t}",
+      "\t}",
+      "",
+      "\t// Show create form",
+      "\t@GetMapping(\"/new\")",
+      "\tpublic String showCreateForm(Model model) {",
+      "\t\tmodel.addAttribute(\"item\", new $5());",
+      "\t\treturn \"${6:create}\";",
+      "\t}",
+      "",
+      "\t// Handle create POST",
+      "\t@PostMapping",
+      "\tpublic String create(@ModelAttribute $5 item) {",
+      "\t\t${8:service}.save(item);",
+      "\t\treturn \"redirect:/${6}\";",
+      "\t}",
+      "",
+      "\t// Show edit form",
+      "\t@GetMapping(\"/{id}/edit\")",
+      "\tpublic String showEditForm(@PathVariable Long id, Model model) {",
+      "\t\tOptional<$5> item = ${8:service}.findById(id);",
+      "\t\tif(item.isPresent()) {",
+      "\t\t\tmodel.addAttribute(\"item\", item.get());",
+      "\t\t\treturn \"${6:edit}\";",
+      "\t\t} else {",
+      "\t\t\treturn \"redirect:/${6}\";",
+      "\t\t}",
+      "\t}",
+      "",
+      "\t// Handle update POST",
+      "\t@PostMapping(\"/{id}\")",
+      "\tpublic String update(@PathVariable Long id, @ModelAttribute $5 item) {",
+      "\t\t${8:service}.update(id, item);",
+      "\t\treturn \"redirect:/${6}\";",
+      "\t}",
+      "",
+      "\t// Handle delete",
+      "\t@PostMapping(\"/{id}/delete\")",
+      "\tpublic String delete(@PathVariable Long id) {",
+      "\t\t${8:service}.delete(id);",
+      "\t\treturn \"redirect:/${6}\";",
+      "\t}",
+      "}"
+    ]
+  },
   "Spring Scheduled Task": {
     "scope": "java",
     "prefix": "sched:task",
@@ -177,7 +258,6 @@
       "}"
     ]
   },
-
   "Spring Event Listener": {
     "scope": "java",
     "prefix": "event:listener",

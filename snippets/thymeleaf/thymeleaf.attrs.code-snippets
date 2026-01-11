@@ -1,0 +1,29 @@
+{
+  "Thymeleaf Class": {
+    "scope": "html",
+    "prefix": "thyme:class",
+    "isFileTemplate": true,
+    "description": "Set class dynamically",
+    "body": [
+      "<div th:class=\"${1:condition} ? 'active' : ''\">${2:Content}</div>"
+    ]
+  },
+  "Thymeleaf Style": {
+    "scope": "html",
+    "prefix": "thyme:style",
+    "isFileTemplate": true,
+    "description": "Set style dynamically",
+    "body": [
+      "<div th:style=\"'color:' + ${1:color}\">${2:Content}</div>"
+    ]
+  },
+  "Thymeleaf Id": {
+    "scope": "html",
+    "prefix": "thyme:id",
+    "isFileTemplate": true,
+    "description": "Set id dynamically",
+    "body": [
+      "<div th:id=\"${1:'id-' + ${2:id}}\">${3:Content}</div>"
+    ]
+  }
+}

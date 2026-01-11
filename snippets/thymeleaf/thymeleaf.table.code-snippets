@@ -1,0 +1,44 @@
+{
+  "Thymeleaf Thead": {
+    "scope": "html",
+    "prefix": "thyme:thead",
+    "isFileTemplate": true,
+    "description": "Table header row",
+    "body": [
+      "<thead>",
+      "\t<tr>",
+      "\t\t<th>${1:Header1}</th>",
+      "\t\t<th>${2:Header2}</th>",
+      "\t\t<th>${3:Actions}</th>",
+      "\t</tr>",
+      "</thead>"
+    ]
+  },
+  "Thymeleaf Tbody": {
+    "scope": "html",
+    "prefix": "thyme:tbody",
+    "isFileTemplate": true,
+    "description": "Table body with iteration",
+    "body": [
+      "<tbody>",
+      "\t<tr th:each=\"${1:item} : ${2:items}\">",
+      "\t\t<td th:text=\"${1.id}\"></td>",
+      "\t\t<td th:text=\"${1.name}\"></td>",
+      "\t\t<td>",
+      "\t\t\t<a th:href=\"@{'/${3:entities}/' + ${1.id}}\">View</a> |",
+      "\t\t\t<a th:href=\"@{'/${3:entities}/' + ${1.id} + '/edit'}\">Edit</a>",
+      "\t\t</td>",
+      "\t</tr>",
+      "</tbody>"
+    ]
+  },
+  "Thymeleaf Td": {
+    "scope": "html",
+    "prefix": "thyme:td",
+    "isFileTemplate": true,
+    "description": "Table cell with dynamic text",
+    "body": [
+      "<td th:text=\"${1:value}\"></td>"
+    ]
+  }
+}

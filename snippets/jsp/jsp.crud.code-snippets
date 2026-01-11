@@ -1,0 +1,117 @@
+{
+  "Spring MVC JSP List View": {
+    "scope": "jsp",
+    "prefix": "jsp:list",
+    "isFileTemplate": true,
+    "description": "Create a JSP list view for displaying all items",
+    "body": [
+      "<%@ taglib uri=\"http://java.sun.com/jsp/jstl/core\" prefix=\"c\" %>",
+      "<!DOCTYPE html>",
+      "<html>",
+      "<head>",
+      "\t<title>${1:List}</title>",
+      "</head>",
+      "<body>",
+      "\t<h1>${2:Lista de items}</h1>",
+      "\t<a href=\"${3:/new}\">Crear nuevo</a>",
+      "\t<table border=\"1\">",
+      "\t\t<thead>",
+      "\t\t\t<tr>",
+      "\t\t\t\t<th>ID</th>",
+      "\t\t\t\t<th>Name</th>",
+      "\t\t\t\t<th>Acciones</th>",
+      "\t\t\t</tr>",
+      "\t\t</thead>",
+      "\t\t<tbody>",
+      "\t\t\t<c:forEach var=\"item\" items=\"${items}\">",
+      "\t\t\t\t<tr>",
+      "\t\t\t\t\t<td>${item.id}</td>",
+      "\t\t\t\t\t<td>${item.name}</td>",
+      "\t\t\t\t\t<td>",
+      "\t\t\t\t\t\t<a href=\"${item.id}\">Ver</a> |",
+      "\t\t\t\t\t\t<a href=\"${item.id}/edit\">Editar</a> |",
+      "\t\t\t\t\t\t<form action=\"${item.id}/delete\" method=\"post\" style=\"display:inline\">",
+      "\t\t\t\t\t\t\t<button type=\"submit\">Eliminar</button>",
+      "\t\t\t\t\t\t</form>",
+      "\t\t\t\t\t</td>",
+      "\t\t\t\t</tr>",
+      "\t\t\t</c:forEach>",
+      "\t\t</tbody>",
+      "\t</table>",
+      "</body>",
+      "</html>"
+    ]
+  },
+
+  "Spring MVC JSP Detail View": {
+    "scope": "jsp",
+    "prefix": "jsp:detail",
+    "isFileTemplate": true,
+    "description": "Create a JSP detail view to display one item",
+    "body": [
+      "<%@ taglib uri=\"http://java.sun.com/jsp/jstl/core\" prefix=\"c\" %>",
+      "<!DOCTYPE html>",
+      "<html>",
+      "<head>",
+      "\t<title>${1:Detalle}</title>",
+      "</head>",
+      "<body>",
+      "\t<h1>Detalle de item</h1>",
+      "\t<p>ID: ${item.id}</p>",
+      "\t<p>Name: ${item.name}</p>",
+      "\t<a href=\"../\">Volver a la lista</a>",
+      "</body>",
+      "</html>"
+    ]
+  },
+
+  "Spring MVC JSP Create View": {
+    "scope": "jsp",
+    "prefix": "jsp:create",
+    "isFileTemplate": true,
+    "description": "Create a JSP form view to create a new item",
+    "body": [
+      "<%@ taglib uri=\"http://java.sun.com/jsp/jstl/core\" prefix=\"c\" %>",
+      "<!DOCTYPE html>",
+      "<html>",
+      "<head>",
+      "\t<title>${1:Crear}</title>",
+      "</head>",
+      "<body>",
+      "\t<h1>Crear nuevo item</h1>",
+      "\t<form action=\"${2:}\" method=\"post\">",
+      "\t\t<label for=\"name\">Name:</label>",
+      "\t\t<input type=\"text\" name=\"name\" id=\"name\" value=\"${item.name}\" />",
+      "\t\t<button type=\"submit\">Crear</button>",
+      "\t</form>",
+      "\t<a href=\"../\">Volver a la lista</a>",
+      "</body>",
+      "</html>"
+    ]
+  },
+
+  "Spring MVC JSP Edit View": {
+    "scope": "jsp",
+    "prefix": "jsp:edit",
+    "isFileTemplate": true,
+    "description": "Create a JSP form view to edit an existing item",
+    "body": [
+      "<%@ taglib uri=\"http://java.sun.com/jsp/jstl/core\" prefix=\"c\" %>",
+      "<!DOCTYPE html>",
+      "<html>",
+      "<head>",
+      "\t<title>${1:Editar}</title>",
+      "</head>",
+      "<body>",
+      "\t<h1>Editar item</h1>",
+      "\t<form action=\"${item.id}\" method=\"post\">",
+      "\t\t<label for=\"name\">Name:</label>",
+      "\t\t<input type=\"text\" name=\"name\" id=\"name\" value=\"${item.name}\" />",
+      "\t\t<button type=\"submit\">Actualizar</button>",
+      "\t</form>",
+      "\t<a href=\"../\">Volver a la lista</a>",
+      "</body>",
+      "</html>"
+    ]
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "Thymeleaf Href": {
+    "scope": "html",
+    "prefix": "thyme:href",
+    "isFileTemplate": true,
+    "description": "Dynamic link with th:href",
+    "body": [
+      "<a th:href=\"@{${1:/path}}\">${2:Link Text}</a>"
+    ]
+  },
+  "Thymeleaf Action": {
+    "scope": "html",
+    "prefix": "thyme:action",
+    "isFileTemplate": true,
+    "description": "Form action dynamically",
+    "body": [
+      "<form th:action=\"@{${1:/action}}\" method=\"post\">",
+      "\t${2:<!-- Inputs -->}",
+      "</form>"
+    ]
+  },
+  "Thymeleaf Onclick": {
+    "scope": "html",
+    "prefix": "thyme:onclick",
+    "isFileTemplate": true,
+    "description": "Dynamic onclick attribute",
+    "body": [
+      "<button th:onclick=\"${1:jsFunction()}\">${2:Button}</button>"
+    ]
+  }
+}

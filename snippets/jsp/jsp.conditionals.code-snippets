@@ -1,0 +1,28 @@
+{
+  "JSP If Condition": {
+    "scope": "jsp",
+    "prefix": "jsp:if",
+    "description": "JSTL if condition",
+    "body": [
+      "<c:if test=\"${1:condicion}\">",
+      "\t${2:Contenido si verdadero}",
+      "</c:if>"
+    ]
+  },
+
+  "JSP If-Else Condition": {
+    "scope": "jsp",
+    "prefix": "jsp:ifelse",
+    "description": "JSTL if-else structure",
+    "body": [
+      "<c:choose>",
+      "\t<c:when test=\"${1:condicion}\">",
+      "\t\t${2:Contenido si verdadero}",
+      "\t</c:when>",
+      "\t<c:otherwise>",
+      "\t\t${3:Contenido si falso}",
+      "\t</c:otherwise>",
+      "</c:choose>"
+    ]
+  }
+}

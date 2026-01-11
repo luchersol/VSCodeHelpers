@@ -1,0 +1,23 @@
+{
+  "JSP Message Display": {
+    "scope": "jsp",
+    "prefix": "jsp:msg",
+    "description": "Display a message from the model",
+    "body": [
+      "<c:if test=\"${not empty ${1:message}}\">",
+      "\t<p style=\"color:green;\">${message}</p>",
+      "</c:if>"
+    ]
+  },
+
+  "JSP Error Message Display": {
+    "scope": "jsp",
+    "prefix": "jsp:error",
+    "description": "Display an error message from the model",
+    "body": [
+      "<c:if test=\"${not empty ${1:error}}\">",
+      "\t<p style=\"color:red;\">${error}</p>",
+      "</c:if>"
+    ]
+  }
+}

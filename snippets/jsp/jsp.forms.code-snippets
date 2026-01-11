@@ -1,0 +1,36 @@
+{
+  "JSP Form Basic": {
+    "scope": "jsp",
+    "prefix": "jsp:form",
+    "description": "Basic HTML form for JSP",
+    "body": [
+      "<form action=\"${1:/action}\" method=\"${2:post}\">",
+      "\t<label for=\"${3:campo}\">${4:Etiqueta}:</label>",
+      "\t<input type=\"${5:text}\" name=\"${3:campo}\" id=\"${3:campo}\" value=\"${6:}\">",
+      "\t<button type=\"submit\">${7:Enviar}</button>",
+      "</form>"
+    ]
+  },
+
+  "JSP Form With Pre-filled Values": {
+    "scope": "jsp",
+    "prefix": "jsp:formvalue",
+    "description": "Form with JSP EL prefilled value",
+    "body": [
+      "<form action=\"${1:/action}\" method=\"post\">",
+      "\t<label for=\"name\">Name:</label>",
+      "\t<input type=\"text\" name=\"name\" id=\"name\" value=\"${item.name}\">",
+      "\t<button type=\"submit\">Enviar</button>",
+      "</form>"
+    ]
+  },
+
+  "JSP Hidden Input": {
+    "scope": "jsp",
+    "prefix": "jsp:hidden",
+    "description": "Hidden input field",
+    "body": [
+      "<input type=\"hidden\" name=\"${1:name}\" value=\"${2:valor}\">"
+    ]
+  }
+}

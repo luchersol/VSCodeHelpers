@@ -1,0 +1,38 @@
+{
+  "Thymeleaf Text": {
+    "scope": "html",
+    "prefix": "thyme:text",
+    "isFileTemplate": true,
+    "description": "Set text content dynamically",
+    "body": [
+      "<span th:text=\"${1:variable}\">${1:variable}</span>"
+    ]
+  },
+  "Thymeleaf UText": {
+    "scope": "html",
+    "prefix": "thyme:utext",
+    "isFileTemplate": true,
+    "description": "Set unescaped HTML content",
+    "body": [
+      "<span th:utext=\"${1:html}\">${1:html}</span>"
+    ]
+  },
+  "Thymeleaf Value": {
+    "scope": "html",
+    "prefix": "thyme:value",
+    "isFileTemplate": true,
+    "description": "Set value for input field",
+    "body": [
+      "<input type=\"text\" th:value=\"${1:value}\" />"
+    ]
+  },
+  "Thymeleaf Placeholder": {
+    "scope": "html",
+    "prefix": "thyme:placeholder",
+    "isFileTemplate": true,
+    "description": "Set placeholder text dynamically",
+    "body": [
+      "<input type=\"text\" th:placeholder=\"${1:placeholder}\" />"
+    ]
+  }
+}
