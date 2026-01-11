@@ -1,0 +1,19 @@
+{
+	"Click Basic Command": {
+		"scope": "python",
+		"prefix": "click:basic",
+		"isFileTemplate": true,
+		"description": "Create a basic Click command",
+		"body": [
+			"import click",
+			"",
+			"@click.command()",
+			"def ${1:main}():",
+			"\t\"\"\"${2:Description of the command}\"\"\"",
+			"\tclick.echo('${3:Hello, World!}')",
+			"",
+			"if __name__ == '__main__':",
+			"\t${1:main}()"
+		]
+	}
+}

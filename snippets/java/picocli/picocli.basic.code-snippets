@@ -1,0 +1,25 @@
+{
+	"Picocli Basic Command": {
+		"scope": "java",
+		"prefix": "picocli:basic",
+		"isFileTemplate": true,
+		"description": "Create a basic Picocli command",
+		"body": [
+			"import picocli.CommandLine;",
+			"import picocli.CommandLine.Command;",
+			"",
+			"@Command(name = \"${1:mycmd}\", mixinStandardHelpOptions = true, version = \"1.0\", description = \"${2:Description of the command}\")",
+			"public class ${1:MyCommand} implements Runnable {",
+			"\t@Override",
+			"\tpublic void run() {",
+			"\t\tSystem.out.println(\"${3:Hello, World!}\");",
+			"\t}",
+			"",
+			"\tpublic static void main(String[] args) {",
+			"\t\tint exitCode = new CommandLine(new ${1:MyCommand}()).execute(args);",
+			"\t\tSystem.exit(exitCode);",
+			"\t}",
+			"}"
+		]
+	}
+}

@@ -1,0 +1,32 @@
+{
+	"Picocli Interactive Prompt": {
+		"scope": "java",
+		"prefix": "picocli:prompt",
+		"isFileTemplate": true,
+		"description": "Create a Picocli command with interactive prompts",
+		"body": [
+			"import picocli.CommandLine;",
+			"import picocli.CommandLine.Command;",
+			"import java.util.Scanner;",
+			"",
+			"@Command(name = \"${1:interactive}\", mixinStandardHelpOptions = true, description = \"${2:Command with user prompts}\")",
+			"public class ${1:InteractiveCommand} implements Runnable {",
+			"\t@Override",
+			"\tpublic void run() {",
+			"\t\tScanner scanner = new Scanner(System.in);",
+			"\t\tSystem.out.print(\"Please enter your name: \");",
+			"\t\tString name = scanner.nextLine();",
+			"\t\tSystem.out.print(\"Please enter your age: \");",
+			"\t\tint age = Integer.parseInt(scanner.nextLine());",
+			"\t\tSystem.out.println(\"Hello \" + name + \", you are \" + age + \" years old!\");",
+			"\t\tscanner.close();",
+			"\t}",
+			"",
+			"\tpublic static void main(String[] args) {",
+			"\t\tint exitCode = new CommandLine(new ${1:InteractiveCommand}()).execute(args);",
+			"\t\tSystem.exit(exitCode);",
+			"\t}",
+			"}"
+		]
+	}
+}

@@ -1,0 +1,21 @@
+{
+	"Click Echo with Colors": {
+		"scope": "python",
+		"prefix": "click:colors",
+		"isFileTemplate": true,
+		"description": "Create a Click command with colored output",
+		"body": [
+			"import click",
+			"",
+			"@click.command()",
+			"def ${1:colored}():",
+			"\t\"\"\"${2:Echo text with colors}\"\"\"",
+			"\tclick.echo(click.style('Success!', fg='green'))",
+			"\tclick.echo(click.style('Warning!', fg='yellow'))",
+			"\tclick.echo(click.style('Error!', fg='red', bold=True))",
+			"",
+			"if __name__ == '__main__':",
+			"\t${1:colored}()"
+		]
+	}
+}

@@ -1,0 +1,42 @@
+{
+	"Picocli CLI with Subcommands": {
+		"scope": "java",
+		"prefix": "picocli:subcmds",
+		"isFileTemplate": true,
+		"description": "Create a Picocli CLI with subcommands",
+		"body": [
+			"import picocli.CommandLine;",
+			"import picocli.CommandLine.Command;",
+			"import picocli.CommandLine.Option;",
+			"",
+			"@Command(name = \"${1:cli}\", mixinStandardHelpOptions = true, subcommands = {StartCommand.class, StopCommand.class}, description = \"${2:Main CLI group}\")",
+			"public class ${1:CliCommand} implements Runnable {",
+			"\t@Override",
+			"\tpublic void run() {",
+			"\t\t// No action for the main group",
+			"\t}",
+			"",
+			"\tpublic static void main(String[] args) {",
+			"\t\tint exitCode = new CommandLine(new ${1:CliCommand}()).execute(args);",
+			"\t\tSystem.exit(exitCode);",
+			"\t}",
+			"}",
+			"",
+			"@Command(name = \"start\", description = \"Start the service\")",
+			"class StartCommand implements Runnable {",
+			"\t@Override",
+			"\tpublic void run() {",
+			"\t\tSystem.out.println(\"Service started\");",
+			"\t}",
+			"}",
+			"",
+			"@Command(name = \"stop\", description = \"Stop the service\")",
+			"class StopCommand implements Runnable {",
+			"\t@Override",
+			"\tpublic void run() {",
+			"\t\tSystem.out.println(\"Service stopped\");",
+			"\t}",
+			"}"
+		]
+	}
+}

@@ -1,0 +1,34 @@
+{
+	"Picocli Command with Options": {
+		"scope": "java",
+		"prefix": "picocli:options",
+		"isFileTemplate": true,
+		"description": "Create a Picocli command with options",
+		"body": [
+			"import picocli.CommandLine;",
+			"import picocli.CommandLine.Command;",
+			"import picocli.CommandLine.Option;",
+			"",
+			"@Command(name = \"${1:greet}\", mixinStandardHelpOptions = true, description = \"${2:Greet a person}\")",
+			"public class ${1:GreetCommand} implements Runnable {",
+			"\t@Option(names = {\"-n\", \"--name\"}, description = \"The person to greet\", required = true)",
+			"\tprivate String name;",
+			"",
+			"\t@Option(names = {\"-c\", \"--count\"}, description = \"Number of greetings\")",
+			"\tprivate int count = 1;",
+			"",
+			"\t@Override",
+			"\tpublic void run() {",
+			"\t\tfor (int i = 0; i < count; i++) {",
+			"\t\t\tSystem.out.println(\"Hello \" + name + \"!\");",
+			"\t\t}",
+			"\t}",
+			"",
+			"\tpublic static void main(String[] args) {",
+			"\t\tint exitCode = new CommandLine(new ${1:GreetCommand}()).execute(args);",
+			"\t\tSystem.exit(exitCode);",
+			"\t}",
+			"}"
+		]
+	}
+}
