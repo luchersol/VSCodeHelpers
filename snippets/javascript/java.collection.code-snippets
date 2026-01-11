@@ -1,0 +1,92 @@
+{
+    "JavaScript List Declaration (Empty)": {
+        "scope": "javascript",
+        "prefix": "list:new",
+        "description": "Create a new empty list",
+        "body": "const ${1:list} = [];"
+    },
+    "JavaScript List Initialization with Values": {
+        "scope": "javascript",
+        "prefix": "list:of",
+        "description": "Create a new list initialized with values",
+        "body": "const ${1:list} = [${2}];"
+    },
+    "JavaScript Sorted Set Declaration (Empty)": {
+        "scope": "javascript",
+        "prefix": "sorted-set:new",
+        "description": "Create a new empty sorted set (manual sorting required)",
+        "body": "const ${1:set} = new Set();"
+    },
+    "JavaScript Insertion-Sorted Set Declaration (Empty)": {
+        "scope": "javascript",
+        "prefix": "sorted-set:new",
+        "description": "Create a new empty insertion-ordered set",
+        "body": "const ${1:set} = new Set();"
+    },
+    "JavaScript Insertion-Sorted Set Declaration with Values": {
+        "scope": "javascript",
+        "prefix": "sorted-set:of",
+        "description": "Create a new insertion-ordered set with values",
+        "body": "const ${1:set} = new Set([${2}]);"
+    },
+    "JavaScript Set Declaration (Empty)": {
+        "scope": "javascript",
+        "prefix": "set:new",
+        "description": "Create a new empty set",
+        "body": "const ${1:set} = new Set();"
+    },
+    "JavaScript Set Initialization with Values": {
+        "scope": "javascript",
+        "prefix": "set:of",
+        "description": "Create a new set initialized with values",
+        "body": "const ${1:set} = new Set([${2}]);"
+    },
+    "JavaScript Map Declaration (Empty)": {
+        "scope": "javascript",
+        "prefix": "map:new",
+        "description": "Create a new empty map",
+        "body": "const ${1:map} = new Map();"
+    },
+    "JavaScript Map Initialization with Values": {
+        "scope": "javascript",
+        "prefix": "map:of",
+        "description": "Create a new map initialized with key-value pairs",
+        "body": "const ${1:map} = new Map([${2:[key, value]}]);"
+    },
+    "JavaScript Optional Empty": {
+        "scope": "javascript",
+        "prefix": "opt:empty",
+        "description": "Represent an empty optional value",
+        "body": "const ${1:value} = undefined;"
+    },
+    "JavaScript Optional with Value": {
+        "scope": "javascript",
+        "prefix": "opt:of",
+        "description": "Represent an optional value",
+        "body": "const ${1:value} = ${2};"
+    },
+    "JavaScript Queue Declaration (Empty)": {
+        "scope": "javascript",
+        "prefix": "queue:new",
+        "description": "Create a new empty queue using an array",
+        "body": "const ${1:queue} = [];"
+    },
+    "JavaScript Queue Initialization with Values": {
+        "scope": "javascript",
+        "prefix": "queue:of",
+        "description": "Create a new queue initialized with values",
+        "body": "const ${1:queue} = [${2}];"
+    },
+    "JavaScript Deque Declaration (Empty)": {
+        "scope": "javascript",
+        "prefix": "deque:new",
+        "description": "Create a new empty deque using an array",
+        "body": "const ${1:deque} = [];"
+    },
+    "JavaScript Deque Initialization with Values": {
+        "scope": "javascript",
+        "prefix": "deque:of",
+        "description": "Create a new deque initialized with values",
+        "body": "const ${1:deque} = [${2}];"
+    }
+}

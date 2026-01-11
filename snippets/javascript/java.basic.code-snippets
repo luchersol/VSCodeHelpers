@@ -1,0 +1,48 @@
+{
+    "JavaScript Basic Variable Declaration": {
+        "scope": "javascript",
+        "prefix": "var:basic",
+        "description": "Declare a basic JavaScript variable",
+        "body": "let ${1|x,num,text|} = $2;"
+    },
+    "JavaScript Constant": {
+        "scope": "javascript",
+        "prefix": "var:const",
+        "description": "Constant declaration",
+        "body": "const ${1:NAME} = $2;"
+    },
+    "JavaScript Swap Variables": {
+        "scope": "javascript",
+        "prefix": "var:swap",
+        "description": "Swap two variables using temp",
+        "body": [
+            "let temp = ${1:a};",
+            "${1:a} = ${2:b};",
+            "${2:b} = temp;"
+        ]
+    },
+    "JavaScript Early Return Validation": {
+        "scope": "javascript",
+        "prefix": "return:early",
+        "description": "Early return validation pattern",
+        "body": "if (!${1:condition}) return ${2:false};"
+    },
+    "JavaScript Date Current Time": {
+        "scope": "javascript",
+        "prefix": "date:now",
+        "description": "Create a Date instance with the current date and time",
+        "body": "const now = new Date();"
+    },
+    "JavaScript Debug Variable": {
+        "scope": "javascript",
+        "prefix": "debug:var",
+        "description": "Print variable name and value for debugging",
+        "body": "console.log(\"${1:var} =\", ${1});"
+    },
+    "JavaScript Console Separator": {
+        "scope": "javascript",
+        "prefix": "print:sep",
+        "description": "Print a visual separator in console",
+        "body": "console.log(\"------------------------------\");"
+    }
+}

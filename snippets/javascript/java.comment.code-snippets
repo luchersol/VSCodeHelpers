@@ -1,0 +1,26 @@
+{
+    "JavaScript Comment Divider Line": {
+        "scope": "javascript",
+        "prefix": "cmt:line",
+        "description": "Insert a horizontal comment divider line",
+        "body": "// ---------------------------------------------------------"
+    },
+    "JavaScript Comment Section Header": {
+        "scope": "javascript",
+        "prefix": "cmt:section",
+        "description": "Insert a commented section header with a custom title",
+        "body": "// ------------------------- $1 -----------------------------"
+    },
+    "JavaScript TODO Comment": {
+        "scope": "javascript",
+        "prefix": "cmt:todo",
+        "description": "Insert a TODO comment",
+        "body": "// TODO: $1"
+    },
+    "JavaScript FIXME Comment": {
+        "scope": "javascript",
+        "prefix": "cmt:fixme",
+        "description": "Insert a FIXME comment indicating a problem to fix",
+        "body": "// FIXME: $1"
+    }
+}

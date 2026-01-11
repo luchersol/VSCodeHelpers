@@ -1,0 +1,127 @@
+{
+    "JavaScript Array Literal Initialization": {
+        "scope": "javascript",
+        "prefix": "arr:literal",
+        "description": "Create and initialize an array with predefined values",
+        "body": "const ${1:array} = [${2}];"
+    },
+    "JavaScript Array Declaration": {
+        "scope": "javascript",
+        "prefix": "arr:declare",
+        "description": "Declare an array without initialization",
+        "body": "let ${1:array};"
+    },
+    "JavaScript Array Allocation": {
+        "scope": "javascript",
+        "prefix": "arr:new",
+        "description": "Create an empty array with a fixed size",
+        "body": "const ${1:array} = new Array(${2:size});"
+    },
+    "JavaScript 2D Array Literal Initialization": {
+        "scope": "javascript",
+        "prefix": "arr2:literal",
+        "description": "Create and initialize a 2D array with predefined values",
+        "body": [
+            "const ${1:matrix} = [",
+            "\t[${2}],",
+            "\t[${3}]",
+            "];"
+        ]
+    },
+    "JavaScript 2D Array Declaration": {
+        "scope": "javascript",
+        "prefix": "arr2:declare",
+        "description": "Declare a 2D array without initialization",
+        "body": "let ${1:matrix};"
+    },
+    "JavaScript 2D Array Allocation": {
+        "scope": "javascript",
+        "prefix": "arr2:new",
+        "description": "Create an empty 2D array with fixed rows and columns",
+        "body": "const ${1:matrix} = Array.from({ length: ${2:rows} }, () => new Array(${3:cols}));"
+    },
+    "JavaScript 2D Jagged Array": {
+        "scope": "javascript",
+        "prefix": "arr2:jagged",
+        "description": "Create a jagged 2D array (rows with different lengths)",
+        "body": "const ${1:matrix} = new Array(${2:rows});"
+    },
+    "JavaScript For Reverse Iteration": {
+        "scope": "javascript",
+        "prefix": "for:reverse",
+        "description": "Iterate an array in reverse order",
+        "body": [
+            "for (let ${1:i} = ${2:array}.length - 1; $1 >= 0; $1--) {",
+            "\t$0",
+            "}"
+        ]
+    },
+    "JavaScript For Matrix Iteration": {
+        "scope": "javascript",
+        "prefix": "for:matrix",
+        "description": "Iterate over a 2D array",
+        "body": [
+            "for (let ${1:i} = 0; $1 < ${2:matrix}.length; $1++) {",
+            "\tfor (let ${3:j} = 0; $3 < $2[$1].length; $3++) {",
+            "\t\t$0",
+            "\t}",
+            "}"
+        ]
+    },
+    "JavaScript Search With Flag": {
+        "scope": "javascript",
+        "prefix": "search:flag",
+        "description": "Search using a boolean flag and break",
+        "body": [
+            "let found = false;",
+            "for (${1}) {",
+            "\tif (${2}) {",
+            "\t\tfound = true;",
+            "\t\tbreak;",
+            "\t}",
+            "}"
+        ]
+    },
+    "JavaScript Conditional Counter": {
+        "scope": "javascript",
+        "prefix": "count:if",
+        "description": "Conditional counter pattern",
+        "body": [
+            "let ${1:count} = 0;",
+            "for (${2}) {",
+            "\tif (${3}) $1++;",
+            "}"
+        ]
+    },
+    "JavaScript Max With Index": {
+        "scope": "javascript",
+        "prefix": "arr:maxidx",
+        "description": "Find maximum value and its index in an array",
+        "body": [
+            "let max = ${1:array}[0];",
+            "let idx = 0;",
+            "for (let i = 1; i < $1.length; i++) {",
+            "\tif ($1[i] > max) {",
+            "\t\tmax = $1[i];",
+            "\t\tidx = i;",
+            "\t}",
+            "}"
+        ]
+    },
+    "JavaScript Bubble Sort Template": {
+        "scope": "javascript",
+        "prefix": "sort:bubble",
+        "description": "Bubble sort template",
+        "body": [
+            "for (let i = 0; i < ${1:array}.length - 1; i++) {",
+            "\tfor (let j = 0; j < $1.length - i - 1; j++) {",
+            "\t\tif ($1[j] > $1[j + 1]) {",
+            "\t\t\tconst tmp = $1[j];",
+            "\t\t\t$1[j] = $1[j + 1];",
+            "\t\t\t$1[j + 1] = tmp;",
+            "\t\t}",
+            "\t}",
+            "}"
+        ]
+    }
+}

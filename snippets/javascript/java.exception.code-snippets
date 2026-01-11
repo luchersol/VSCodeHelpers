@@ -1,0 +1,61 @@
+{
+    "JavaScript Try-Finally Block": {
+        "scope": "javascript",
+        "prefix": "try:resources",
+        "description": "Create a try-finally block to ensure resource cleanup",
+        "body": [
+            "try {",
+            "\tconst ${1:resource} = ${2:createResource()};",
+            "\t${3:// code using resource}",
+            "} catch (${4:error}) {",
+            "\t${5:console.error(error);}",
+            "} finally {",
+            "\t${6:// cleanup resource if needed}",
+            "}"
+        ]
+    },
+    "JavaScript Exception Logging": {
+        "scope": "javascript",
+        "prefix": "log:exception",
+        "description": "Catch an exception and log it",
+        "body": [
+            "try {",
+            "\t${1:// code that may throw exception}",
+            "} catch (${2:error}) {",
+            "\tconsole.error(\"${3:Error message}\", error);",
+            "}"
+        ]
+    },
+    "JavaScript Throw Custom Error": {
+        "scope": "javascript",
+        "prefix": "ex:throw",
+        "description": "Throw a custom error with a message",
+        "body": "throw new ${1:Error}(${2:\"Custom message\"});"
+    },
+    "JavaScript Basic Custom Error Class": {
+        "scope": "javascript",
+        "prefix": "ex:class-runtime",
+        "description": "Define a basic custom Error class with a message constructor",
+        "body": [
+            "class ${1:MyCustomError} extends Error {",
+            "\tconstructor(message) {",
+            "\t\tsuper(message);",
+            "\t\tthis.name = \"${1:MyCustomError}\";",
+            "\t}",
+            "}"
+        ]
+    },
+    "JavaScript Custom Error Class with Cause": {
+        "scope": "javascript",
+        "prefix": "ex:class",
+        "description": "Define a custom Error class with optional cause",
+        "body": [
+            "class ${1:MyCustomError} extends Error {",
+            "\tconstructor(message, cause) {",
+            "\t\tsuper(message, { cause });",
+            "\t\tthis.name = \"${1:MyCustomError}\";",
+            "\t}",
+            "}"
+        ]
+    }
+}
