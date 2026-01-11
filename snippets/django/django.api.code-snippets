@@ -1,0 +1,17 @@
+{
+  "Django DRF Serializer": {
+    "scope": "python",
+    "prefix": "dj:serializer",
+    "isFileTemplate": false,
+    "description": "Basic Django Rest Framework serializer",
+    "body": [
+      "from rest_framework import serializers",
+      "from .models import ${1:ModelName}",
+      "",
+      "class ${1:ModelName}Serializer(serializers.ModelSerializer):",
+      "    class Meta:",
+      "        model = ${1:ModelName}",
+      "        fields = '__all__'"
+    ]
+  }
+}

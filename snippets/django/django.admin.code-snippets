@@ -1,0 +1,18 @@
+{
+    "Django Admin Register": {
+        "scope": "python",
+        "prefix": "dj:admin",
+        "isFileTemplate": false,
+        "description": "Quick register a model in Django admin",
+        "body": [
+        "from django.contrib import admin",
+        "from .models import ${1:ModelName}",
+        "",
+        "@admin.register(${1:ModelName})",
+        "class ${1:ModelName}Admin(admin.ModelAdmin):",
+        "    list_display = (${2:'field1', 'field2'})",
+        "    search_fields = (${3:'field1', 'field2'})",
+        "    list_filter = (${4:'created', 'updated'})"
+        ]
+    }
+}
