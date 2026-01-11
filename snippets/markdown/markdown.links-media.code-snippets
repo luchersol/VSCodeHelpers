@@ -1,0 +1,26 @@
+{
+    "Markdown Link": {
+        "scope": "markdown",
+        "prefix": "md:link",
+        "description": "Insert a hyperlink",
+        "body": [
+            "[${1:link text}](${2:url})"
+        ]
+    },
+    "Markdown Image": {
+        "scope": "markdown",
+        "prefix": "md:image",
+        "description": "Insert an image",
+        "body": [
+            "![${1:alt text}](${2:image_url})"
+        ]
+    },
+    "Markdown Emoji": {
+        "scope": "markdown",
+        "prefix": "md:emoji",
+        "description": "Insert an emoji",
+        "body": [
+            ":${1:emoji_name}:"
+        ]
+    }
+}

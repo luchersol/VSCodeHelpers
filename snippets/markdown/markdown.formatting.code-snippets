@@ -1,0 +1,42 @@
+{
+    "Markdown Bold Text": {
+        "scope": "markdown",
+        "prefix": "md:bold",
+        "description": "Insert bold text",
+        "body": [
+            "**${1:bold text}**"
+        ]
+    },
+    "Markdown Italic Text": {
+        "scope": "markdown",
+        "prefix": "md:italic",
+        "description": "Insert italic text",
+        "body": [
+            "_${1:italic text}_"
+        ]
+    },
+    "Markdown Bold Italic": {
+        "scope": "markdown",
+        "prefix": "md:bolditalic",
+        "description": "Insert bold and italic text",
+        "body": [
+            "***${1:text}***"
+        ]
+    },
+    "Markdown Strikethrough": {
+        "scope": "markdown",
+        "prefix": "md:strike",
+        "description": "Insert strikethrough text",
+        "body": [
+            "~~${1:strikethrough}~~"
+        ]
+    },
+    "Markdown Inline Code": {
+        "scope": "markdown",
+        "prefix": "md:inlinecode",
+        "description": "Insert inline code",
+        "body": [
+            "`$1`"
+        ]
+    }
+}

@@ -1,0 +1,16 @@
+{
+    "Node.js Event Emitter": {
+        "scope": "javascript",
+        "prefix": "node:event:emitter",
+        "description": "Create a custom EventEmitter and listen to events",
+        "body": [
+            "import EventEmitter from 'events';",
+            "const ${1:emitter} = new EventEmitter();",
+            "${1}.on('${2:event}', (${3:args}) => {",
+            "\tconsole.log('${2:event} triggered', $3);",
+            "});",
+            "// Emit event",
+            "${1}.emit('${2:event}', ${4:data});"
+        ]
+    }
+}

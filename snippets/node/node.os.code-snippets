@@ -1,0 +1,14 @@
+{
+    "Node.js OS Info": {
+        "scope": "javascript",
+        "prefix": "node:os:info",
+        "description": "Get basic OS information using the os module",
+        "body": [
+            "import os from 'os';",
+            "console.log('Platform:', os.platform());",
+            "console.log('CPU Architecture:', os.arch());",
+            "console.log('Total Memory:', os.totalmem());",
+            "console.log('Free Memory:', os.freemem());"
+        ]
+    }
+}

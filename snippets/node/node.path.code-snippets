@@ -1,0 +1,8 @@
+{
+    "Node.js Path Join": {
+        "scope": "javascript",
+        "prefix": "node:path:join",
+        "description": "Join multiple path segments safely using path.join",
+        "body": "import path from 'path';\nconst ${1:fullPath} = path.join(${2:__dirname}, '${3:subdir}', '${4:file}');"
+    }
+}

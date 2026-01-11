@@ -1,0 +1,32 @@
+{
+    "Markdown Unordered List": {
+        "scope": "markdown",
+        "prefix": "md:ulist",
+        "description": "Insert an unordered list",
+        "body": [
+            "- ${1:Item 1}",
+            "- ${2:Item 2}",
+            "- ${3:Item 3}"
+        ]
+    },
+    "Markdown Ordered List": {
+        "scope": "markdown",
+        "prefix": "md:olist",
+        "description": "Insert an ordered list",
+        "body": [
+            "1. ${1:First item}",
+            "2. ${2:Second item}",
+            "3. ${3:Third item}"
+        ]
+    },
+    "Markdown Task List": {
+        "scope": "markdown",
+        "prefix": "md:tasklist",
+        "description": "Insert a task list with checkboxes",
+        "body": [
+            "- [ ] ${1:Task 1}",
+            "- [ ] ${2:Task 2}",
+            "- [x] ${3:Completed Task}"
+        ]
+    }
+}

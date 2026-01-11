@@ -1,0 +1,31 @@
+{
+    "Markdown Table": {
+        "scope": "markdown",
+        "prefix": "md:table",
+        "description": "Insert a Markdown table",
+        "body": [
+            "| ${1:Header 1} | ${2:Header 2} |",
+            "| --- | --- |",
+            "| ${3:Row 1 Col 1} | ${4:Row 1 Col 2} |",
+            "| ${5:Row 2 Col 1} | ${6:Row 2 Col 2} |"
+        ]
+    },
+    "Markdown Code Block": {
+        "scope": "markdown",
+        "prefix": "md:code",
+        "description": "Insert a code block",
+        "body": [
+            "``` ${1:language}",
+            "${2:code here}",
+            "```"
+        ]
+    },
+    "Markdown Inline Code": {
+        "scope": "markdown",
+        "prefix": "md:inlinecode",
+        "description": "Insert inline code",
+        "body": [
+            "`$1`"
+        ]
+    }
+}

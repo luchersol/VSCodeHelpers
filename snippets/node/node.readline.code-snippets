@@ -1,0 +1,18 @@
+{
+    "Node.js Readline Interface": {
+        "scope": "javascript",
+        "prefix": "node:readline",
+        "description": "Create a readline interface for console input",
+        "body": [
+            "import readline from 'readline';",
+            "const rl = readline.createInterface({",
+            "\tinput: process.stdin,",
+            "\toutput: process.stdout",
+            "});",
+            "rl.question('${1:Your question?} ', (answer) => {",
+            "\tconsole.log('You answered:', answer);",
+            "\trl.close();",
+            "});"
+        ]
+    }
+}

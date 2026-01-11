@@ -1,0 +1,41 @@
+{
+    "Node.js Read File Async": {
+        "scope": "javascript",
+        "prefix": "node:fs:read",
+        "description": "Read a file asynchronously using fs.promises",
+        "body": [
+            "import fs from 'fs/promises';",
+            "try {",
+            "\tconst data = await fs.readFile('${1:filepath}', 'utf8');",
+            "\tconsole.log(data);",
+            "} catch (error) {",
+            "\tconsole.error('Error reading file:', error);",
+            "}"
+        ]
+    },
+    "Node.js Write File Async": {
+        "scope": "javascript",
+        "prefix": "node:fs:write",
+        "description": "Write data to a file asynchronously using fs.promises",
+        "body": [
+            "import fs from 'fs/promises';",
+            "try {",
+            "\tawait fs.writeFile('${1:filepath}', '${2:data}');",
+            "\tconsole.log('File written successfully');",
+            "} catch (error) {",
+            "\tconsole.error('Error writing file:', error);",
+            "}"
+        ]
+    },
+    "Node.js Stream Pipe": {
+        "scope": "javascript",
+        "prefix": "node:stream:pipe",
+        "description": "Pipe a readable stream to a writable stream",
+        "body": [
+            "import fs from 'fs';",
+            "const readStream = fs.createReadStream('${1:inputFile}');",
+            "const writeStream = fs.createWriteStream('${2:outputFile}');",
+            "readStream.pipe(writeStream);"
+        ]
+    }
+}

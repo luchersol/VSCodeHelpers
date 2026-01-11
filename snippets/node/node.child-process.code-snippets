@@ -1,0 +1,21 @@
+{
+    "Node.js Child Process Exec": {
+        "scope": "javascript",
+        "prefix": "node:child:exec",
+        "description": "Execute a shell command using child_process.exec",
+        "body": [
+            "import { exec } from 'child_process';",
+            "exec('${1:command}', (error, stdout, stderr) => {",
+            "\tif (error) {",
+            "\t\tconsole.error(`Error: ${error.message}`);",
+            "\t\treturn;",
+            "\t}",
+            "\tif (stderr) {",
+            "\t\tconsole.error(`Stderr: ${stderr}`);",
+            "\t\treturn;",
+            "\t}",
+            "\tconsole.log(`Stdout: ${stdout}`);",
+            "});"
+        ]
+    }
+}

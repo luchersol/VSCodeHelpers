@@ -1,0 +1,80 @@
+{
+    "Express GET Route": {
+        "scope": "javascript",
+        "prefix": "express:get",
+        "description": "Define a GET route in Express",
+        "body": [
+            "app.get('/${1:path}', (req, res) => {",
+            "\t// Your GET logic here",
+            "\tres.status(200).send('${2:response}');",
+            "});"
+        ]
+    },
+    "Express POST Route": {
+        "scope": "javascript",
+        "prefix": "express:post",
+        "description": "Define a POST route in Express",
+        "body": [
+            "app.post('/${1:path}', (req, res) => {",
+            "\t// Your POST logic here",
+            "\tconst data = req.body;",
+            "\tres.status(201).json(data);",
+            "});"
+        ]
+    },
+    "Express PUT Route": {
+        "scope": "javascript",
+        "prefix": "express:put",
+        "description": "Define a PUT route in Express",
+        "body": [
+            "app.put('/${1:path}', (req, res) => {",
+            "\t// Your PUT logic here",
+            "\tconst data = req.body;",
+            "\tres.status(200).json(data);",
+            "});"
+        ]
+    },
+    "Express DELETE Route": {
+        "scope": "javascript",
+        "prefix": "express:delete",
+        "description": "Define a DELETE route in Express",
+        "body": [
+            "app.delete('/${1:path}', (req, res) => {",
+            "\t// Your DELETE logic here",
+            "\tres.status(200).send('${2:Deleted successfully}');",
+            "});"
+        ]
+    },
+    "Express PATCH Route": {
+        "scope": "javascript",
+        "prefix": "express:patch",
+        "description": "Define a PATCH route in Express",
+        "body": [
+            "app.patch('/${1:path}', (req, res) => {",
+            "\t// Your PATCH logic here",
+            "\tconst data = req.body;",
+            "\tres.status(200).json(data);",
+            "});"
+        ]
+    },
+    "Express Router Module": {
+        "scope": "javascript",
+        "prefix": "express:router",
+        "description": "Create a modular Express router",
+        "body": [
+            "import express from 'express';",
+            "const router = express.Router();",
+            "",
+            "router.get('/${1:path}', (req, res) => {",
+            "\tres.send('${2:response}');",
+            "});",
+            "",
+            "router.post('/${3:path}', (req, res) => {",
+            "\tconst data = req.body;",
+            "\tres.json(data);",
+            "});",
+            "",
+            "export default router;"
+        ]
+    }
+}

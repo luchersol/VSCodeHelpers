@@ -1,0 +1,18 @@
+{
+    "Node.js Create HTTP Server": {
+        "scope": "javascript",
+        "prefix": "node:http:server",
+        "description": "Create a simple HTTP server using Node's http module",
+        "body": [
+            "import http from 'http';",
+            "const server = http.createServer((req, res) => {",
+            "\tres.statusCode = 200;",
+            "\tres.setHeader('Content-Type', 'text/plain');",
+            "\tres.end('${1:Hello World}\\n');",
+            "});",
+            "server.listen(${2:3000}, '${3:localhost}', () => {",
+            "\tconsole.log(`Server running at http://${3}:${2}/`);",
+            "});"
+        ]
+    }
+}

@@ -1,0 +1,54 @@
+{
+    "Markdown Heading 1": {
+        "scope": "markdown",
+        "prefix": "md:h1",
+        "description": "Insert Markdown heading 1",
+        "body": "# "
+    },
+    "Markdown Heading 2": {
+        "scope": "markdown",
+        "prefix": "md:h2",
+        "description": "Insert Markdown heading 2",
+        "body": "## "
+    },
+    "Markdown Heading 3": {
+        "scope": "markdown",
+        "prefix": "md:h3",
+        "description": "Insert Markdown heading 3",
+        "body": "### "
+    },
+    "Markdown Heading 4": {
+        "scope": "markdown",
+        "prefix": "md:h4",
+        "description": "Insert Markdown heading 4",
+        "body": "#### "
+    },
+    "Markdown Heading 5": {
+        "scope": "markdown",
+        "prefix": "md:h5",
+        "description": "Insert Markdown heading 5",
+        "body": "##### "
+    },
+    "Markdown Heading 6": {
+        "scope": "markdown",
+        "prefix": "md:h6",
+        "description": "Insert Markdown heading 6",
+        "body": "###### "
+    },
+    "Markdown Horizontal Rule": {
+        "scope": "markdown",
+        "prefix": "md:hr",
+        "description": "Insert a horizontal rule",
+        "body": [
+            "----------"
+        ]
+    },
+    "Markdown Blockquote": {
+        "scope": "markdown",
+        "prefix": "md:quote",
+        "description": "Insert a blockquote",
+        "body": [
+            "> ${1:Quote here}"
+        ]
+    }
+}
