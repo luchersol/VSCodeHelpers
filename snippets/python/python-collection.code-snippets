@@ -1,0 +1,73 @@
+{
+    "Python List Declaration (Empty)": {
+        "scope": "python",
+        "prefix": "list:new",
+        "description": "Create a new empty list",
+        "body": "${2:ls} = []"
+    },
+    "Python List Initialization with Values": {
+        "scope": "python",
+        "prefix": "list:of",
+        "description": "Create a new list initialized with values",
+        "body": "${2:ls} = [$3]"
+    },
+    "Python 1D List (Fixed Size)": {
+        "scope": "python",
+        "prefix": "list:fixed",
+        "description": "Create a 1D list with fixed size initialized with None",
+        "body": [
+            "${1:ls} = [None] * ${2:size}  # 1D list with fixed size filled with None"
+        ]
+    },
+    "Python 2D List (Fixed Size)": {
+        "scope": "python",
+        "prefix": "list2:fixed",
+        "description": "Create a 2D list with fixed number of rows and columns initialized with None",
+        "body": [
+            "${1:matrix} = [[None] * ${3:cols} for _ in range(${2:rows})]  # 2D list with fixed size"
+        ]
+    },
+    "Python 2D List with Values": {
+        "scope": "python",
+        "prefix": "list2:of",
+        "description": "Create a 2D list with predefined values",
+        "body": [
+            "${1:matrix} = [",
+            "    [${2:row1_values}],  # Row 1 values",
+            "    [${3:row2_values}]   # Row 2 values",
+            "]"
+        ]
+    },
+    "Python 2D Jagged List": {
+        "scope": "python",
+        "prefix": "list2:jagged",
+        "description": "Create a 2D jagged list with rows of variable length",
+        "body": [
+            "${1:matrix} = [[] for _ in range(${2:rows})]  # 2D jagged list with variable row lengths"
+        ]
+    },
+    "Python Set Declaration (Empty)": {
+        "scope": "python",
+        "prefix": "set:new",
+        "description": "Create a new empty set",
+        "body": "${2:st} = set()"
+    },
+    "Python Set Initialization with Values": {
+        "scope": "python",
+        "prefix": "set:of",
+        "description": "Create a new set initialized with values",
+        "body": "${2:st} = set($3)"
+    },
+    "Python Dict Declaration (Empty)": {
+        "scope": "python",
+        "prefix": "dict:new",
+        "description": "Create a new empty dictionary",
+        "body": "${3:dt} = {}"
+    },
+    "Python Dict Initialization with Values": {
+        "scope": "python",
+        "prefix": "dict:of",
+        "description": "Create a new dictionary initialized with key-value pairs",
+        "body": "${3:dt} = {$4}"
+    },
+}

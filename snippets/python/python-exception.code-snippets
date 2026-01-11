@@ -1,0 +1,54 @@
+{
+    "Python Try-Except Block": {
+        "scope": "python",
+        "prefix": "try:except",
+        "description": "Create a try-except block for handling exceptions",
+        "body": [
+            "try:",
+            "    ${1:# code that may raise an exception}",
+            "except ${2:Exception} as ${3:e}:",
+            "    ${4:print(e)}"
+        ]
+    },
+    "Python Exception Logging (Using logging)": {
+        "scope": "python",
+        "prefix": "log:exception",
+        "description": "Catch an exception and log it using the logging module",
+        "body": [
+            "import logging",
+            "logger = logging.getLogger(__name__)",
+            "",
+            "try:",
+            "    ${1:# code that may raise an exception}",
+            "except ${2:Exception} as ${3:e}:",
+            "    logger.error(\"${4:Error message}\", exc_info=True)"
+        ]
+    },
+    "Python Raise Custom Exception": {
+        "scope": "python",
+        "prefix": "ex:raise",
+        "description": "Raise a custom exception with a message",
+        "body": "raise ${1:MyCustomException}(${2:'Custom message'})"
+    },
+    "Python Basic Runtime Exception Class": {
+        "scope": "python",
+        "prefix": "ex:class-runtime",
+        "description": "Define a basic custom exception with a message constructor",
+        "body": [
+            "class ${1:MyCustomException}(Exception):",
+            "    def __init__(self, message):",
+            "        super().__init__(message)"
+        ]
+    },
+    "Python Custom Exception Class": {
+        "scope": "python",
+        "prefix": "ex:class",
+        "description": "Define a custom exception class with optional message and cause",
+        "body": [
+            "class ${1:MyCustomException}(Exception):",
+            "    def __init__(self, message=None, cause=None):",
+            "        super().__init__(message)",
+            "        self.cause = cause"
+        ]
+    }
+}

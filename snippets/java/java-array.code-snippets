@@ -95,7 +95,7 @@
     },
     "Java Max With Index": {
         "scope": "java",
-        "prefix": "array:maxidx",
+        "prefix": "arr:maxidx",
         "description": "Find maximum value and its index in an array",
         "body": [
             "int max = ${1:array}[0];",

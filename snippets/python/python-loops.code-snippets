@@ -1,0 +1,68 @@
+{
+    "Python For Reverse Iteration": {
+        "scope": "python",
+        "prefix": "for:reverse",
+        "description": "Iterar una lista en orden inverso",
+        "body": [
+            "for ${1:item} in reversed($2):",
+            "\t$0"
+        ]
+    },
+    "Python For Matrix Iteration": {
+        "scope": "python",
+        "prefix": "for:matrix",
+        "description": "Iterar sobre una lista 2D",
+        "body": [
+            "for i, row in enumerate($2):",
+            "\tfor j, ${3:val} in enumerate(row):",
+            "\t\t$0"
+        ]
+    },
+    "Python Search With Flag": {
+        "scope": "python",
+        "prefix": "search:flag",
+        "description": "Buscar usando una bandera y break",
+        "body": [
+            "found = False",
+            "for ${1:item} in ${2:iterable}:",
+            "\tif ${3:condition}:",
+            "\t\tfound = True",
+            "\t\tbreak"
+        ]
+    },
+    "Python Conditional Counter": {
+        "scope": "python",
+        "prefix": "count:if",
+        "description": "Patrón de contador condicional",
+        "body": [
+            "${1:count} = 0",
+            "for ${2:item} in ${3:iterable}:",
+            "\tif ${4:condition}:",
+            "\t\t$1 += 1"
+        ]
+    },
+    "Python Max With Index": {
+        "scope": "python",
+        "prefix": "list:maxidx",
+        "description": "Encontrar el valor máximo y su índice en una lista",
+        "body": [
+            "max_val = $1[0]",
+            "idx = 0",
+            "for i, val in enumerate($1[1:], 1):",
+            "\tif val > max_val:",
+            "\t\tmax_val = val",
+            "\t\tidx = i"
+        ]
+    },
+    "Python Bubble Sort Template": {
+        "scope": "python",
+        "prefix": "sort:bubble",
+        "description": "Plantilla de bubble sort",
+        "body": [
+            "for i in range(len($1) - 1):",
+            "\tfor j in range(len($1) - i - 1):",
+            "\t\tif $1[j] > $1[j + 1]:",
+            "\t\t\t$1[j], $1[j + 1] = $1[j + 1], $1[j]"
+        ]
+    }
+}

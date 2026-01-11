@@ -1,0 +1,115 @@
+{
+    "Python Match-Case Basic": {
+        "scope": "python",
+        "prefix": "match:expr",
+        "description": "Basic match-case expression that returns a value",
+        "body": [
+            "match ${2:value}:",
+            "    case ${3:'A'}:",
+            "        ${1:result} = ${4:'Result A'}",
+            "    case ${5:'B'}:",
+            "        ${1:result} = ${6:'Result B'}",
+            "    case _:",
+            "        ${1:result} = ${7:'Default result'}"
+        ]
+    },
+    "Python Match Multiple Cases": {
+        "scope": "python",
+        "prefix": "match:multi",
+        "description": "Match-case with multiple literals in a single case",
+        "body": [
+            "match ${2:value}:",
+            "    case ${3:'A'} | ${4:'B'} | ${5:'C'}:",
+            "        ${1:result} = ${6:'Group ABC'}",
+            "    case ${7:'D'}:",
+            "        ${1:result} = ${8:'Group D'}",
+            "    case _:",
+            "        ${1:result} = ${9:'Other'}"
+        ]
+    },
+    "Python Match With Block Logic": {
+        "scope": "python",
+        "prefix": "match:yield",
+        "description": "Match-case using block logic to assign a value",
+        "body": [
+            "match ${2:value}:",
+            "    case ${3:'A'}:",
+            "        ${4:# complex logic}",
+            "        ${1:result} = ${5:'Result A'}",
+            "    case ${6:'B'}:",
+            "        ${1:result} = ${7:'Result B'}",
+            "    case _:",
+            "        ${1:result} = ${8:'Default'}"
+        ]
+    },
+    "Python Match Flow Control Only": {
+        "scope": "python",
+        "prefix": "match:flow",
+        "description": "Match-case used only for control flow (no return value)",
+        "body": [
+            "match ${1:value}:",
+            "    case ${2:'A'}:",
+            "        ${3:do_something()}",
+            "    case ${4:'B'}:",
+            "        ${5:do_something_else()}",
+            "    case _:",
+            "        ${6:do_default()}"
+        ]
+    },
+    "Python Match With None": {
+        "scope": "python",
+        "prefix": "match:none",
+        "description": "Match-case that explicitly handles None",
+        "body": [
+            "match ${2:value}:",
+            "    case None:",
+            "        ${1:result} = ${3:'Is None'}",
+            "    case ${4:'A'}:",
+            "        ${1:result} = ${5:'A'}",
+            "    case _:",
+            "        ${1:result} = ${6:'Other'}"
+        ]
+    },
+    "Python Match With Enum": {
+        "scope": "python",
+        "prefix": "match:enum",
+        "description": "Match-case using Enum values",
+        "body": [
+            "match ${1:enum_value}:",
+            "    case ${2:Enum.CREATED}:",
+            "        return ${3:Status.NEW}",
+            "    case ${4:Enum.UPDATED}:",
+            "        return ${5:Status.MODIFIED}",
+            "    case ${6:Enum.DELETED}:",
+            "        return ${7:Status.REMOVED}"
+        ]
+    },
+    "Python Match Pattern Matching": {
+        "scope": "python",
+        "prefix": "match:pattern",
+        "description": "Match-case with pattern matching by type",
+        "body": [
+            "match ${1:obj}:",
+            "    case str(${2:s}):",
+            "        return len(${2:s})",
+            "    case int(${3:i}):",
+            "        return ${3:i}",
+            "    case None:",
+            "        return ${4:0}",
+            "    case _:",
+            "        return ${5:-1}"
+        ]
+    },
+    "Python Match Short": {
+        "scope": "python",
+        "prefix": "match:short",
+        "description": "Short match-case expression with one case and default",
+        "body": [
+            "match ${1:value}:",
+            "    case ${2:'A'}:",
+            "        return ${3:result_a}",
+            "    case _:",
+            "        return ${4:result_default}"
+        ]
+    }
+}
