@@ -33,8 +33,8 @@
         "description": "Create a 2D list with predefined values",
         "body": [
             "${1:matrix} = [",
-            "    [${2:row1_values}],  # Row 1 values",
-            "    [${3:row2_values}]   # Row 2 values",
+            "\t[${2:row1_values}],  # Row 1 values",
+            "\t[${3:row2_values}]   # Row 2 values",
             "]"
         ]
     },

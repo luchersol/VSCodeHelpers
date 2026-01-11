@@ -16,16 +16,16 @@
       "@ControllerAdvice",
       "public class ${2:GlobalExceptionHandler} {",
       "",
-      "    @ExceptionHandler(Exception.class)",
-      "    public ResponseEntity<String> handleAllExceptions(Exception ex, WebRequest request) {",
-      "        return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(ex.getMessage());",
-      "    }",
+      "\t@ExceptionHandler(Exception.class)",
+      "\tpublic ResponseEntity<String> handleAllExceptions(Exception ex, WebRequest request) {",
+      "\t\treturn ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(ex.getMessage());",
+      "\t}",
       "",
-      "    // Example: NotFoundException",
-      "    @ExceptionHandler(${3:ResourceNotFoundException}.class)",
-      "    public ResponseEntity<String> handleNotFound(${3:ResourceNotFoundException} ex) {",
-      "        return ResponseEntity.status(HttpStatus.NOT_FOUND).body(ex.getMessage());",
-      "    }",
+      "\t// Example: NotFoundException",
+      "\t@ExceptionHandler(${3:ResourceNotFoundException}.class)",
+      "\tpublic ResponseEntity<String> handleNotFound(${3:ResourceNotFoundException} ex) {",
+      "\t\treturn ResponseEntity.status(HttpStatus.NOT_FOUND).body(ex.getMessage());",
+      "\t}",
       "}"
     ]
   },
@@ -35,10 +35,10 @@
     "prefix": "spring:exhandler-method",
     "description": "Create a single @ExceptionHandler method for a controller or advice",
     "body": [
-      "    @ExceptionHandler(${1:Exception.class})",
-      "    public ResponseEntity<${2:String}> ${3:handleException}(Exception ex, WebRequest request) {",
-      "        return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(ex.getMessage());",
-      "    }"
+      "\t@ExceptionHandler(${1:Exception.class})",
+      "\tpublic ResponseEntity<${2:String}> ${3:handleException}(Exception ex, WebRequest request) {",
+      "\t\treturn ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(ex.getMessage());",
+      "\t}"
     ]
   }
 }

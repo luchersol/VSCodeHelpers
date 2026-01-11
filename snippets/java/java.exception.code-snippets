@@ -5,9 +5,9 @@
         "description": "Create a try-with-resources block for AutoCloseable resources",
         "body": [
             "try (${1:ResourceType} ${2:resource} = ${3:new ResourceType()}) {",
-            "    ${4:// code using resource}",
+            "\t${4:// code using resource}",
             "} catch (${5:Exception} ${6:e}) {",
-            "    ${7:e.printStackTrace();}",
+            "\t${7:e.printStackTrace();}",
             "}"
         ]
     },
@@ -17,9 +17,9 @@
         "description": "Catch an exception and log it using an SLF4J logger",
         "body": [
             "try {",
-            "    ${1:// code that may throw exception}",
+            "\t${1:// code that may throw exception}",
             "} catch (${2:Exception} ${3:e}) {",
-            "    log.error(\"${4:Error message}\", ${3:e});",
+            "\tlog.error(\"${4:Error message}\", ${3:e});",
             "}"
         ]
     },
@@ -36,9 +36,9 @@
         "body": [
             "public class ${1:MyCustomException} extends RuntimeException {",
             "",
-            "    public $1(String message) {",
-            "        super(message);",
-            "    }",
+            "\tpublic $1(String message) {",
+            "\t\tsuper(message);",
+            "\t}",
             "",
             "}"
         ]
@@ -50,21 +50,21 @@
         "body": [
             "public class ${1:MyCustomException} extends ${2:Exception} {",
             "",
-            "    public $1() {",
-            "        super();",
-            "    }",
+            "\tpublic $1() {",
+            "\t\tsuper();",
+            "\t}",
             "",
-            "    public $1(String message) {",
-            "        super(message);",
-            "    }",
+            "\tpublic $1(String message) {",
+            "\t\tsuper(message);",
+            "\t}",
             "",
-            "    public $1(String message, Throwable cause) {",
-            "        super(message, cause);",
-            "    }",
+            "\tpublic $1(String message, Throwable cause) {",
+            "\t\tsuper(message, cause);",
+            "\t}",
             "",
-            "    public $1(Throwable cause) {",
-            "        super(cause);",
-            "    }",
+            "\tpublic $1(Throwable cause) {",
+            "\t\tsuper(cause);",
+            "\t}",
             "",
             "}"
         ]

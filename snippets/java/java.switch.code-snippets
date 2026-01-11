@@ -5,9 +5,9 @@
         "description": "Modern switch expression that returns a value",
         "body": [
             "var ${1:result} = switch (${2:value}) {",
-            "    case ${3:A} -> ${4:\"Result A\"};",
-            "    case ${5:B} -> ${6:\"Result B\"};",
-            "    default -> ${7:\"Default result\"};",
+            "\tcase ${3:A} -> ${4:\"Result A\"};",
+            "\tcase ${5:B} -> ${6:\"Result B\"};",
+            "\tdefault -> ${7:\"Default result\"};",
             "};"
         ]
     },
@@ -17,9 +17,9 @@
         "description": "Modern switch with multiple labels in a single case",
         "body": [
             "var ${1:result} = switch (${2:value}) {",
-            "    case ${3:A}, ${4:B}, ${5:C} -> ${6:\"Group ABC\"};",
-            "    case ${7:D} -> ${8:\"Group D\"};",
-            "    default -> ${9:\"Other\"};",
+            "\tcase ${3:A}, ${4:B}, ${5:C} -> ${6:\"Group ABC\"};",
+            "\tcase ${7:D} -> ${8:\"Group D\"};",
+            "\tdefault -> ${9:\"Other\"};",
             "};"
         ]
     },
@@ -29,16 +29,16 @@
         "description": "Switch expression using blocks and yield",
         "body": [
             "var ${1:result} = switch (${2:value}) {",
-            "    case ${3:A} -> {",
-            "        ${4:// complex logic}",
-            "        yield ${5:\"Result A\"};",
-            "    }",
-            "    case ${6:B} -> {",
-            "        yield ${7:\"Result B\"};",
-            "    }",
-            "    default -> {",
-            "        yield ${8:\"Default\"};",
-            "    }",
+            "\tcase ${3:A} -> {",
+            "\t\t${4:// complex logic}",
+            "\t\tyield ${5:\"Result A\"};",
+            "\t}",
+            "\tcase ${6:B} -> {",
+            "\t\tyield ${7:\"Result B\"};",
+            "\t}",
+            "\tdefault -> {",
+            "\t\tyield ${8:\"Default\"};",
+            "\t}",
             "};"
         ]
     },
@@ -48,9 +48,9 @@
         "description": "Modern switch used only for control flow (no return value)",
         "body": [
             "switch (${1:value}) {",
-            "    case ${2:A} -> ${3:doSomething()};",
-            "    case ${4:B} -> ${5:doSomethingElse()};",
-            "    default -> ${6:doDefault()};",
+            "\tcase ${2:A} -> ${3:doSomething()};",
+            "\tcase ${4:B} -> ${5:doSomethingElse()};",
+            "\tdefault -> ${6:doDefault()};",
             "}"
         ]
     },
@@ -60,9 +60,9 @@
         "description": "Modern switch that explicitly handles null (Java 21+)",
         "body": [
             "var ${1:result} = switch (${2:value}) {",
-            "    case null -> ${3:\"Is null\"};",
-            "    case ${4:A} -> ${5:\"A\"};",
-            "    default -> ${6:\"Other\"};",
+            "\tcase null -> ${3:\"Is null\"};",
+            "\tcase ${4:A} -> ${5:\"A\"};",
+            "\tdefault -> ${6:\"Other\"};",
             "};"
         ]
     },
@@ -72,9 +72,9 @@
         "description": "Switch expression using enum values (no default required)",
         "body": [
             "return switch (${1:enumValue}) {",
-            "    case ${2:CREATED} -> ${3:Status.NEW};",
-            "    case ${4:UPDATED} -> ${5:Status.MODIFIED};",
-            "    case ${6:DELETED} -> ${7:Status.REMOVED};",
+            "\tcase ${2:CREATED} -> ${3:Status.NEW};",
+            "\tcase ${4:UPDATED} -> ${5:Status.MODIFIED};",
+            "\tcase ${6:DELETED} -> ${7:Status.REMOVED};",
             "};"
         ]
     },
@@ -84,10 +84,10 @@
         "description": "Switch expression with pattern matching by type (Java 21+)",
         "body": [
             "return switch (${1:obj}) {",
-            "    case String ${2:s} -> ${2:s}.length();",
-            "    case Integer ${3:i} -> ${3:i};",
-            "    case null -> ${4:0};",
-            "    default -> ${5:-1};",
+            "\tcase String ${2:s} -> ${2:s}.length();",
+            "\tcase Integer ${3:i} -> ${3:i};",
+            "\tcase null -> ${4:0};",
+            "\tdefault -> ${5:-1};",
             "};"
         ]
     },
@@ -97,8 +97,8 @@
         "description": "Short switch expression with one case and default",
         "body": [
             "return switch (${1:value}) {",
-            "    case ${2:A} -> ${3:resultA};",
-            "    default -> ${4:resultDefault};",
+            "\tcase ${2:A} -> ${3:resultA};",
+            "\tdefault -> ${4:resultDefault};",
             "};"
         ]
     }
