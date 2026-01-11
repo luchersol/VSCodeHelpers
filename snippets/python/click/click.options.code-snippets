@@ -1,22 +1,29 @@
 {
-	"Click Command with Options": {
-		"scope": "python",
-		"prefix": "click:options",
-		"isFileTemplate": true,
-		"description": "Create a Click command with options",
-		"body": [
-			"import click",
-			"",
-			"@click.command()",
-			"@click.option('--count', default=1, help='Number of greetings.')",
-			"@click.option('--name', prompt='Your name', help='The person to greet.')",
-			"def ${1:greet}(count, name):",
-			"\t\"\"\"${2:Send greetings to a person}\"\"\"",
-			"\tfor _ in range(count):",
-			"\t\tclick.echo(f'Hello {name}!')",
-			"",
-			"if __name__ == '__main__':",
-			"\t${1:greet}()"
-		]
-	}
+    "Click Command with Options": {
+        "scope": "python",
+        "prefix": "click:options",
+        "isFileTemplate": true,
+        "description": "Create a Click command with options",
+        "body": [
+            "import click",
+            "",
+            "@click.command()",
+            "@click.option('--count', default=1, help='Number of greetings.')",
+            "@click.option('--name', prompt='Your name', help='The person to greet.')",
+            "def ${1:greet}(count, name):",
+            "\t\"\"\"${2:Send greetings to a person}\"\"\"",
+            "\tfor _ in range(count):",
+            "\t\tclick.echo(f'Hello {name}!')",
+            "",
+            "if __name__ == '__main__':",
+            "\t${1:greet}()"
+        ]
+    },
+    "Click Option": {
+        "scope": "python",
+        "prefix": "click:options",
+        "isFileTemplate": true,
+        "description": "Create a Click option",
+        "body": "@click.option(${1:'--input'}, default=${2:'hello'}, help=${3:'Perform a greeting'})"
+    }
 }

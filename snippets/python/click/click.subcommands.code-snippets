@@ -1,29 +1,29 @@
 {
-	"Click CLI with Subcommands": {
-		"scope": "python",
-		"prefix": "click:subcmds",
-		"isFileTemplate": true,
-		"description": "Create a Click CLI with subcommands",
-		"body": [
-			"import click",
-			"",
-			"@click.group()",
-			"def ${1:cli}():",
-			"\t\"\"\"${2:Main CLI group}\"\"\"",
-			"\tpass",
-			"",
-			"@${1:cli}.command()",
-			"def ${3:start}():",
-			"\t\"\"\"${4:Start the service}\"\"\"",
-			"\tclick.echo('Service started')",
-			"",
-			"@${1:cli}.command()",
-			"def ${5:stop}():",
-			"\t\"\"\"${6:Stop the service}\"\"\"",
-			"\tclick.echo('Service stopped')",
-			"",
-			"if __name__ == '__main__':",
-			"\t${1:cli}()"
-		]
-	}
+    "Click CLI with Subcommands": {
+        "scope": "python",
+        "prefix": "click:subcmds",
+        "isFileTemplate": true,
+        "description": "Create a Click CLI with subcommands",
+        "body": [
+            "import click",
+            "",
+            "@click.group()",
+            "def ${1:cli}():",
+            "\t\"\"\"${2:Main CLI group}\"\"\"",
+            "\tpass",
+            "",
+            "@${1:cli}.command()",
+            "def ${3:start}():",
+            "\t\"\"\"${4:Start the service}\"\"\"",
+            "\tclick.echo('Service started')",
+            "",
+            "@${1:cli}.command()",
+            "def ${5:stop}():",
+            "\t\"\"\"${6:Stop the service}\"\"\"",
+            "\tclick.echo('Service stopped')",
+            "",
+            "if __name__ == '__main__':",
+            "\t${1:cli}()"
+        ]
+    }
 }

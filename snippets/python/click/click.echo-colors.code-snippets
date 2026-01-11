@@ -1,21 +1,45 @@
 {
-	"Click Echo with Colors": {
-		"scope": "python",
-		"prefix": "click:colors",
-		"isFileTemplate": true,
-		"description": "Create a Click command with colored output",
-		"body": [
-			"import click",
-			"",
-			"@click.command()",
-			"def ${1:colored}():",
-			"\t\"\"\"${2:Echo text with colors}\"\"\"",
-			"\tclick.echo(click.style('Success!', fg='green'))",
-			"\tclick.echo(click.style('Warning!', fg='yellow'))",
-			"\tclick.echo(click.style('Error!', fg='red', bold=True))",
-			"",
-			"if __name__ == '__main__':",
-			"\t${1:colored}()"
-		]
-	}
+    "Click Echo with Colors": {
+        "scope": "python",
+        "prefix": "click:colors",
+        "isFileTemplate": true,
+        "description": "Create a Click command with colored output",
+        "body": [
+            "import click",
+            "",
+            "@click.command()",
+            "def ${1:colored}():",
+            "\t\"\"\"${2:Echo text with colors}\"\"\"",
+            "\tclick.echo(click.style('Success!', fg='green'))",
+            "\tclick.echo(click.style('Warning!', fg='yellow'))",
+            "\tclick.echo(click.style('Error!', fg='red', bold=True))",
+            "",
+            "if __name__ == '__main__':",
+            "\t${1:colored}()"
+        ]
+    },
+    "Click Echo Green": {
+        "scope": "python",
+        "prefix": "click:green",
+        "description": "Echo text in green using Click",
+        "body": [
+            "click.echo(click.style('${1:Your text here}', fg='green'))"
+        ]
+    },
+    "Click Echo Yellow": {
+        "scope": "python",
+        "prefix": "click:yellow",
+        "description": "Echo text in yellow using Click",
+        "body": [
+            "click.echo(click.style('${1:Your text here}', fg='yellow'))"
+        ]
+    },
+    "Click Echo Red": {
+        "scope": "python",
+        "prefix": "click:red",
+        "description": "Echo text in red using Click",
+        "body": [
+            "click.echo(click.style('${1:Your text here}', fg='red', bold=True))"
+        ]
+    }
 }

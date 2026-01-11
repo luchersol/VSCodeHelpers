@@ -30,5 +30,11 @@
 			"\t}",
 			"}"
 		]
+	},
+    "Picocli Option": {
+		"scope": "java",
+		"prefix": "picocli:option",
+		"description": "Create a Picocli command option",
+		"body": "@Option(names = ${1:{\"-n\", \"--name\"}}, description = ${2:\"The person to greet\"}, required = ${3|false,true|})"
 	}
 }

@@ -9,7 +9,6 @@
       "</c:if>"
     ]
   },
-
   "JSP If-Else Condition": {
     "scope": "jsp",
     "prefix": "jsp:ifelse",

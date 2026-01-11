@@ -1,5 +1,5 @@
 {
-	"Picocli Basic Command": {
+	"Picocli Basic Command Class": {
 		"scope": "java",
 		"prefix": "picocli:basic",
 		"isFileTemplate": true,
@@ -21,5 +21,11 @@
 			"\t}",
 			"}"
 		]
+	},
+    "Picocli Basic Command Annotation": {
+		"scope": "java",
+		"prefix": "picocli:command",
+		"description": "Create a basic Picocli command annotation",
+		"body": "@Command(name = \"${1:mycmd}\", description = \"${2:Description of the command}\")",
 	}
 }
