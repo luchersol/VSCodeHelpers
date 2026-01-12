@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Picocli Interactive Prompt - Documentación</title>
+  <link rel="stylesheet" href="../static/styles.css">
+  <script src="../scripts/scopes-color.js"></script>
+</head>
+<body>
+  <header>
+    <h1>
+      <a href="../index.html" class="back-arrow">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+          <path fill-rule="evenodd" d="M15 8a.5.5 0 0 1-.5.5H2.707l4.147 4.146a.5.5 0 0 1-.708.708l-5-5a.5.5 0 0 1 0-.708l5-5a.5.5 0 1 1 .708.708L2.707 7.5H14.5A.5.5 0 0 1 15 8z"/>
+        </svg>
+      </a>
+      Picocli Interactive Prompt
+    </h1>
+  </header>
+  <main>
+    <div style="padding: 5vh; width: 100%;">
+      <h2>Descripción</h2>
+      <p>Create a Picocli command with interactive prompts</p>
+      <br>
+      <h2>File Template:  ✅ </h2>
+      <br>
+      <h2>Prefix</h2>
+      <div style="margin-top: 4px; display: flex; flex-direction: row; overflow-x: auto;">
+      
+        <div style="background-color: white; 
+                    border: 1px black solid; 
+                    border-radius: 5px; 
+                    width: fit-content; 
+                    padding-inline: 10px;
+                    padding-block: 4px;
+                    margin-top: 4px;
+                    margin-inline: 8px;">
+          <p>picocli:prompt</p>
+        </div>
+      
+      </div>
+      <br>
+      <h2>Scopes</h2>
+      <div class="scopes-container">
+      
+        <div class="scope-badge" data-scope="java">
+          <p>java</p>
+        </div>
+      
+      </div>
+      <br>
+      <h2>Snippet de código</h2>
+      <pre>import picocli.CommandLine;
+import picocli.CommandLine.Command;
+import java.util.Scanner;
+
+@Command(name = &#34;${1:interactive}&#34;, mixinStandardHelpOptions = true, description = &#34;${2:Command with user prompts}&#34;)
+public class ${1:InteractiveCommand} implements Runnable {
+	@Override
+	public void run() {
+		Scanner scanner = new Scanner(System.in);
+		System.out.print(&#34;Please enter your name: &#34;);
+		String name = scanner.nextLine();
+		System.out.print(&#34;Please enter your age: &#34;);
+		int age = Integer.parseInt(scanner.nextLine());
+		System.out.println(&#34;Hello &#34; + name + &#34;, you are &#34; + age + &#34; years old!&#34;);
+		scanner.close();
+	}
+
+	public static void main(String[] args) {
+		int exitCode = new CommandLine(new ${1:InteractiveCommand}()).execute(args);
+		System.exit(exitCode);
+	}
+}</pre>
+    </div>
+  </main>
+</body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Thymeleaf List View - Documentación</title>
+  <link rel="stylesheet" href="../static/styles.css">
+  <script src="../scripts/scopes-color.js"></script>
+</head>
+<body>
+  <header>
+    <h1>
+      <a href="../index.html" class="back-arrow">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+          <path fill-rule="evenodd" d="M15 8a.5.5 0 0 1-.5.5H2.707l4.147 4.146a.5.5 0 0 1-.708.708l-5-5a.5.5 0 0 1 0-.708l5-5a.5.5 0 1 1 .708.708L2.707 7.5H14.5A.5.5 0 0 1 15 8z"/>
+        </svg>
+      </a>
+      Thymeleaf List View
+    </h1>
+  </header>
+  <main>
+    <div style="padding: 5vh; width: 100%;">
+      <h2>Descripción</h2>
+      <p>Create a Thymeleaf list view for a given entity</p>
+      <br>
+      <h2>File Template:  ✅ </h2>
+      <br>
+      <h2>Prefix</h2>
+      <div style="margin-top: 4px; display: flex; flex-direction: row; overflow-x: auto;">
+      
+        <div style="background-color: white; 
+                    border: 1px black solid; 
+                    border-radius: 5px; 
+                    width: fit-content; 
+                    padding-inline: 10px;
+                    padding-block: 4px;
+                    margin-top: 4px;
+                    margin-inline: 8px;">
+          <p>thyme:list</p>
+        </div>
+      
+      </div>
+      <br>
+      <h2>Scopes</h2>
+      <div class="scopes-container">
+      
+        <div class="scope-badge" data-scope="html">
+          <p>html</p>
+        </div>
+      
+      </div>
+      <br>
+      <h2>Snippet de código</h2>
+      <pre>&lt;!DOCTYPE html&gt;
+&lt;html xmlns:th=&#34;http://www.thymeleaf.org&#34;&gt;
+&lt;head&gt;
+	&lt;title&gt;List of ${1:MyEntity}&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+	&lt;h1&gt;List of ${1:MyEntity}&lt;/h1&gt;
+	&lt;a th:href=&#34;@{&#39;/${2:entidades}/new&#39;}&#34;&gt;Create New ${1:MyEntity}&lt;/a&gt;
+	&lt;table&gt;
+		&lt;thead&gt;
+			&lt;tr&gt;
+				&lt;!-- Add table headers for entity attributes --&gt;
+				&lt;th&gt;ID&lt;/th&gt;
+				&lt;th&gt;Name&lt;/th&gt;
+				&lt;th&gt;Actions&lt;/th&gt;
+			&lt;/tr&gt;
+		&lt;/thead&gt;
+		&lt;tbody&gt;
+			&lt;tr th:each=&#34;item : ${items}&#34;&gt;
+				&lt;td th:text=&#34;${item.id}&#34;&gt;&lt;/td&gt;
+				&lt;td th:text=&#34;${item.name}&#34;&gt;&lt;/td&gt;
+				&lt;td&gt;
+					&lt;a th:href=&#34;@{&#39;/${2:entidades}/&#39; + ${item.id}}&#34;&gt;View&lt;/a&gt; |
+					&lt;a th:href=&#34;@{&#39;/${2:entidades}/&#39; + ${item.id} + &#39;/edit&#39;}&#34;&gt;Edit&lt;/a&gt; |
+					&lt;form th:action=&#34;@{&#39;/${2:entidades}/&#39; + ${item.id} + &#39;/delete&#39;}&#34; method=&#34;post&#34; style=&#34;display:inline&#34;&gt;
+						&lt;button type=&#34;submit&#34;&gt;Delete&lt;/button&gt;
+					&lt;/form&gt;
+				&lt;/td&gt;
+			&lt;/tr&gt;
+		&lt;/tbody&gt;
+	&lt;/table&gt;
+&lt;/body&gt;
+&lt;/html&gt;</pre>
+    </div>
+  </main>
+</body>
+</html>
