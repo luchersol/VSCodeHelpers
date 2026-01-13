@@ -11,7 +11,7 @@
     },
     "C Dynamic Memory Allocation": {
         "scope": "c",
-        "prefix": "malloc",
+        "prefix": "dyn:malloc",
         "description": "Dynamic memory allocation with malloc",
         "body": [
             "${1:int} *${2:arr} = (${1:int}*)malloc(${3:10} * sizeof(${1:int}));",

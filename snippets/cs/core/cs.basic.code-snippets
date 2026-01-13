@@ -28,13 +28,13 @@
     },
     "C# Property": {
         "scope": "csharp",
-        "prefix": "prop",
+        "prefix": "class:prop",
         "description": "Auto-implemented property",
         "body": "public ${1:int} ${2:Property} { get; set; }"
     },
     "C# If Statement": {
         "scope": "csharp",
-        "prefix": "if",
+        "prefix": "cond:if",
         "description": "Basic if statement",
         "body": [
             "if (${1:condition}) {",
@@ -44,7 +44,7 @@
     },
     "C# For Loop": {
         "scope": "csharp",
-        "prefix": "for",
+        "prefix": "loop:for",
         "description": "Basic for loop",
         "body": [
             "for (${1:int i = 0}; ${2:i < 10}; ${3:i++}) {",
@@ -54,7 +54,7 @@
     },
     "C# Foreach Loop": {
         "scope": "csharp",
-        "prefix": "foreach",
+        "prefix": "loop:foreach",
         "description": "Foreach loop",
         "body": [
             "foreach (var ${1:item} in ${2:collection}) {",
@@ -64,13 +64,13 @@
     },
     "C# Console WriteLine": {
         "scope": "csharp",
-        "prefix": "cw",
+        "prefix": "io:cw",
         "description": "Console.WriteLine",
         "body": "Console.WriteLine(\"${1:Hello World}\");"
     },
     "C# Console ReadLine": {
         "scope": "csharp",
-        "prefix": "cr",
+        "prefix": "io:cr",
         "description": "Console.ReadLine",
         "body": "${1:string} ${2:input} = Console.ReadLine();"
     }

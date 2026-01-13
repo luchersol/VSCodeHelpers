@@ -34,7 +34,7 @@
     },
     "C++ Constructor": {
         "scope": "cpp",
-        "prefix": "ctor",
+        "prefix": "class:ctor",
         "description": "Class constructor",
         "body": [
             "${1:MyClass}::${1:MyClass}() {",
@@ -44,7 +44,7 @@
     },
     "C++ If Statement": {
         "scope": "cpp",
-        "prefix": "if",
+        "prefix": "cond:if",
         "description": "Basic if statement",
         "body": [
             "if (${1:condition}) {",
@@ -54,7 +54,7 @@
     },
     "C++ For Loop": {
         "scope": "cpp",
-        "prefix": "for",
+        "prefix": "loop:for",
         "description": "Range-based for loop",
         "body": [
             "for (auto &${1:element} : ${2:container}) {",
@@ -64,13 +64,13 @@
     },
     "C++ Cout": {
         "scope": "cpp",
-        "prefix": "cout",
+        "prefix": "io:cout",
         "description": "Cout statement",
         "body": "std::cout << \"${1:Hello World}\" << std::endl;"
     },
     "C++ Cin": {
         "scope": "cpp",
-        "prefix": "cin",
+        "prefix": "io:cin",
         "description": "Cin statement",
         "body": "std::cin >> ${1:variable};"
     }

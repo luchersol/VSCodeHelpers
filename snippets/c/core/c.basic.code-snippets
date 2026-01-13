@@ -8,6 +8,12 @@
     "C Constant": {
         "scope": "c",
         "prefix": "var:const",
+        "description": "Constant using const",
+        "body": "const ${1|int,float,double,char|} ${2:CONSTANT_NAME} = $3;"
+    },
+    "C Constant Define": {
+        "scope": "c",
+        "prefix": "var:const:define",
         "description": "Constant using #define",
         "body": "#define ${1:CONSTANT_NAME} $2"
     },
@@ -31,7 +37,7 @@
     },
     "C If Statement": {
         "scope": "c",
-        "prefix": "if",
+        "prefix": "cond:if",
         "description": "Basic if statement",
         "body": [
             "if (${1:condition}) {",
@@ -41,7 +47,7 @@
     },
     "C For Loop": {
         "scope": "c",
-        "prefix": "for",
+        "prefix": "loop:for",
         "description": "Basic for loop",
         "body": [
             "for (${1:int i = 0}; ${2:i < 10}; ${3:i++}) {",
@@ -51,7 +57,7 @@
     },
     "C While Loop": {
         "scope": "c",
-        "prefix": "while",
+        "prefix": "loop:while",
         "description": "Basic while loop",
         "body": [
             "while (${1:condition}) {",
@@ -61,13 +67,13 @@
     },
     "C Printf": {
         "scope": "c",
-        "prefix": "printf",
+        "prefix": "io:printf",
         "description": "Printf statement",
         "body": "printf(\"${1:%d}\\n\", ${2:variable});"
     },
     "C Scanf": {
         "scope": "c",
-        "prefix": "scanf",
+        "prefix": "io:scanf",
         "description": "Scanf statement",
         "body": "scanf(\"${1:%d}\", &${2:variable});"
     }

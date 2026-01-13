@@ -24,13 +24,13 @@
     },
     "C++ Smart Pointer": {
         "scope": "cpp",
-        "prefix": "unique_ptr",
+        "prefix": "ptr:unique",
         "description": "Declare a std::unique_ptr",
         "body": "std::unique_ptr<${1:MyClass}> ${2:ptr} = std::make_unique<${1:MyClass}>();"
     },
     "C++ Lambda": {
         "scope": "cpp",
-        "prefix": "lambda",
+        "prefix": "func:lambda",
         "description": "Lambda function",
         "body": "auto ${1:lambda} = [](${2:int x}) { return ${3:x * 2}; };"
     }
