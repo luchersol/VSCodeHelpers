@@ -1,0 +1,228 @@
+{
+  "Spring Repository FindBy Method": {
+    "scope": "java",
+    "prefix": "spring:repo:findby",
+    "description": "Create a Spring Data JPA findBy query method",
+    "body": "List<${1:Entity}> findBy${2:Field}(${3:Type} ${4:field});"
+  },
+
+  "Spring Repository FindBy Multiple Fields": {
+    "scope": "java",
+    "prefix": "spring:repo:findby:and",
+    "description": "Create a Spring Data JPA findBy query with multiple fields",
+    "body": "List<${1:Entity}> findBy${2:Field1}And${3:Field2}(${4:Type1} ${5:field1}, ${6:Type2} ${7:field2});"
+  },
+
+  "Spring Repository FindBy OR": {
+    "scope": "java",
+    "prefix": "spring:repo:findby:or",
+    "description": "Create a Spring Data JPA findBy query using OR condition",
+    "body": "List<${1:Entity}> findBy${2:Field1}Or${3:Field2}(${4:Type1} ${5:field1}, ${6:Type2} ${7:field2});"
+  },
+
+  "Spring Repository FindBy AND OR Combined": {
+    "scope": "java",
+    "prefix": "spring:repo:findby:and:or",
+    "description": "Create a Spring Data JPA findBy query combining AND and OR conditions",
+    "body": [
+      "List<${1:Entity}> findBy${2:Field1}And${3:Field2}Or${4:Field3}(",
+      "\t${5:Type1} ${6:field1},",
+      "\t${7:Type2} ${8:field2},",
+      "\t${9:Type3} ${10:field3}",
+      ");"
+    ]
+  },
+
+  "Spring Repository FindBy In": {
+    "scope": "java",
+    "prefix": "spring:repo:findby:in",
+    "description": "Create a Spring Data JPA findBy IN query",
+    "body": "List<${1:Entity}> findBy${2:Field}In(Collection<${3:Type}> ${4:values});"
+  },
+
+  "Spring Repository FindBy Not In": {
+    "scope": "java",
+    "prefix": "spring:repo:findby:notin",
+    "description": "Create a Spring Data JPA findBy NOT IN query",
+    "body": "List<${1:Entity}> findBy${2:Field}NotIn(Collection<${3:Type}> ${4:values});"
+  },
+
+  "Spring Repository FindBy Between": {
+    "scope": "java",
+    "prefix": "spring:repo:findby:between",
+    "description": "Create a Spring Data JPA findBy BETWEEN query",
+    "body": "List<${1:Entity}> findBy${2:Field}Between(${3:Type} ${4:start}, ${3:Type} ${5:end});"
+  },
+
+  "Spring Repository FindBy Greater Than": {
+    "scope": "java",
+    "prefix": "spring:repo:findby:gt",
+    "description": "Create a Spring Data JPA findBy GreaterThan query",
+    "body": "List<${1:Entity}> findBy${2:Field}GreaterThan(${3:Type} ${4:value});"
+  },
+
+  "Spring Repository FindBy Less Than": {
+    "scope": "java",
+    "prefix": "spring:repo:findby:lt",
+    "description": "Create a Spring Data JPA findBy LessThan query",
+    "body": "List<${1:Entity}> findBy${2:Field}LessThan(${3:Type} ${4:value});"
+  },
+
+  "Spring Repository FindBy Like": {
+    "scope": "java",
+    "prefix": "spring:repo:findby:like",
+    "description": "Create a Spring Data JPA findBy LIKE query",
+    "body": "List<${1:Entity}> findBy${2:Field}Like(String ${3:pattern});"
+  },
+
+  "Spring Repository FindBy Contains": {
+    "scope": "java",
+    "prefix": "spring:repo:findby:contains",
+    "description": "Create a Spring Data JPA findBy Containing (LIKE %value%) query",
+    "body": "List<${1:Entity}> findBy${2:Field}Containing(String ${3:value});"
+  },
+
+  "Spring Repository FindBy Starts With": {
+    "scope": "java",
+    "prefix": "spring:repo:findby:startswith",
+    "description": "Create a Spring Data JPA findBy StartsWith query",
+    "body": "List<${1:Entity}> findBy${2:Field}StartingWith(String ${3:value});"
+  },
+
+  "Spring Repository FindBy Ends With": {
+    "scope": "java",
+    "prefix": "spring:repo:findby:endswith",
+    "description": "Create a Spring Data JPA findBy EndsWith query",
+    "body": "List<${1:Entity}> findBy${2:Field}EndingWith(String ${3:value});"
+  },
+
+  "Spring Repository FindBy Ignore Case": {
+    "scope": "java",
+    "prefix": "spring:repo:findby:ignorecase",
+    "description": "Create a Spring Data JPA findBy IgnoreCase query",
+    "body": "List<${1:Entity}> findBy${2:Field}IgnoreCase(String ${3:value});"
+  },
+
+  "Spring Repository FindBy Is Null": {
+    "scope": "java",
+    "prefix": "spring:repo:findby:isnull",
+    "description": "Create a Spring Data JPA findBy IsNull query",
+    "body": "List<${1:Entity}> findBy${2:Field}IsNull();"
+  },
+
+  "Spring Repository FindBy Is Not Null": {
+    "scope": "java",
+    "prefix": "spring:repo:findby:isnotnull",
+    "description": "Create a Spring Data JPA findBy IsNotNull query",
+    "body": "List<${1:Entity}> findBy${2:Field}IsNotNull();"
+  },
+
+  "Spring Repository FindBy True": {
+    "scope": "java",
+    "prefix": "spring:repo:findby:true",
+    "description": "Create a Spring Data JPA findBy True boolean query",
+    "body": "List<${1:Entity}> findBy${2:Field}True();"
+  },
+
+  "Spring Repository FindBy False": {
+    "scope": "java",
+    "prefix": "spring:repo:findby:false",
+    "description": "Create a Spring Data JPA findBy False boolean query",
+    "body": "List<${1:Entity}> findBy${2:Field}False();"
+  },
+
+  "Spring Repository Optional FindBy": {
+    "scope": "java",
+    "prefix": "spring:repo:findby:optional",
+    "description": "Create a Spring Data JPA Optional findBy query method",
+    "body": "Optional<${1:Entity}> findBy${2:Field}(${3:Type} ${4:field});"
+  },
+
+  "Spring Repository Pageable Query": {
+    "scope": "java",
+    "prefix": "spring:repo:page",
+    "description": "Create a Spring Data JPA pageable query method",
+    "body": "Page<${1:Entity}> findBy${2:Field}(${3:Type} ${4:field}, Pageable pageable);"
+  },
+
+  "Spring Repository Sort Query": {
+    "scope": "java",
+    "prefix": "spring:repo:sort",
+    "description": "Create a Spring Data JPA query method with Sort",
+    "body": "List<${1:Entity}> findBy${2:Field}(${3:Type} ${4:field}, Sort sort);"
+  },
+
+  "Spring Repository Top Query": {
+    "scope": "java",
+    "prefix": "spring:repo:top",
+    "description": "Get the first X records",
+    "body": "List<${1:Entity}> findTop${2:Count}By${3:Field}(${4:Type} ${5:field});"
+  },
+  
+  "Spring Repository Top Sort Query": {
+    "scope": "java",
+    "prefix": "spring:repo:top:sort",
+    "description": "Get the first X records with Sort",
+    "body": "List<${1:Entity}> findTop${2:Count}By${3:Field}(${4:Type} ${5:field}, Sort sort);"
+  },
+
+  "Spring Repository Last Sort Query": {
+    "scope": "java",
+    "prefix": "spring:repo:last:sort",
+    "description": "Get the last X records with Sort",
+    "body": "List<${1:Entity}> findTop${2:Count}By${3:Field}(${4:Type} ${5:field}, Sort sort);"
+  },
+  
+  "Spring Repository JPQL Query": {
+    "scope": "java",
+    "prefix": "spring:repo:query",
+    "description": "Create a Spring Data JPA @Query with JPQL",
+    "body": [
+      "@Query(\"${1:SELECT e FROM Entity e WHERE e.field = :field\")",
+      "List<${2:Entity}> ${3:findByField}(@Param(\"${4:field}\") ${5:Type} ${6:field});"
+    ]
+  },
+
+  "Spring Repository Native Query": {
+    "scope": "java",
+    "prefix": "spring:repo:query:native",
+    "description": "Create a Spring Data JPA native SQL query",
+    "body": [
+      "@Query(value = \"SELECT * FROM ${1:table} WHERE ${2:column} = :${3:param}\", nativeQuery = true)",
+      "List<${4:Entity}> findBy${5:Field}(@Param(\"${3:param}\") ${6:Type} ${3:param});"
+    ]
+  },
+
+  "Spring Repository Modifying Update Query": {
+    "scope": "java",
+    "prefix": "spring:repo:update",
+    "description": "Create a Spring Data JPA modifying update query",
+    "body": [
+      "@Modifying",
+      "@Transactional",
+      "@Query(\"UPDATE ${1:Entity} e SET e.${2:field} = :${3:value} WHERE e.${4:id} = :${5:idValue}\")",
+      "int update${6:Field}By${7:Id}(@Param(\"${3:value}\") ${8:Type} ${3:value}, @Param(\"${5:idValue}\") ${9:IdType} ${5:idValue});"
+    ]
+  },
+
+  "Spring Repository Delete Query": {
+    "scope": "java",
+    "prefix": "spring:repo:delete",
+    "description": "Create a Spring Data JPA delete query method",
+    "body": "void deleteBy${1:Field}(${2:Type} ${3:field});"
+  },
+
+  "Spring Repository Exists Query": {
+    "scope": "java",
+    "prefix": "spring:repo:exists",
+    "description": "Create a Spring Data JPA exists query method",
+    "body": "boolean existsBy${1:Field}(${2:Type} ${3:field});"
+  },
+
+  "Spring Repository Count Query": {
+    "scope": "java",
+    "prefix": "spring:repo:count",
+    "description": "Create a Spring Data JPA count query method",
+    "body": "long countBy${1:Field}(${2:Type} ${3:field});"
+  }
+}
