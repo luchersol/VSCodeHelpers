@@ -1,0 +1,9 @@
+{
+    "_comment": "Readable code: visual guides, whitespace, and line wrapping for clarity",
+    "editor.formatOnType": true,
+    "editor.rulers": [80, 120],
+    "editor.wordWrap": "on",
+    "editor.minimap.enabled": true,
+    "editor.renderWhitespace": "all",
+    "editor.renderControlCharacters": true
+}

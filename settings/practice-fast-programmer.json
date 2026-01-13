@@ -1,0 +1,9 @@
+{
+    "_comment": "Fast programmer: saves and formats automatically for speed",
+    "files.autoSave": "afterDelay",
+    "files.autoSaveDelay": 500,
+    "editor.formatOnSave": true,
+    "editor.tabSize": 4,
+    "editor.insertSpaces": true,
+    "editor.detectIndentation": true
+}

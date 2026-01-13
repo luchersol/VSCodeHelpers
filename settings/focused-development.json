@@ -1,0 +1,9 @@
+{
+    "_comment": "Focused development: hides activity bar, clean workspace, autosave on focus change",
+    "workbench.activityBar.visible": false,
+    "workbench.statusBar.visible": true,
+    "workbench.sideBar.location": "left",
+    "workbench.startupEditor": "newUntitledFile",
+    "files.autoSave": "onFocusChange",
+    "editor.formatOnSave": true
+}

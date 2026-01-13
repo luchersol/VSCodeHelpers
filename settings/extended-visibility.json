@@ -1,0 +1,10 @@
+{
+    "_comment": "Extended visibility: rulers, minimap, line numbers, glyph margin for debugging",
+    "editor.rulers": [80, 100, 120],
+    "editor.wordWrap": "bounded",
+    "editor.renderWhitespace": "all",
+    "editor.renderControlCharacters": true,
+    "editor.minimap.enabled": true,
+    "editor.lineNumbers": "on",
+    "editor.glyphMargin": true
+}

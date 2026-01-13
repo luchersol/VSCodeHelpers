@@ -1,0 +1,9 @@
+{
+    "_comment": "Smooth coding: smooth scroll, animated cursor, mouse wheel zoom",
+    "editor.smoothScrolling": true,
+    "editor.scrollBeyondLastLine": true,
+    "editor.cursorSmoothCaretAnimation": true,
+    "editor.cursorStyle": "line",
+    "editor.cursorBlinking": "phase",
+    "editor.mouseWheelZoom": true
+}

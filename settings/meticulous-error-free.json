@@ -1,0 +1,10 @@
+{
+    "_comment": "Meticulous: formats on save, paste, and type, trims whitespace",
+    "files.autoSave": "afterDelay",
+    "files.autoSaveDelay": 1000,
+    "editor.formatOnSave": true,
+    "editor.formatOnPaste": true,
+    "editor.formatOnType": true,
+    "editor.trimAutoWhitespace": true,
+    "files.trimTrailingWhitespace": true
+}

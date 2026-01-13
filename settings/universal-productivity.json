@@ -1,0 +1,16 @@
+{
+    "_comment": "All-round profile: speed, readability, and smooth coding experience",
+    "files.autoSave": "afterDelay",
+    "files.autoSaveDelay": 500,
+    "editor.formatOnSave": true,
+    "editor.formatOnType": true,
+    "editor.tabSize": 4,
+    "editor.insertSpaces": true,
+    "editor.detectIndentation": true,
+    "editor.rulers": [80, 120],
+    "editor.wordWrap": "on",
+    "editor.renderWhitespace": "all",
+    "editor.minimap.enabled": true,
+    "editor.cursorSmoothCaretAnimation": true,
+    "editor.scrollBeyondLastLine": true
+}
