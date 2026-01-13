@@ -1,0 +1,66 @@
+{
+    "Java Dynamic Proxy": {
+        "scope": "java",
+        "prefix": "proxy:dynamic",
+        "description": "Create a dynamic proxy for an interface with logging before and after method execution",
+        "body": [
+            "${1:ServiceInterface} service = ($1) Proxy.newProxyInstance(",
+            "\t$1.class.getClassLoader(),",
+            "\tnew Class[]{ $1.class },",
+            "\tnew InvocationHandler() {",
+            "\t\tprivate final ${2:Service} real = new $2();",
+            "\t\t@Override",
+            "\t\tpublic Object invoke(Object proxy, Method method, Object[] args) throws Throwable {",
+            "\t\t\tSystem.out.println(\"Before executing method: \" + method.getName());",
+            "\t\t\tObject result = method.invoke(real, args);",
+            "\t\t\tSystem.out.println(\"After executing method: \" + method.getName());",
+            "\t\t\treturn result;",
+            "\t\t}",
+            "\t}",
+            ");",
+        ]
+    },
+    "Java Reflection Modify Private Field": {
+        "scope": "java",
+        "prefix": "reflection:field",
+        "description": "Access and modify private fields using reflection",
+        "body": [
+            "Field field = ${1:MyClass}.class.getDeclaredField(\"$2\");",
+            "field.setAccessible(true);",
+            "field.set(${3:object}, ${4:newValue});"
+        ]
+    },
+    "Java Enum Singleton": {
+        "scope": "java",
+        "prefix": "singleton:enum",
+        "description": "Thread-safe singleton using enum pattern",
+        "body": [
+            "enum ${1:Singleton} {",
+            "\tINSTANCE;",
+            "",
+            "\tprivate int ${2:counter} = 0;",
+            "",
+            "\tpublic void increment() {",
+            "\t\t$2++;",
+            "\t}",
+            "",
+            "\tpublic int getCounter() {",
+            "\t\treturn $2;",
+            "\t}",
+            "}",
+        ]
+    },
+    "Java MethodHandles Dynamic Invocation": {
+        "scope": "java",
+        "prefix": "methodhandle:invoke",
+        "description": "Use MethodHandles to dynamically invoke a method",
+        "body": [
+            "MethodHandles.Lookup lookup = MethodHandles.lookup();",
+            "MethodHandle mh = lookup.findVirtual(${1:MyClass}.class, \"${2:methodName}\",",
+            "\tMethodType.methodType(${3:rtype}, ${4:ptype...});",
+            "",
+            "$1 obj = new $1();",
+            "$3 result = ($3) mh.invoke(obj, $4);"
+        ]
+    }
+}

@@ -12,7 +12,7 @@ A curated collection of VS Code snippets, templates, and configurations designed
 ## Supported Languages and Frameworks
 
 - **Java**:
-  - Core (arrays, classes, collections, exceptions, I/O, switches)
+  - Core (arrays, classes, collections, exceptions, I/O, switches, advanced functions)
   - JSP (bases, conditionals, CRUD, forms, includes, links, loops, messages, tables)
   - PicoCLI (basics, options, prompts, subcommands)
   - Spring (querys, components, configuration, exceptions, Thymeleaf)
