@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Spring JPA Repository - Documentación</title>
+  <title>Java Dynamic Proxy - Documentación</title>
   <link rel="stylesheet" href="../static/styles.css">
   <script src="../scripts/scopes-color.js"></script>
 </head>
@@ -14,15 +14,15 @@
           <path fill-rule="evenodd" d="M15 8a.5.5 0 0 1-.5.5H2.707l4.147 4.146a.5.5 0 0 1-.708.708l-5-5a.5.5 0 0 1 0-.708l5-5a.5.5 0 1 1 .708.708L2.707 7.5H14.5A.5.5 0 0 1 15 8z"/>
         </svg>
       </a>
-      Spring JPA Repository
+      Java Dynamic Proxy
     </h1>
   </header>
   <main>
     <div style="padding: 5vh; width: 100%;">
       <h2>Descripción</h2>
-      <p>Create a JpaRepository interface for a JPA entity</p>
+      <p>Create a dynamic proxy for an interface with logging before and after method execution</p>
       <br>
-      <h2>File Template:  ✅ </h2>
+      <h2>File Template:  ❌ </h2>
       <br>
       <h2>Prefix</h2>
       <div style="margin-top: 4px; display: flex; flex-direction: row; overflow-x: auto;">
@@ -35,7 +35,7 @@
                     padding-block: 4px;
                     margin-top: 4px;
                     margin-inline: 8px;">
-          <p>spring:repo</p>
+          <p>proxy:dynamic</p>
         </div>
       
       </div>
@@ -50,16 +50,20 @@
       </div>
       <br>
       <h2>Snippet de código</h2>
-      <pre>package ${1:com.example.demo.repository};
-
-import org.springframework.data.jpa.repository.JpaRepository;
-import org.springframework.stereotype.Repository;
-import ${2:com.example.demo.model.${3:MyEntity}};
-
-@Repository
-public interface ${4:MyRepository} extends JpaRepository&lt;${3:MyEntity}, Long&gt; {
-
-}</pre>
+      <pre>${1:ServiceInterface} service = ($1) Proxy.newProxyInstance(
+	$1.class.getClassLoader(),
+	new Class[]{ $1.class },
+	new InvocationHandler() {
+		private final ${2:Service} real = new $2();
+		@Override
+		public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
+			System.out.println(&#34;Before executing method: &#34; + method.getName());
+			Object result = method.invoke(real, args);
+			System.out.println(&#34;After executing method: &#34; + method.getName());
+			return result;
+		}
+	}
+);</pre>
     </div>
   </main>
 </body>

@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Spring JPA Repository - Documentación</title>
+  <title>Java Enum Singleton - Documentación</title>
   <link rel="stylesheet" href="../static/styles.css">
   <script src="../scripts/scopes-color.js"></script>
 </head>
@@ -14,15 +14,15 @@
           <path fill-rule="evenodd" d="M15 8a.5.5 0 0 1-.5.5H2.707l4.147 4.146a.5.5 0 0 1-.708.708l-5-5a.5.5 0 0 1 0-.708l5-5a.5.5 0 1 1 .708.708L2.707 7.5H14.5A.5.5 0 0 1 15 8z"/>
         </svg>
       </a>
-      Spring JPA Repository
+      Java Enum Singleton
     </h1>
   </header>
   <main>
     <div style="padding: 5vh; width: 100%;">
       <h2>Descripción</h2>
-      <p>Create a JpaRepository interface for a JPA entity</p>
+      <p>Thread-safe singleton using enum pattern</p>
       <br>
-      <h2>File Template:  ✅ </h2>
+      <h2>File Template:  ❌ </h2>
       <br>
       <h2>Prefix</h2>
       <div style="margin-top: 4px; display: flex; flex-direction: row; overflow-x: auto;">
@@ -35,7 +35,7 @@
                     padding-block: 4px;
                     margin-top: 4px;
                     margin-inline: 8px;">
-          <p>spring:repo</p>
+          <p>singleton:enum</p>
         </div>
       
       </div>
@@ -50,15 +50,18 @@
       </div>
       <br>
       <h2>Snippet de código</h2>
-      <pre>package ${1:com.example.demo.repository};
+      <pre>enum ${1:Singleton} {
+	INSTANCE;
 
-import org.springframework.data.jpa.repository.JpaRepository;
-import org.springframework.stereotype.Repository;
-import ${2:com.example.demo.model.${3:MyEntity}};
+	private int ${2:counter} = 0;
 
-@Repository
-public interface ${4:MyRepository} extends JpaRepository&lt;${3:MyEntity}, Long&gt; {
+	public void increment() {
+		$2++;
+	}
 
+	public int getCounter() {
+		return $2;
+	}
 }</pre>
     </div>
   </main>
