@@ -3,13 +3,19 @@
         "scope": "svelte",
         "prefix": "svelte:store:writable",
         "description": "Create a writable store",
-        "body": "import { writable } from 'svelte/store';\nconst ${1:store} = writable(${2:initialValue});$0"
+        "body": [
+            "import { writable } from 'svelte/store';",
+            "const ${1:store} = writable(${2:initialValue});$0"
+        ]
     },
     "Svelte derived store": {
         "scope": "svelte",
         "prefix": "svelte:store:derived",
         "description": "Create a derived store",
-        "body": "import { derived } from 'svelte/store';\nconst ${1:derivedStore} = derived(${2:sourceStores}, $${3:values} => ${4:expression});$0"
+        "body": [
+            "import { derived } from 'svelte/store';",
+            "const ${1:derivedStore} = derived(${2:sourceStores}, $${3:values} => ${4:expression});$0"
+        ]
     },
     "Svelte store subscription": {
         "scope": "svelte",

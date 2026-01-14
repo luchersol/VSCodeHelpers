@@ -15,6 +15,10 @@
         "scope": "svelte",
         "prefix": "svelte:on:submit",
         "description": "Form submit event",
-        "body": "<form on:submit|preventDefault={${1:handleSubmit}}>\n\t$0\n</form>"
+        "body": [
+            "<form on:submit|preventDefault={${1:handleSubmit}}>",
+            "\t$0",
+            "</form>"
+        ]
     }
 }

@@ -3,13 +3,30 @@
         "scope": "svelte",
         "prefix": "svelte:component",
         "description": "Create a new Svelte component",
-        "body": "<script>\n\t$0\n</script>\n\n<div>\n\t${1:Content}\n</div>"
+        "body": [
+            "<script>",
+            "\t$0",
+            "</script>",
+            "",
+            "<div>",
+            "\t${1:Content}",
+            "</div>"
+        ]
     },
     "Svelte Component with Props": {
         "scope": "svelte",
         "prefix": "svelte:props",
         "description": "Create a Svelte component with props",
-        "body": "<script>\n\texport let ${1:propName}: ${2:string};\n\t$0\n</script>\n\n<div>\n\t${1}\n</div>"
+        "body": [
+            "<script>",
+            "\texport let ${1:propName}: ${2:string};",
+            "\t$0",
+            "</script>",
+            "",
+            "<div>",
+            "\t${1}",
+            "</div>"
+        ]
     },
     "Svelte Reactive Statement": {
         "scope": "svelte",
