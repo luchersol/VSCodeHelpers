@@ -42,6 +42,8 @@ The folder `settings` contains different VS Code settings files, each designed f
 - **Markdown**:
   - Formatting, headings, links and media, lists, tables and code
 
+- **Svelte**
+
 ## Installation
 
 ### Option 1: Automatic Installation (Recommended)

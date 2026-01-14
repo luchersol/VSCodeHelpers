@@ -1,0 +1,20 @@
+{
+    "Svelte use action": {
+        "scope": "svelte",
+        "prefix": "svelte:action",
+        "description": "Use a custom action",
+        "body": "<div use:${1:action}={{ ${2:params} }}>${3:content}</div>$0"
+    },
+    "Svelte bind this": {
+        "scope": "svelte",
+        "prefix": "svelte:bind:this",
+        "description": "Bind DOM element to variable",
+        "body": "<div bind:this={${1:element}}>${2:content}</div>$0"
+    },
+    "Svelte bind group": {
+        "scope": "svelte",
+        "prefix": "svelte:bind:group",
+        "description": "Bind radio/checkbox group",
+        "body": "<input type='${1:radio}' bind:group={${2:variable}} value='${3:value}' />$0"
+    }
+}

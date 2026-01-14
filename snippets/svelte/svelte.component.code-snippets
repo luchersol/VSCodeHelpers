@@ -1,0 +1,20 @@
+{
+    "Svelte Component": {
+        "scope": "svelte",
+        "prefix": "svelte:component",
+        "description": "Create a new Svelte component",
+        "body": "<script>\n\t$0\n</script>\n\n<div>\n\t${1:Content}\n</div>"
+    },
+    "Svelte Component with Props": {
+        "scope": "svelte",
+        "prefix": "svelte:props",
+        "description": "Create a Svelte component with props",
+        "body": "<script>\n\texport let ${1:propName}: ${2:string};\n\t$0\n</script>\n\n<div>\n\t${1}\n</div>"
+    },
+    "Svelte Reactive Statement": {
+        "scope": "svelte",
+        "prefix": "svelte:reactive",
+        "description": "Create a reactive statement",
+        "body": "$: ${1:variable} = ${2:expression}$0"
+    }
+}

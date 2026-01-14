@@ -43,6 +43,8 @@ La carpeta `settings` contiene diferentes archivos de configuración de VS Code,
 - **Markdown**:
   - Formateo, encabezados, enlaces y medios, listas, tablas y código
 
+- **Svelte**
+
 ## Instalación
 
 ### Opción 1: Instalación Automática (Recomendada)

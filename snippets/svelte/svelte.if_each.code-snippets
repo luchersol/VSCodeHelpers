@@ -1,0 +1,20 @@
+{
+    "Svelte if block": {
+        "scope": "svelte",
+        "prefix": "svelte:if",
+        "description": "Create an {#if} block",
+        "body": "{#if ${1:condition}}\n\t$0\n{/if}"
+    },
+    "Svelte if-else block": {
+        "scope": "svelte",
+        "prefix": "svelte:ifelse",
+        "description": "Create an {#if}{:else} block",
+        "body": "{#if ${1:condition}}\n\t${2:content1}\n{:else}\n\t${3:content2}\n{/if}$0"
+    },
+    "Svelte each block": {
+        "scope": "svelte",
+        "prefix": "svelte:each",
+        "description": "Create an {#each} block",
+        "body": "{#each ${1:items} as ${2:item}${3:, index}}\n\t$0\n{/each}"
+    }
+}

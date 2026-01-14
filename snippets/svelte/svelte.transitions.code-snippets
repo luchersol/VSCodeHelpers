@@ -1,0 +1,26 @@
+{
+    "Svelte fade transition": {
+        "scope": "svelte",
+        "prefix": "svelte:transition:fade",
+        "description": "Add fade transition",
+        "body": "<div transition:fade>${1:content}</div>$0"
+    },
+    "Svelte slide transition": {
+        "scope": "svelte",
+        "prefix": "svelte:transition:slide",
+        "description": "Add slide transition",
+        "body": "<div transition:slide>${1:content}</div>$0"
+    },
+    "Svelte animate flip": {
+        "scope": "svelte",
+        "prefix": "svelte:animate:flip",
+        "description": "Add flip animation",
+        "body": "<div animate:flip>${1:content}</div>$0"
+    },
+    "Svelte fly transition": {
+        "scope": "svelte",
+        "prefix": "svelte:transition:fly",
+        "description": "Add fly transition",
+        "body": "<div transition:fly={{ x: ${1:100}, y: ${2:0}, duration: ${3:400} }}>${4:content}</div>$0"
+    }
+}

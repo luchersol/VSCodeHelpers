@@ -1,0 +1,20 @@
+{
+    "Svelte onClick": {
+        "scope": "svelte",
+        "prefix": "svelte:on:click",
+        "description": "Add on:click event",
+        "body": "<button on:click={${1:handleClick}}>${2:Button}</button>$0"
+    },
+    "Svelte onInput bind": {
+        "scope": "svelte",
+        "prefix": "svelte:bind:value",
+        "description": "Bind value of input",
+        "body": "<input type='${1:text}' bind:value={${2:variable}}>$0"
+    },
+    "Svelte onSubmit": {
+        "scope": "svelte",
+        "prefix": "svelte:on:submit",
+        "description": "Form submit event",
+        "body": "<form on:submit|preventDefault={${1:handleSubmit}}>\n\t$0\n</form>"
+    }
+}

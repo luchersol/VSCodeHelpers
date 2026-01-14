@@ -1,0 +1,20 @@
+{
+    "Svelte default slot": {
+        "scope": "svelte",
+        "prefix": "svelte:slot:default",
+        "description": "Default slot in a component",
+        "body": "<slot></slot>$0"
+    },
+    "Svelte named slot": {
+        "scope": "svelte",
+        "prefix": "svelte:slot:named",
+        "description": "Named slot in a component",
+        "body": "<slot name='${1:name}'></slot>$0"
+    },
+    "Svelte component with slot": {
+        "scope": "svelte",
+        "prefix": "svelte:slot:use",
+        "description": "Use component with slot",
+        "body": "<${1:Component}>\n\t<slot />\n</${1:Component}>$0"
+    }
+}
