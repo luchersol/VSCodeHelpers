@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>React Functional Component TS - Documentación</title>
+  <title>React Component With Props TS - Documentación</title>
   <link rel="stylesheet" href="../static/styles.css">
   <script src="../scripts/scopes-color.js"></script>
 </head>
@@ -14,13 +14,13 @@
           <path fill-rule="evenodd" d="M15 8a.5.5 0 0 1-.5.5H2.707l4.147 4.146a.5.5 0 0 1-.708.708l-5-5a.5.5 0 0 1 0-.708l5-5a.5.5 0 1 1 .708.708L2.707 7.5H14.5A.5.5 0 0 1 15 8z"/>
         </svg>
       </a>
-      React Functional Component TS
+      React Component With Props TS
     </h1>
   </header>
   <main>
     <div style="padding: 5vh; width: 100%;">
       <h2>Descripción</h2>
-      <p>Create a React functional component in TypeScript</p>
+      <p>Functional component with typed props in TypeScript</p>
       <br>
       <h2>File Template:  ❌ </h2>
       <br>
@@ -35,7 +35,7 @@
                     padding-block: 4px;
                     margin-top: 4px;
                     margin-inline: 8px;">
-          <p>rfc:basic</p>
+          <p>rfc:props</p>
         </div>
       
       </div>
@@ -52,7 +52,11 @@
       <h2>Snippet de código</h2>
       <pre>import React from &#39;react&#39;;
 
-const ${1:ComponentName}: React.FC = () =&gt; {
+interface ${1:ComponentName}Props {
+	${2:propName}: ${3:string};
+}
+
+const ${1:ComponentName}: React.FC&lt;${1:ComponentName}Props&gt; = ({ ${2:propName} }) =&gt; {
 	return (
 		&lt;div&gt;
 			$0

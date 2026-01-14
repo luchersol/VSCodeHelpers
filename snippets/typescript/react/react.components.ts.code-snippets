@@ -1,18 +1,58 @@
 {
-  "React Functional Component TS": {
-    "scope": "typescriptreact",
-    "prefix": "rfc",
-    "description": "Typed React functional component",
-    "body": [
-      "const ${1:ComponentName}: React.FC = () => {",
-      "\treturn (",
-      "\t\t<div>",
-      "\t\t\t$0",
-      "\t\t</div>",
-      "\t);",
-      "};",
-      "",
-      "export default $1;"
-    ]
-  }
+    "React Functional Component TS": {
+        "scope": "typescriptreact",
+        "prefix": "rfc:basic",
+        "description": "Create a React functional component in TypeScript",
+        "body": [
+            "import React from 'react';",
+            "",
+            "const ${1:ComponentName}: React.FC = () => {",
+            "\treturn (",
+            "\t\t<div>",
+            "\t\t\t$0",
+            "\t\t</div>",
+            "\t);",
+            "};",
+            "",
+            "export default $1;"
+        ]
+    },
+    "React Arrow Component Inline Export TS": {
+        "scope": "typescriptreact",
+        "prefix": "rfc:inline",
+        "description": "React arrow function component with export in TypeScript",
+        "body": [
+            "import React from 'react';",
+            "",
+            "const ${1:ComponentName}: React.FC = () => (",
+            "\t<div>",
+            "\t\t$0",
+            "\t</div>",
+            ");",
+            "",
+            "export default $1;"
+        ]
+    },
+    "React Component With Props TS": {
+        "scope": "typescriptreact",
+        "prefix": "rfc:props",
+        "description": "Functional component with typed props in TypeScript",
+        "body": [
+            "import React from 'react';",
+            "",
+            "interface ${1:ComponentName}Props {",
+            "\t${2:propName}: ${3:string};",
+            "}",
+            "",
+            "const ${1:ComponentName}: React.FC<${1:ComponentName}Props> = ({ ${2:propName} }) => {",
+            "\treturn (",
+            "\t\t<div>",
+            "\t\t\t$0",
+            "\t\t</div>",
+            "\t);",
+            "};",
+            "",
+            "export default $1;"
+        ]
+    }
 }

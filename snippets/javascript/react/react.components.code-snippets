@@ -1,7 +1,7 @@
 {
     "React Functional Component": {
         "scope": "javascriptreact",
-        "prefix": "rfc",
+        "prefix": "rfc:basic",
         "description": "Create a React functional component",
         "body": [
             "const ${1:ComponentName} = () => {",
@@ -17,7 +17,7 @@
     },
     "React Arrow Component Inline Export": {
         "scope": "javascriptreact",
-        "prefix": "rafce",
+        "prefix": "rfc:inline",
         "description": "React arrow function component with export",
         "body": [
             "const ${1:ComponentName} = () => (",
