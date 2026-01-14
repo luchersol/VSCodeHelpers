@@ -1,0 +1,106 @@
+{
+    "Python Date Today": {
+        "scope": "python",
+        "prefix": "date:today",
+        "description": "Get today's date",
+        "body": [
+            "from datetime import date",
+            "",
+            "today = date.today()"
+        ]
+    },
+    "Python DateTime Now": {
+        "scope": "python",
+        "prefix": "datetime:now",
+        "description": "Get current date and time",
+        "body": [
+            "from datetime import datetime",
+            "",
+            "now = datetime.now()"
+        ]
+    },
+    "Python Parse String to Date": {
+        "scope": "python",
+        "prefix": "date:parse",
+        "description": "Parse string to date using common formats",
+        "body": [
+            "from datetime import datetime",
+            "",
+            "${1:date_var} = datetime.strptime(${2:date_string}, \"${3|%Y-%m-%d,%d/%m/%Y,%m/%d/%Y,%d-%m-%Y,%Y/%m/%d|}\").date()"
+        ]
+    },
+    "Python Parse String to DateTime": {
+        "scope": "python",
+        "prefix": "datetime:parse",
+        "description": "Parse string to datetime using common formats",
+        "body": [
+            "from datetime import datetime",
+            "",
+            "${1:dt} = datetime.strptime(${2:datetime_string}, \"${3|%Y-%m-%d %H:%M,%Y-%m-%d %H:%M:%S,%d/%m/%Y %H:%M,%d/%m/%Y %H:%M:%S,%m/%d/%Y %H:%M,%m/%d/%Y %H:%M:%S,%Y-%m-%dT%H:%M:%S|}\")"
+        ]
+    },
+    "Python Format Date to String": {
+        "scope": "python",
+        "prefix": "date:format",
+        "description": "Format date to string",
+        "body": "${1:formatted_date} = ${2:date_var}.strftime(\"${3|%Y-%m-%d,%d/%m/%Y,%m/%d/%Y,%d-%m-%Y,%Y/%m/%d|}\")"
+    },
+    "Python Format DateTime to String": {
+        "scope": "python",
+        "prefix": "datetime:format",
+        "description": "Format datetime to string",
+        "body": "${1:formatted_dt} = ${2:dt}.strftime(\"${3|%Y-%m-%d %H:%M,%Y-%m-%d %H:%M:%S,%d/%m/%Y %H:%M,%d/%m/%Y %H:%M:%S,%m/%d/%Y %H:%M,%m/%d/%Y %H:%M:%S|}\")"
+    },
+    "Python Add Days to Date": {
+        "scope": "python",
+        "prefix": "date:add:days",
+        "description": "Add days to a date",
+        "body": [
+            "from datetime import timedelta",
+            "",
+            "${1:new_date} = ${2:date_var} + timedelta(days=${3:days})"
+        ]
+    },
+    "Python Subtract Days from Date": {
+        "scope": "python",
+        "prefix": "date:sub:days",
+        "description": "Subtract days from a date",
+        "body": [
+            "from datetime import timedelta",
+            "",
+            "${1:new_date} = ${2:date_var} - timedelta(days=${3:days})"
+        ]
+    },
+    "Python Add Time to DateTime": {
+        "scope": "python",
+        "prefix": "datetime:add",
+        "description": "Add time to datetime",
+        "body": [
+            "from datetime import timedelta",
+            "",
+            "${1:new_dt} = ${2:dt} + timedelta(${3|days,hours,minutes,seconds|}=${4:value})"
+        ]
+    },
+    "Python Subtract Time from DateTime": {
+        "scope": "python",
+        "prefix": "datetime:sub",
+        "description": "Subtract time from datetime",
+        "body": [
+            "from datetime import timedelta",
+            "",
+            "${1:new_dt} = ${2:dt} - timedelta(${3|days,hours,minutes,seconds|}=${4:value})"
+        ]
+    },
+    "Python Compare Dates": {
+        "scope": "python",
+        "prefix": "date:compare",
+        "description": "Compare two dates",
+        "body": "is_before = ${1:date1} < ${2:date2}"
+    },
+    "Python Check Date Range": {
+        "scope": "python",
+        "prefix": "date:between",
+        "description": "Check if date is between two dates",
+        "body": "in_range = ${1:start} <= ${2:date_var} <= ${3:end}"
+    }
+}

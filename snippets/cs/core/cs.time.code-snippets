@@ -1,0 +1,100 @@
+{
+    "C# DateTime Now": {
+        "scope": "csharp",
+        "prefix": "datetime:now",
+        "description": "Get current date and time",
+        "body": "DateTime now = DateTime.Now;"
+    },
+
+    "C# DateTime Today": {
+        "scope": "csharp",
+        "prefix": "date:today",
+        "description": "Get today's date without time",
+        "body": "DateTime today = DateTime.Today;"
+    },
+
+    "C# DateTime UTC Now": {
+        "scope": "csharp",
+        "prefix": "datetime:utcnow",
+        "description": "Get current UTC date and time",
+        "body": "DateTime utcNow = DateTime.UtcNow;"
+    },
+
+    "C# Parse String to DateTime": {
+        "scope": "csharp",
+        "prefix": "datetime:parse",
+        "description": "Parse string to DateTime using common formats",
+        "body": [
+            "DateTime ${1:dt} = DateTime.ParseExact(",
+            "\t${2:dateString},",
+            "\t\"${3|yyyy-MM-dd,dd/MM/yyyy,MM/dd/yyyy,dd-MM-yyyy,yyyy/MM/dd,yyyy-MM-dd HH:mm:ss,dd/MM/yyyy HH:mm:ss|}\",",
+            "\tCultureInfo.InvariantCulture,",
+            "\tDateTimeStyles.None",
+            ");"
+        ]
+    },
+
+    "C# TryParse String to DateTime": {
+        "scope": "csharp",
+        "prefix": "datetime:tryparse",
+        "description": "Safely parse string to DateTime",
+        "body": [
+            "bool ${1:success} = DateTime.TryParseExact(",
+            "\t${2:dateString},",
+            "\t\"${3|yyyy-MM-dd,dd/MM/yyyy,MM/dd/yyyy,yyyy-MM-dd HH:mm:ss,dd/MM/yyyy HH:mm:ss|}\",",
+            "\tCultureInfo.InvariantCulture,",
+            "\tDateTimeStyles.None,",
+            "\tout DateTime ${4:dt}",
+            ");"
+        ]
+    },
+
+    "C# Format DateTime to String": {
+        "scope": "csharp",
+        "prefix": "datetime:format",
+        "description": "Format DateTime to string",
+        "body": "string ${1:formatted} = ${2:dt}.ToString(\"${3|yyyy-MM-dd,dd/MM/yyyy,MM/dd/yyyy,yyyy-MM-dd HH:mm:ss,dd/MM/yyyy HH:mm:ss|}\");"
+    },
+
+    "C# Add Time to DateTime": {
+        "scope": "csharp",
+        "prefix": "datetime:add",
+        "description": "Add time units to DateTime",
+        "body": "DateTime ${1:newDt} = ${2:dt}.Add${3|Days,Hours,Minutes,Seconds|}(${4:value});"
+    },
+
+    "C# Subtract Time from DateTime": {
+        "scope": "csharp",
+        "prefix": "datetime:sub",
+        "description": "Subtract time units from DateTime",
+        "body": "DateTime ${1:newDt} = ${2:dt}.Add${3|Days,Hours,Minutes,Seconds|}(-${4:value});"
+    },
+
+    "C# Compare DateTimes": {
+        "scope": "csharp",
+        "prefix": "datetime:compare",
+        "description": "Compare two DateTime values",
+        "body": "bool ${1:isBefore} = ${2:dt1} < ${3:dt2};"
+    },
+
+    "C# Check DateTime Range": {
+        "scope": "csharp",
+        "prefix": "datetime:between",
+        "description": "Check if DateTime is between two values",
+        "body": "bool ${1:inRange} = ${2:dt} >= ${3:start} && ${2} <= ${4:end};"
+    },
+
+    "C# DateTimeOffset Now": {
+        "scope": "csharp",
+        "prefix": "datetimeoffset:now",
+        "description": "Get current DateTimeOffset",
+        "body": "DateTimeOffset now = DateTimeOffset.Now;"
+    },
+
+    "C# Convert DateTime to DateTimeOffset": {
+        "scope": "csharp",
+        "prefix": "datetime:to:offset",
+        "description": "Convert DateTime to DateTimeOffset",
+        "body": "DateTimeOffset ${1:offset} = new DateTimeOffset(${2:dt});"
+    }
+}

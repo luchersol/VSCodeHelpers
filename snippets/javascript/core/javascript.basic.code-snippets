@@ -27,12 +27,6 @@
         "description": "Early return validation pattern",
         "body": "if (!${1:condition}) return ${2:false};"
     },
-    "JavaScript Date Current Time": {
-        "scope": "javascript",
-        "prefix": "date:now",
-        "description": "Create a Date instance with the current date and time",
-        "body": "const now = new Date();"
-    },
     "JavaScript Debug Variable": {
         "scope": "javascript",
         "prefix": "debug:var",

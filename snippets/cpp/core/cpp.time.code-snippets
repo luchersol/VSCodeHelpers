@@ -1,0 +1,94 @@
+{
+    "C++ Current Time": {
+        "scope": "cpp",
+        "prefix": "time:now",
+        "description": "Get current system time",
+        "body": [
+            "#include <chrono>",
+            "",
+            "auto ${1:now} = std::chrono::system_clock::now();"
+        ]
+    },
+
+    "C++ Convert Time Point to tm": {
+        "scope": "cpp",
+        "prefix": "time:local",
+        "description": "Convert time_point to local tm",
+        "body": [
+            "#include <chrono>",
+            "#include <ctime>",
+            "",
+            "std::time_t ${1:t} = std::chrono::system_clock::to_time_t(${2:tp});",
+            "std::tm ${3:tm_time} = *std::localtime(&${1});"
+        ]
+    },
+
+    "C++ Format DateTime": {
+        "scope": "cpp",
+        "prefix": "date:format",
+        "description": "Format date/time using put_time",
+        "body": [
+            "#include <iomanip>",
+            "#include <sstream>",
+            "",
+            "std::ostringstream ${1:ss};",
+            "${1} << std::put_time(&${2:tm_time}, \"${3|%Y-%m-%d,%d/%m/%Y,%m/%d/%Y,%H:%M:%S,%Y-%m-%d %H:%M:%S|}\");",
+            "std::string ${4:formatted} = ${1}.str();"
+        ]
+    },
+
+    "C++ Parse String to tm": {
+        "scope": "cpp",
+        "prefix": "date:parse",
+        "description": "Parse date string to std::tm",
+        "body": [
+            "#include <iomanip>",
+            "#include <sstream>",
+            "",
+            "std::tm ${1:tm_date} = {};",
+            "std::istringstream ${2:ss}(${3:date_string});",
+            "${2} >> std::get_time(&${1}, \"${4|%Y-%m-%d,%d/%m/%Y,%m/%d/%Y,%Y-%m-%d %H:%M:%S|}\");"
+        ]
+    },
+
+    "C++ Convert tm to time_point": {
+        "scope": "cpp",
+        "prefix": "time:from:tm",
+        "description": "Convert tm to time_point",
+        "body": [
+            "#include <chrono>",
+            "#include <ctime>",
+            "",
+            "std::time_t ${1:t} = std::mktime(&${2:tm_date});",
+            "auto ${3:tp} = std::chrono::system_clock::from_time_t(${1});"
+        ]
+    },
+
+    "C++ Add Time": {
+        "scope": "cpp",
+        "prefix": "time:add",
+        "description": "Add duration to time_point",
+        "body": "auto ${1:new_tp} = ${2:tp} + std::chrono::${3|seconds,minutes,hours|}(${4:value});"
+    },
+
+    "C++ Subtract Time": {
+        "scope": "cpp",
+        "prefix": "time:sub",
+        "description": "Subtract duration from time_point",
+        "body": "auto ${1:new_tp} = ${2:tp} - std::chrono::${3|seconds,minutes,hours|}(${4:value});"
+    },
+
+    "C++ Compare Time Points": {
+        "scope": "cpp",
+        "prefix": "time:compare",
+        "description": "Compare two time_points",
+        "body": "bool ${1:is_before} = ${2:tp1} < ${3:tp2};"
+    },
+
+    "C++ Check Time Range": {
+        "scope": "cpp",
+        "prefix": "time:between",
+        "description": "Check if time_point is between two values",
+        "body": "bool ${1:in_range} = ${2:tp} >= ${3:start} && ${2} <= ${4:end};"
+    }
+}

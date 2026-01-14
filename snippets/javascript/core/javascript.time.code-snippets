@@ -1,0 +1,109 @@
+{
+    "JavaScript Date Now": {
+        "scope": "javascript",
+        "prefix": "date:now",
+        "description": "Get current date and time",
+        "body": "const now = new Date();"
+    },
+
+    "JavaScript Date Today (No Time)": {
+        "scope": "javascript",
+        "prefix": "date:today",
+        "description": "Get today's date without time",
+        "body": "const today = new Date(new Date().toDateString());"
+    },
+
+    "JavaScript ISO String Now": {
+        "scope": "javascript",
+        "prefix": "date:iso:now",
+        "description": "Get current date-time as ISO string",
+        "body": "const isoNow = new Date().toISOString();"
+    },
+
+    "JavaScript Parse ISO String to Date": {
+        "scope": "javascript",
+        "prefix": "date:parse:iso",
+        "description": "Parse ISO-8601 string to Date",
+        "body": "const ${1:date} = new Date(${2:isoString});"
+    },
+
+    "JavaScript Parse Date String (Manual Parts)": {
+        "scope": "javascript",
+        "prefix": "date:parse:manual",
+        "description": "Parse date string manually (dd/MM/yyyy or MM/dd/yyyy)",
+        "body": [
+            "const [${1:a}, ${2:b}, ${3:year}] = ${4:dateString}.split(/[\\/\\-]/).map(Number);",
+            "const ${5:date} = new Date(${6|year,year|}, ${7|b-1,a-1|}, ${8|a,b|});"
+        ]
+    },
+
+    "JavaScript Format Date to ISO Date": {
+        "scope": "javascript",
+        "prefix": "date:format:iso",
+        "description": "Format Date to yyyy-MM-dd",
+        "body": "const formatted = ${1:date}.toISOString().split('T')[0];"
+    },
+
+    "JavaScript Format Date (Locale)": {
+        "scope": "javascript",
+        "prefix": "date:format:locale",
+        "description": "Format date using Intl.DateTimeFormat",
+        "body": [
+            "const formatter = new Intl.DateTimeFormat(\"${1|en-US,en-GB,es-ES,fr-FR,de-DE|}\", {",
+            "\tyear: 'numeric',",
+            "\tmonth: '2-digit',",
+            "\tday: '2-digit'",
+            "});",
+            "const ${2:formatted} = formatter.format(${3:date});"
+        ]
+    },
+
+    "JavaScript Format DateTime (Locale)": {
+        "scope": "javascript",
+        "prefix": "datetime:format:locale",
+        "description": "Format date and time using Intl.DateTimeFormat",
+        "body": [
+            "const formatter = new Intl.DateTimeFormat(\"${1|en-US,en-GB,es-ES,fr-FR,de-DE|}\", {",
+            "\tyear: 'numeric',",
+            "\tmonth: '2-digit',",
+            "\tday: '2-digit',",
+            "\thour: '2-digit',",
+            "\tminute: '2-digit',",
+            "\tsecond: '2-digit'",
+            "});",
+            "const ${2:formatted} = formatter.format(${3:date});"
+        ]
+    },
+
+    "JavaScript Add Time to Date": {
+        "scope": "javascript",
+        "prefix": "date:add",
+        "description": "Add time to date",
+        "body": [
+            "const ${1:newDate} = new Date(${2:date}.getTime() + ${3:value} * ${4|1000,60000,3600000,86400000|});"
+        ]
+    },
+
+    "JavaScript Subtract Time from Date": {
+        "scope": "javascript",
+        "prefix": "date:sub",
+        "description": "Subtract time from date",
+        "body": [
+            "const ${1:newDate} = new Date(${2:date}.getTime() - ${3:value} * ${4|1000,60000,3600000,86400000|});"
+        ]
+    },
+
+    "JavaScript Compare Dates": {
+        "scope": "javascript",
+        "prefix": "date:compare",
+        "description": "Compare two dates",
+        "body": "const ${1:isBefore} = ${2:date1}.getTime() < ${3:date2}.getTime();"
+    },
+
+    "JavaScript Check Date Range": {
+        "scope": "javascript",
+        "prefix": "date:between",
+        "description": "Check if date is between two dates",
+        "body": "const ${1:inRange} = ${2:date} >= ${3:start} && ${2} <= ${4:end};"
+    }
+}

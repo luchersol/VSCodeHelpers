@@ -27,24 +27,6 @@
         "description": "Early return validation pattern",
         "body": "if (!${1:condition}) return ${2:false};"
     },
-    "Java Date Current Time (Legacy)": {
-        "scope": "java",
-        "prefix": "date:now",
-        "body": "Date now = new Date();",
-        "description": "Create a Date instance with the current date and time (legacy API)"
-    },
-    "Java LocalDate Today": {
-        "scope": "java",
-        "prefix": "localdate:now",
-        "body": "LocalDate now = LocalDate.now();",
-        "description": "Get the current date using LocalDate (java.time)"
-    },
-    "Java LocalDateTime Now": {
-        "scope": "java",
-        "prefix": "localdatetime:now",
-        "body": "LocalDateTime now = LocalDateTime.now();",
-        "description": "Get the current date and time using LocalDateTime (java.time)"
-    },
     "Java Debug Variable": {
         "scope": "java",
         "prefix": "debug:var",

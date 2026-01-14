@@ -1,0 +1,116 @@
+{
+    "Java Date Current Time (Legacy)": {
+        "scope": "java",
+        "prefix": "date:now",
+        "description": "Create a Date instance with the current date and time (legacy API)",
+        "body": "Date now = new Date();",
+    },
+    "Java LocalDate Today": {
+        "scope": "java",
+        "prefix": "localdate:now",
+        "description": "Get the current date using LocalDate (java.time)",
+        "body": "LocalDate now = LocalDate.now();",
+    },
+    "Java LocalDateTime Now": {
+        "scope": "java",
+        "prefix": "localdatetime:now",
+        "description": "Get the current date and time using LocalDateTime (java.time)",
+        "body": "LocalDateTime now = LocalDateTime.now();",
+    },
+    "Java Parse String to LocalDate": {
+        "scope": "java",
+        "prefix": "localdate:parse",
+        "description": "Parse ISO-8601 String to LocalDate (yyyy-MM-dd)",
+        "body": "LocalDate ${1:date} = LocalDate.parse(${2:dateString});",
+    },
+    "Java Parse String to LocalDateTime": {
+        "scope": "java",
+        "prefix": "localdatetime:parse",
+        "description": "Parse ISO-8601 String to LocalDateTime",
+        "body": "LocalDateTime ${1:dateTime} = LocalDateTime.parse(${2:dateTimeString});",
+    },
+    "Java Parse String to LocalDate with Formatter": {
+        "scope": "java",
+        "prefix": "localdate:parsefmt",
+        "description": "Parse String to LocalDate using custom DateTimeFormatter",
+        "body": [
+            "DateTimeFormatter formatter = DateTimeFormatter.ofPattern(\"${1|yyyy-MM-dd,dd/MM/yyyy,MM/dd/yyyy,dd-MM-yyyy,yyyy/MM/dd|}\");",
+            "LocalDate ${2:date} = LocalDate.parse(${3:dateString}, formatter);"
+        ],
+    },
+    "Java Parse String to LocalDateTime with Formatter": {
+        "scope": "java",
+        "prefix": "localdatetime:parsefmt",
+        "description": "Parse String to LocalDateTime using custom DateTimeFormatter",
+        "body": [
+            "DateTimeFormatter formatter = DateTimeFormatter.ofPattern(\"${1|yyyy-MM-dd HH:mm,yyyy-MM-dd HH:mm:ss,dd/MM/yyyy HH:mm,dd/MM/yyyy HH:mm:ss,MM/dd/yyyy HH:mm,MM/dd/yyyy HH:mm:ss|}\");",
+            "LocalDateTime ${2:dateTime} = LocalDateTime.parse(${3:dateTimeString}, formatter);"
+        ],
+    },
+    "Java Format LocalDate to String": {
+        "scope": "java",
+        "prefix": "localdate:format",
+        "description": "Format LocalDate to String using DateTimeFormatter",
+        "body": [
+            "DateTimeFormatter formatter = DateTimeFormatter.ofPattern(\"${1|yyyy-MM-dd,dd/MM/yyyy,MM/dd/yyyy,dd-MM-yyyy,yyyy/MM/dd|}\");",
+            "String ${2:formattedDate} = ${3:date}.format(formatter);"
+        ],
+    },
+    "Java Format LocalDateTime to String": {
+        "scope": "java",
+        "prefix": "localdatetime:format",
+        "description": "Format LocalDateTime to String",
+        "body": [
+            "DateTimeFormatter formatter = DateTimeFormatter.ofPattern(\"${1|yyyy-MM-dd HH:mm,yyyy-MM-dd HH:mm:ss,dd/MM/yyyy HH:mm,dd/MM/yyyy HH:mm:ss,MM/dd/yyyy HH:mm,MM/dd/yyyy HH:mm:ss|}\");",
+            "String ${2:formattedDateTime} = ${3:dateTime}.format(formatter);"
+        ],
+    },
+    "Java Add Days to LocalDate": {
+        "scope": "java",
+        "prefix": "localdate:add:days",
+        "description": "Add days to a LocalDate",
+        "body": "LocalDate ${1:newDate} = ${2:date}.plusDays(${3:days});",
+    },
+    "Java Subtract Days from LocalDate": {
+        "scope": "java",
+        "prefix": "localdate:sub:days",
+        "description": "Subtract days from a LocalDate",
+        "body": "LocalDate ${1:newDate} = ${2:date}.minusDays(${3:days});",
+    },
+    "Java Add Time to LocalDateTime": {
+        "scope": "java",
+        "prefix": "localdatetime:add",
+        "description": "Add time units to LocalDateTime",
+        "body": "LocalDateTime ${1:newDateTime} = ${2:dateTime}.plus${3|Days,Hours,Minutes,Seconds|}(${4:value});",
+    },
+    "Java Sub Time to LocalDateTime": {
+        "scope": "java",
+        "prefix": "localdatetime:sub",
+        "description": "Add time units to LocalDateTime",
+        "body": "LocalDateTime ${1:newDateTime} = ${2:dateTime}.minus${3|Days,Hours,Minutes,Seconds|}(${4:value});",
+    },
+    "Java Compare LocalDates": {
+        "scope": "java",
+        "prefix": "localdate:compare",
+        "description": "Compare two LocalDate values",
+        "body": "boolean ${1:isBefore} = ${2:date1}.isBefore(${3:date2});",
+    },
+    "Java Check Date Range": {
+        "scope": "java",
+        "prefix": "localdate:between",
+        "description": "Check if a LocalDate is between two dates",
+        "body": "boolean ${1:inRange} = !${2:date}.isBefore(${3:start}) && !${2}.isAfter(${4:end});",
+    },
+    "Java Convert Date to LocalDateTime": {
+        "scope": "java",
+        "prefix": "date:to:localdatetime",
+        "description": "Convert java.util.Date to LocalDateTime",
+        "body": "LocalDateTime ${1:dateTime} = ${2:date}.toInstant().atZone(ZoneId.systemDefault()).toLocalDateTime();",
+    },
+    "Java Convert LocalDateTime to Date": {
+        "scope": "java",
+        "prefix": "localdatetime:to:date",
+        "description": "Convert LocalDateTime to java.util.Date",
+        "body": "Date ${1:date} = Date.from(${2:dateTime}.atZone(ZoneId.systemDefault()).toInstant());",
+    }
+}

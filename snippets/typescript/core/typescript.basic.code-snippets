@@ -27,12 +27,6 @@
         "description": "Early return validation pattern",
         "body": "if (!${1:condition}) return ${2:false};"
     },
-    "TypeScript Date Current Time": {
-        "scope": "typescript",
-        "prefix": "date:now",
-        "description": "Create a Date instance with the current date and time",
-        "body": "const now: Date = new Date();"
-    },
     "TypeScript Debug Variable": {
         "scope": "typescript",
         "prefix": "debug:var",

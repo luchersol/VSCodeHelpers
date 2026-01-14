@@ -1,0 +1,83 @@
+{
+    "C Current Time": {
+        "scope": "c",
+        "prefix": "time:now",
+        "description": "Get current time (time_t)",
+        "body": [
+            "#include <time.h>",
+            "",
+            "time_t now = time(NULL);"
+        ]
+    },
+
+    "C Local Time Struct": {
+        "scope": "c",
+        "prefix": "time:local",
+        "description": "Get local time as struct tm",
+        "body": [
+            "#include <time.h>",
+            "",
+            "time_t now = time(NULL);",
+            "struct tm *local = localtime(&now);"
+        ]
+    },
+
+    "C Format Date to String": {
+        "scope": "c",
+        "prefix": "date:format",
+        "description": "Format date using strftime",
+        "body": [
+            "#include <time.h>",
+            "",
+            "char ${1:buffer}[${2:64}];",
+            "strftime(${1}, sizeof(${1}), \"${3|%Y-%m-%d,%d/%m/%Y,%m/%d/%Y,%H:%M:%S,%Y-%m-%d %H:%M:%S|}\", ${4:local});"
+        ]
+    },
+
+    "C Parse String to tm (POSIX)": {
+        "scope": "c",
+        "prefix": "date:parse",
+        "description": "Parse date string to struct tm (POSIX strptime)",
+        "body": [
+            "#include <time.h>",
+            "",
+            "struct tm ${1:tm_date} = {0};",
+            "strptime(${2:date_string}, \"${3|%Y-%m-%d,%d/%m/%Y,%m/%d/%Y,%Y-%m-%d %H:%M:%S|}\", &${1});"
+        ]
+    },
+
+    "C Convert tm to time_t": {
+        "scope": "c",
+        "prefix": "time:from:tm",
+        "description": "Convert struct tm to time_t",
+        "body": "time_t ${1:timestamp} = mktime(&${2:tm_date});"
+    },
+
+    "C Add Seconds to Time": {
+        "scope": "c",
+        "prefix": "time:add",
+        "description": "Add seconds to time_t",
+        "body": "time_t ${1:new_time} = ${2:time_var} + ${3:seconds};"
+    },
+
+    "C Subtract Seconds from Time": {
+        "scope": "c",
+        "prefix": "time:sub",
+        "description": "Subtract seconds from time_t",
+        "body": "time_t ${1:new_time} = ${2:time_var} - ${3:seconds};"
+    },
+
+    "C Compare Times": {
+        "scope": "c",
+        "prefix": "time:compare",
+        "description": "Compare two time_t values",
+        "body": "int ${1:is_before} = ${2:t1} < ${3:t2};"
+    },
+
+    "C Check Time Range": {
+        "scope": "c",
+        "prefix": "time:between",
+        "description": "Check if time is between two times",
+        "body": "int ${1:in_range} = ${2:t} >= ${3:start} && ${2} <= ${4:end};"
+    }
+}
