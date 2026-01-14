@@ -1,0 +1,98 @@
+{
+    "TypeScript Simple Class": {
+        "scope": "typescript",
+        "prefix": "class:simple",
+        "description": "Create a simple TypeScript class with one attribute",
+        "body": [
+            "class ${1:MyClass} {",
+            "\t${2:attr}: ${3:string};",
+            "",
+            "\tconstructor($2: $3) {",
+            "\t\tthis.$2 = $2;",
+            "\t}",
+            "",
+            "\tprint(): void {",
+            "\t\tconsole.log('$2:', this.$2);",
+            "\t}",
+            "}"
+        ]
+    },
+
+    "TypeScript Class with Methods": {
+        "scope": "typescript",
+        "prefix": "class:methods",
+        "description": "Create a TypeScript class with multiple methods",
+        "body": [
+            "class ${1:MyClass} {",
+            "\t${2:attr}: ${3:string};",
+            "",
+            "\tconstructor($2: $3) {",
+            "\t\tthis.$2 = $2;",
+            "\t}",
+            "",
+            "\tget${2/(.*)/${1:/capitalize}/}(): $3 {",
+            "\t\treturn this.$2;",
+            "\t}",
+            "",
+            "\tset${2/(.*)/${1:/capitalize}/}($2: $3): void {",
+            "\t\tthis.$2 = $2;",
+            "\t}",
+            "",
+            "\tdisplay(): void {",
+            "\t\tconsole.log('$2:', this.$2);",
+            "\t}",
+            "}"
+        ]
+    },
+
+    "TypeScript Class Inheritance": {
+        "scope": "typescript",
+        "prefix": "class:extend",
+        "description": "Create a TypeScript class that extends a parent class",
+        "body": [
+            "class ${2:ChildClass} extends ${1:ParentClass} {",
+            "\tconstructor(${3:args}: ${4:string}) {",
+            "\t\tsuper($3);",
+            "\t\t${5:// child attributes here}",
+            "\t}",
+            "",
+            "\t${6:childMethod}(): void {",
+            "\t\t${7:// TODO: implement method}",
+            "\t}",
+            "}"
+        ]
+    },
+    "TypeScript Class Static Methods": {
+        "scope": "typescript",
+        "prefix": "method:static",
+        "description": "Create a TypeScript class static method",
+        "body": [
+            "static ${3:staticMethod}(${4:args}: ${5:string}): ${6:void} {",
+            "\t${7:// TODO: implement static method}",
+            "}",
+        ]
+    },
+
+    "TypeScript Class Getter and Setter": {
+        "scope": "typescript",
+        "prefix": "class:getset",
+        "description": "Create a TypeScript class with getter and setter methods",
+        "body": [
+            "class ${1:MyClass} {",
+            "\tprivate _${2:attr}: ${3:string};",
+            "",
+            "\tconstructor($2: $3) {",
+            "\t\tthis._$2 = $2;",
+            "\t}",
+            "",
+            "\tget $2(): $3 {",
+            "\t\treturn this._$2;",
+            "\t}",
+            "",
+            "\tset $2(value: $3): void {",
+            "\t\tthis._$2 = value;",
+            "\t}",
+            "}"
+        ]
+    }
+}

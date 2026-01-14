@@ -1,0 +1,10 @@
+{
+  "Controlled Input TS": {
+    "scope": "typescriptreact",
+    "prefix": "form:input",
+    "description": "Typed controlled input",
+    "body": [
+      "<input value={${1:value}} onChange={(e: React.ChangeEvent<HTMLInputElement>) => ${2:setValue}(e.target.value)} />"
+    ]
+  }
+}

@@ -1,0 +1,53 @@
+{
+    "React Router Setup": {
+        "scope": "javascriptreact",
+        "prefix": "router:setup",
+        "description": "Basic React Router setup",
+        "body": [
+            "import { BrowserRouter, Routes, Route } from 'react-router-dom';",
+            "",
+            "const AppRouter = () => (",
+            "\t<BrowserRouter>",
+            "\t\t<Routes>",
+            "\t\t\t<Route path=\"/\" element={<${1:Home} />} />",
+            "\t\t\t<Route path=\"/${2:path}\" element={<${3:Component} />} />",
+            "\t\t</Routes>",
+            "\t</BrowserRouter>",
+            ");",
+            "",
+            "export default AppRouter;"
+        ]
+    },
+    "React Router Link": {
+        "scope": "javascriptreact",
+        "prefix": "router:link",
+        "description": "React Router Link",
+        "body": [
+            "import { Link } from 'react-router-dom';",
+            "",
+            "<Link to=\"/${1:path}\">$0</Link>"
+        ]
+    },
+    "React Router useParams": {
+        "scope": "javascriptreact",
+        "prefix": "router:params",
+        "description": "useParams hook",
+        "body": [
+            "import { useParams } from 'react-router-dom';",
+            "",
+            "const { ${1:id} } = useParams();"
+        ]
+    },
+    "React Router useNavigate": {
+        "scope": "javascriptreact",
+        "prefix": "router:navigate",
+        "description": "useNavigate hook",
+        "body": [
+            "import { useNavigate } from 'react-router-dom';",
+            "",
+            "const navigate = useNavigate();",
+            "",
+            "navigate('/${1:path}');"
+        ]
+    }
+}

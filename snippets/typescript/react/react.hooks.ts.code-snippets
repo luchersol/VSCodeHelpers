@@ -1,0 +1,40 @@
+{
+  "React useState TS": {
+    "scope": "typescriptreact",
+    "prefix": "use:state",
+    "description": "Typed useState hook",
+    "body": [
+      "const [${1:state}, set${1/(.*)/${1:/capitalize}/}] = useState<${2:type}>(${3:initial});"
+    ]
+  },
+  "React useEffect TS": {
+    "scope": "typescriptreact",
+    "prefix": "use:effect",
+    "description": "Typed useEffect hook",
+    "body": [
+      "useEffect((): void => {",
+      "\\t$0",
+      "}, [${1:deps}]);"
+    ]
+  },
+  "React useCallback TS": {
+    "scope": "typescriptreact",
+    "prefix": "use:callback",
+    "description": "Typed useCallback hook",
+    "body": [
+      "const ${1:callback} = useCallback((): void => {",
+      "\\t$0",
+      "}, [${2:deps}]);"
+    ]
+  },
+  "React useMemo TS": {
+    "scope": "typescriptreact",
+    "prefix": "use:memo",
+    "description": "Typed useMemo hook",
+    "body": [
+      "const ${1:value} = useMemo<${2:type}>(() => {",
+      "\\treturn $0;",
+      "}, [${3:deps}]);"
+    ]
+  }
+}

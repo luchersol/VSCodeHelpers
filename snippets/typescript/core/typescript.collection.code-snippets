@@ -1,0 +1,92 @@
+{
+    "TypeScript List Declaration (Empty)": {
+        "scope": "typescript",
+        "prefix": "list:new",
+        "description": "Create a new empty list",
+        "body": "const ${1:list}: ${2:number}[] = [];"
+    },
+    "TypeScript List Initialization with Values": {
+        "scope": "typescript",
+        "prefix": "list:of",
+        "description": "Create a new list initialized with values",
+        "body": "const ${1:list}: ${2:number}[] = [$3];"
+    },
+    "TypeScript Sorted Set Declaration (Empty)": {
+        "scope": "typescript",
+        "prefix": "sorted-set:new",
+        "description": "Create a new empty sorted set (manual sorting required)",
+        "body": "const ${1:set}: Set<${2:number}> = new Set();"
+    },
+    "TypeScript Insertion-Sorted Set Declaration (Empty)": {
+        "scope": "typescript",
+        "prefix": "sorted-set:new",
+        "description": "Create a new empty insertion-ordered set",
+        "body": "const ${1:set}: Set<${2:number}> = new Set();"
+    },
+    "TypeScript Insertion-Sorted Set Declaration with Values": {
+        "scope": "typescript",
+        "prefix": "sorted-set:of",
+        "description": "Create a new insertion-ordered set with values",
+        "body": "const ${1:set}: Set<${2:number}> = new Set([$3]);"
+    },
+    "TypeScript Set Declaration (Empty)": {
+        "scope": "typescript",
+        "prefix": "set:new",
+        "description": "Create a new empty set",
+        "body": "const ${1:set}: Set<${2:number}> = new Set();"
+    },
+    "TypeScript Set Initialization with Values": {
+        "scope": "typescript",
+        "prefix": "set:of",
+        "description": "Create a new set initialized with values",
+        "body": "const ${1:set}: Set<${2:number}> = new Set([$3]);"
+    },
+    "TypeScript Map Declaration (Empty)": {
+        "scope": "typescript",
+        "prefix": "map:new",
+        "description": "Create a new empty map",
+        "body": "const ${1:map}: Map<${2:string}, ${3:number}> = new Map();"
+    },
+    "TypeScript Map Initialization with Values": {
+        "scope": "typescript",
+        "prefix": "map:of",
+        "description": "Create a new map initialized with key-value pairs",
+        "body": "const ${1:map}: Map<${2:string}, ${3:number}> = new Map([${4:[key, value]}]);"
+    },
+    "TypeScript Optional Empty": {
+        "scope": "typescript",
+        "prefix": "opt:empty",
+        "description": "Represent an empty optional value",
+        "body": "const ${1:value}: ${2:number} | undefined = undefined;"
+    },
+    "TypeScript Optional with Value": {
+        "scope": "typescript",
+        "prefix": "opt:of",
+        "description": "Represent an optional value",
+        "body": "const ${1:value}: ${2:number} | undefined = $3;"
+    },
+    "TypeScript Queue Declaration (Empty)": {
+        "scope": "typescript",
+        "prefix": "queue:new",
+        "description": "Create a new empty queue using an array",
+        "body": "const ${1:queue}: ${2:number}[] = [];"
+    },
+    "TypeScript Queue Initialization with Values": {
+        "scope": "typescript",
+        "prefix": "queue:of",
+        "description": "Create a new queue initialized with values",
+        "body": "const ${1:queue}: ${2:number}[] = [$3];"
+    },
+    "TypeScript Deque Declaration (Empty)": {
+        "scope": "typescript",
+        "prefix": "deque:new",
+        "description": "Create a new empty deque using an array",
+        "body": "const ${1:deque}: ${2:number}[] = [];"
+    },
+    "TypeScript Deque Initialization with Values": {
+        "scope": "typescript",
+        "prefix": "deque:of",
+        "description": "Create a new deque initialized with values",
+        "body": "const ${1:deque}: ${2:number}[] = [$3];"
+    }
+}

@@ -1,0 +1,36 @@
+{
+    "JSX Conditional Render": {
+        "scope": "javascriptreact",
+        "prefix": "jsx:if",
+        "description": "Conditional rendering with &&",
+        "body": [
+            "{${1:condition} && (",
+            "\t$0",
+            ")}"
+        ]
+    },
+    "JSX Ternary Render": {
+        "scope": "javascriptreact",
+        "prefix": "jsx:ternary",
+        "description": "Conditional rendering with ternary operator",
+        "body": [
+            "{${1:condition} ? (",
+            "\t$2",
+            ") : (",
+            "\t$3",
+            ")}"
+        ]
+    },
+    "JSX Map Render": {
+        "scope": "javascriptreact",
+        "prefix": "jsx:map",
+        "description": "Render list using map",
+        "body": [
+            "{${1:items}.map((${2:item}, ${3:index}) => (",
+            "\t<div key={$3}>",
+            "\t\t$0",
+            "\t</div>",
+            "))}"
+        ]
+    }
+}

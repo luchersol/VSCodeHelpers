@@ -1,0 +1,25 @@
+{
+    "React Controlled Input": {
+        "scope": "javascriptreact",
+        "prefix": "form:input",
+        "description": "Controlled input field",
+        "body": [
+            "<input",
+            "\ttype=\"${1:text}\"",
+            "\tvalue={${2:value}}",
+            "\tonChange={${3:handleChange}}",
+            "/>"
+        ]
+    },
+    "React Form Submit": {
+        "scope": "javascriptreact",
+        "prefix": "form:submit",
+        "description": "Form submit handler",
+        "body": [
+            "const handleSubmit = (e) => {",
+            "\te.preventDefault();",
+            "\t$0",
+            "};"
+        ]
+    }
+}

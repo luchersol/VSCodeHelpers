@@ -1,0 +1,12 @@
+{
+  "React onClick Handler TS": {
+    "scope": "typescriptreact",
+    "prefix": "evt:click",
+    "description": "Typed onClick handler",
+    "body": [
+      "const handle${1:Click} = (event: React.MouseEvent<HTMLButtonElement>) => {",
+      "\t$0",
+      "};"
+    ]
+  }
+}

@@ -1,0 +1,23 @@
+{
+    "React onClick Handler": {
+        "scope": "javascriptreact",
+        "prefix": "evt:click",
+        "description": "onClick handler function",
+        "body": [
+            "const handle${1:Click} = (event) => {",
+            "\t$0",
+            "};"
+        ]
+    },
+    "React onChange Input Handler": {
+        "scope": "javascriptreact",
+        "prefix": "evt:change",
+        "description": "Input onChange handler",
+        "body": [
+            "const handle${1:Change} = (e) => {",
+            "\tconst { value } = e.target;",
+            "\t$0",
+            "};"
+        ]
+    }
+}

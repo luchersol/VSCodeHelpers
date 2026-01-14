@@ -1,0 +1,42 @@
+{
+    "React useState": {
+        "scope": "javascriptreact",
+        "prefix": "use:state",
+        "description": "React useState hook",
+        "body": [
+            "const [${1:state}, set${1/(.*)/${1:/capitalize}/}] = useState(${2:initialState});"
+        ]
+    },
+    "React useEffect": {
+        "scope": "javascriptreact",
+        "prefix": "use:effect",
+        "description": "React useEffect hook",
+        "body": [
+            "useEffect(() => {",
+            "\t$0",
+            "}, [${1:dependencies}]);"
+        ]
+    },
+    "React useRef": {
+        "scope": "javascriptreact",
+        "prefix": "use:ref",
+        "description": "React useRef hook",
+        "body": [
+            "const ${1:ref} = useRef(${2:null});"
+        ]
+    },
+    "React Custom Hook": {
+        "scope": "javascriptreact",
+        "prefix": "use:custom",
+        "description": "Create a custom React hook",
+        "body": [
+            "const use${1:HookName} = () => {",
+            "\t$0",
+            "",
+            "\treturn {};",
+            "};",
+            "",
+            "export default use$1;"
+        ]
+    }
+}

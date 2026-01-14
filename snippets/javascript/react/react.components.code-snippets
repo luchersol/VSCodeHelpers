@@ -1,0 +1,48 @@
+{
+    "React Functional Component": {
+        "scope": "javascriptreact",
+        "prefix": "rfc",
+        "description": "Create a React functional component",
+        "body": [
+            "const ${1:ComponentName} = () => {",
+            "\treturn (",
+            "\t\t<div>",
+            "\t\t\t$0",
+            "\t\t</div>",
+            "\t);",
+            "};",
+            "",
+            "export default $1;"
+        ]
+    },
+    "React Arrow Component Inline Export": {
+        "scope": "javascriptreact",
+        "prefix": "rafce",
+        "description": "React arrow function component with export",
+        "body": [
+            "const ${1:ComponentName} = () => (",
+            "\t<div>",
+            "\t\t$0",
+            "\t</div>",
+            ");",
+            "",
+            "export default $1;"
+        ]
+    },
+    "React Component With Props": {
+        "scope": "javascriptreact",
+        "prefix": "rfc:props",
+        "description": "Functional component with props",
+        "body": [
+            "const ${1:ComponentName} = ({ ${2:props} }) => {",
+            "\treturn (",
+            "\t\t<div>",
+            "\t\t\t$0",
+            "\t\t</div>",
+            "\t);",
+            "};",
+            "",
+            "export default $1;"
+        ]
+    }
+}

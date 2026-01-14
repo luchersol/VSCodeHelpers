@@ -1,0 +1,10 @@
+{
+    "React Context Creation TS": {
+        "scope": "typescriptreact",
+        "prefix": "ctx:create",
+        "description": "Create a typed React Context",
+        "body": [
+            "import { createContext } from 'react';"
+        ]
+    }
+}

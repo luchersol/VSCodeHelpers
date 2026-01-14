@@ -1,0 +1,26 @@
+{
+    "TypeScript Comment Divider Line": {
+        "scope": "typescript",
+        "prefix": "cmt:line",
+        "description": "Insert a horizontal comment divider line",
+        "body": "// ---------------------------------------------------------"
+    },
+    "TypeScript Comment Section Header": {
+        "scope": "typescript",
+        "prefix": "cmt:section",
+        "description": "Insert a commented section header with a custom title",
+        "body": "// ------------------------- $1 -----------------------------"
+    },
+    "TypeScript TODO Comment": {
+        "scope": "typescript",
+        "prefix": "cmt:todo",
+        "description": "Insert a TODO comment",
+        "body": "// TODO: $1"
+    },
+    "TypeScript FIXME Comment": {
+        "scope": "typescript",
+        "prefix": "cmt:fixme",
+        "description": "Insert a FIXME comment indicating a problem to fix",
+        "body": "// FIXME: $1"
+    }
+}

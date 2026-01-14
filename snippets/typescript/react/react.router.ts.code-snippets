@@ -1,0 +1,10 @@
+{
+    "React Router Setup TS": {
+        "scope": "typescriptreact",
+        "prefix": "router:setup",
+        "description": "Typed React Router setup",
+        "body": [
+            "import { BrowserRouter, Routes, Route } from 'react-router-dom';"
+        ]
+    }
+}

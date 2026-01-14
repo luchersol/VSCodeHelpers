@@ -1,0 +1,114 @@
+{
+    "TypeScript Switch Assign Value": {
+        "scope": "typescript",
+        "prefix": "switch:assign",
+        "description": "Switch statement that assigns a value to a variable",
+        "body": [
+            "let ${1:result}: ${2:string};",
+            "switch (${3:value}: ${4:string}) {",
+            "\tcase ${5:A}:",
+            "\t\t$1 = ${6:\"Result A\"};",
+            "\t\tbreak;",
+            "\tcase ${7:B}:",
+            "\t\t$1 = ${8:\"Result B\"};",
+            "\t\tbreak;",
+            "\tdefault:",
+            "\t\t$1 = ${9:\"Default result\"};",
+            "}"
+        ]
+    },
+    "TypeScript Switch Multiple Cases": {
+        "scope": "typescript",
+        "prefix": "switch:multi",
+        "description": "Switch with multiple cases sharing the same logic",
+        "body": [
+            "let ${1:result}: ${2:string};",
+            "switch (${3:value}: ${4:string}) {",
+            "\tcase ${5:A}:",
+            "\tcase ${6:B}:",
+            "\tcase ${7:C}:",
+            "\t\t$1 = ${8:\"Group ABC\"};",
+            "\t\tbreak;",
+            "\tcase ${9:D}:",
+            "\t\t$1 = ${10:\"Group D\"};",
+            "\t\tbreak;",
+            "\tdefault:",
+            "\t\t$1 = ${11:\"Other\"};",
+            "}"
+        ]
+    },
+    "TypeScript Switch With Block Logic": {
+        "scope": "typescript",
+        "prefix": "switch:block",
+        "description": "Switch with blocks and complex logic per case",
+        "body": [
+            "let ${1:result}: ${2:string};",
+            "switch (${3:value}: ${4:string}) {",
+            "\tcase ${5:A}: {",
+            "\t\t${6:// complex logic}",
+            "\t\t$1 = ${7:\"Result A\"};",
+            "\t\tbreak;",
+            "\t}",
+            "\tcase ${8:B}: {",
+            "\t\t$1 = ${9:\"Result B\"};",
+            "\t\tbreak;",
+            "\t}",
+            "\tdefault: {",
+            "\t\t$1 = ${10:\"Default\"};",
+            "\t}",
+            "}"
+        ]
+    },
+    "TypeScript Switch Control Flow": {
+        "scope": "typescript",
+        "prefix": "switch:flow",
+        "description": "Switch used only for control flow",
+        "body": [
+            "switch (${1:value}: ${2:string}) {",
+            "\tcase ${3:A}:",
+            "\t\t${4:doSomething()};",
+            "\t\tbreak;",
+            "\tcase ${5:B}:",
+            "\t\t${6:doSomethingElse()};",
+            "\t\tbreak;",
+            "\tdefault:",
+            "\t\t${7:doDefault()};",
+            "}"
+        ]
+    },
+    "TypeScript Switch With Null Case": {
+        "scope": "typescript",
+        "prefix": "switch:null",
+        "description": "Switch that explicitly handles null values",
+        "body": [
+            "let ${1:result}: ${2:string};",
+            "switch (${3:value}: ${4:string} | null) {",
+            "\tcase null:",
+            "\t\t$1 = ${5:\"Is null\"};",
+            "\t\tbreak;",
+            "\tcase ${6:A}:",
+            "\t\t$1 = ${7:\"A\"};",
+            "\t\tbreak;",
+            "\tdefault:",
+            "\t\t$1 = ${8:\"Other\"};",
+            "}"
+        ]
+    },
+    "TypeScript Type-Based Conditional Logic": {
+        "scope": "typescript",
+        "prefix": "type:check",
+        "description": "Type-based conditional logic using typeof and instanceof",
+        "body": [
+            "if (${1:obj} === null) return ${2:0};",
+            "if (typeof $1 === \"string\") return ($1 as string).length;",
+            "if (typeof $1 === \"number\") return $1 as number;",
+            "return ${3:-1};"
+        ]
+    },
+    "TypeScript Conditional Expression (Ternary)": {
+        "scope": "typescript",
+        "prefix": "cond:ternary",
+        "description": "Conditional expression using the ternary operator",
+        "body": "return ${1:condition} ? ${2:valueIfTrue} : ${3:valueIfFalse};"
+    }
+}

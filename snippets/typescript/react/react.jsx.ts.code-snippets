@@ -1,0 +1,14 @@
+{
+  "JSX map render TS": {
+    "scope": "typescriptreact",
+    "prefix": "jsx:map",
+    "description": "Typed JSX map render",
+    "body": [
+      "{${1:items}.map((${2:item}: ${3:any}, ${4:index}: number) => (",
+      "\t<div key={$4}>",
+      "\t\t$0",
+      "\t</div>",
+      "))}"
+    ]
+  }
+}

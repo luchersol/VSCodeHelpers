@@ -1,0 +1,62 @@
+{
+    "Redux Slice": {
+        "scope": "javascriptreact",
+        "prefix": "redux:slice",
+        "description": "Create a Redux slice",
+        "body": [
+            "import { createSlice } from '@reduxjs/toolkit';",
+            "",
+            "const initialState = {",
+            "\t${1:value}: ${2:null}",
+            "};",
+            "",
+            "const ${3:sliceName}Slice = createSlice({",
+            "\tname: '$3',",
+            "\tinitialState,",
+            "\treducers: {",
+            "\t\t${4:setValue}(state, action) {",
+            "\t\t\tstate.$1 = action.payload;",
+            "\t\t}",
+            "\t}",
+            "});",
+            "",
+            "export const { $4 } = $3Slice.actions;",
+            "export default $3Slice.reducer;"
+        ]
+    },
+    "Redux Store": {
+        "scope": "javascriptreact",
+        "prefix": "redux:store",
+        "description": "Create Redux store",
+        "body": [
+            "import { configureStore } from '@reduxjs/toolkit';",
+            "import ${1:reducer} from './${1}';",
+            "",
+            "export const store = configureStore({",
+            "\treducer: {",
+            "\t\t$1",
+            "\t}",
+            "});"
+        ]
+    },
+    "Redux useDispatch": {
+        "scope": "javascriptreact",
+        "prefix": "redux:dispatch",
+        "description": "useDispatch hook",
+        "body": [
+            "import { useDispatch } from 'react-redux';",
+            "",
+            "const dispatch = useDispatch();"
+        ]
+    },
+    "Redux useSelector": {
+        "scope": "javascriptreact",
+        "prefix": "redux:selector",
+        "description": "useSelector hook",
+        "body": [
+            "import { useSelector } from 'react-redux';",
+            "",
+            "const ${1:value} = useSelector(state => state.${2:slice}.$1);"
+        ]
+    }
+}
