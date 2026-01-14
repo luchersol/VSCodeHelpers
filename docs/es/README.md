@@ -27,6 +27,11 @@ La carpeta `settings` contiene diferentes archivos de configuración de VS Code,
   - Core (arrays, básicos, clases, colecciones, comentarios, excepciones, I/O, switches)
   - Node.js (child_process, events, fs, http, os, path, readline)
   - Express
+  - React
+
+- **TypeScript**:
+  - Core (arrays, básicos, clases, colecciones, comentarios, excepciones, I/O, switches)
+  - React
 
 - **Python**:
   - Core (básicos, clases, colecciones, comentarios, excepciones, funciones, I/O, bucles)
@@ -82,7 +87,11 @@ VSCodeHelpers/
     │   └── spring/
     ├── javascript/
     │   ├── core/
-    │   └── node/
+    │   ├── node/
+    │   └── react/
+    ├── typecript/
+    │   ├── core/
+    │   └── react/
     ├── markdown/
     └── python/
         ├── click/

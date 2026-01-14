@@ -26,6 +26,11 @@ The folder `settings` contains different VS Code settings files, each designed f
   - Core (arrays, basics, classes, collections, comments, exceptions, I/O, switches)
   - Node.js (child_process, events, fs, http, os, path, readline)
   - Express
+  - React
+
+- **TypeScript**:
+  - Core (arrays, basics, classes, collections, comments, exceptions, I/O, switches)
+  - React
 
 - **Python**:
   - Core (basics, classes, collections, comments, exceptions, functions, I/O, loops)
@@ -81,7 +86,11 @@ VSCodeHelpers/
     │   └── spring/
     ├── javascript/
     │   ├── core/
-    │   └── node/
+    │   ├── node/
+    │   └── react/
+    ├── typecript/
+    │   ├── core/
+    │   └── react/
     ├── markdown/
     └── python/
         ├── click/
