@@ -1,0 +1,10 @@
+#!/bin/sh
+# This hook runs the linter before allowing a commit.
+# It prevents commits with linting errors.
+
+npm run lint
+
+if [ $? -ne 0 ]; then
+  echo "❌ Linting failed. Fix errors before committing."
+  exit 1
+fi

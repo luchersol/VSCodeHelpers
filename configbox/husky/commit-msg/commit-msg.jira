@@ -1,0 +1,13 @@
+#!/bin/sh
+# This hook ensures the commit message contains a JIRA ticket ID.
+# Useful when commits must be traceable to a ticket.
+
+COMMIT_MSG_FILE="$1"
+COMMIT_MSG=$(cat "$COMMIT_MSG_FILE")
+
+PATTERN="[A-Z]+-[0-9]+"
+
+if ! echo "$COMMIT_MSG" | grep -Eq "$PATTERN"; then
+  echo "❌ Commit message must contain a JIRA ticket ID (e.g. PROJ-123)."
+  exit 1
+fi

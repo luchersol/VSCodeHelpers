@@ -1,0 +1,10 @@
+#!/bin/sh
+# This hook runs unit tests before committing.
+# It ensures that no commit breaks existing tests.
+
+npm test -- --watch=false
+
+if [ $? -ne 0 ]; then
+  echo "❌ Tests failed. Commit aborted."
+  exit 1
+fi

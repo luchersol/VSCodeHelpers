@@ -1,0 +1,10 @@
+#!/bin/sh
+# This hook runs the full test suite before pushing.
+# Useful to avoid pushing broken code to remote repositories.
+
+npm test
+
+if [ $? -ne 0 ]; then
+  echo "❌ Tests failed. Push aborted."
+  exit 1
+fi

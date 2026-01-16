@@ -1,0 +1,15 @@
+#!/bin/sh
+# This hook injects a commit message template.
+# It helps developers follow a structured commit message format.
+
+COMMIT_MSG_FILE="$1"
+
+if [ ! -s "$COMMIT_MSG_FILE" ]; then
+cat <<EOF > "$COMMIT_MSG_FILE"
+# type(scope): short description
+#
+# body: explain WHAT and WHY, not HOW
+#
+# footer: breaking changes, ticket references, etc.
+EOF
+fi

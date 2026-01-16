@@ -1,0 +1,10 @@
+#!/bin/sh
+# This hook checks code formatting using Prettier.
+# Commits are blocked if files are not properly formatted.
+
+npm run format:check
+
+if [ $? -ne 0 ]; then
+  echo "❌ Code formatting issues detected."
+  exit 1
+fi

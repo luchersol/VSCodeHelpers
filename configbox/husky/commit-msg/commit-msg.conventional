@@ -1,0 +1,14 @@
+#!/bin/sh
+# This hook enforces Conventional Commits format.
+# It checks that the commit message starts with a valid type and optional scope.
+
+COMMIT_MSG_FILE="$1"
+COMMIT_MSG=$(cat "$COMMIT_MSG_FILE")
+
+PATTERN="^(feat|fix|docs|style|refactor|test|chore)(\([a-z0-9-]+\))?: .+"
+
+if ! echo "$COMMIT_MSG" | grep -Eq "$PATTERN"; then
+  echo "❌ Commit message does not follow Conventional Commits."
+  echo "Example: feat(api): add user endpoint"
+  exit 1
+fi

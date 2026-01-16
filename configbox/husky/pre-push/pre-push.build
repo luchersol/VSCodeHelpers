@@ -1,0 +1,10 @@
+#!/bin/sh
+# This hook ensures the project builds successfully before pushing.
+# It prevents broken builds from reaching the remote repository.
+
+npm run build
+
+if [ $? -ne 0 ]; then
+  echo "❌ Build failed. Push aborted."
+  exit 1
+fi

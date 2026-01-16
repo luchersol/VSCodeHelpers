@@ -38,4 +38,4 @@ def clear_and_copy(source, destination, extension):
                 shutil.copy2(source_path, dest_path)
 
 # Example usage:
-clear_and_copy('snippets', '.vscode', '.code-snippets')
+clear_and_copy('configbox/snippets', '.vscode', '.code-snippets')

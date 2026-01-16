@@ -1,0 +1,6 @@
+
+# Useful git aliases to speed up daily work
+[alias]
+  st = status -sb
+  lg = log --oneline --graph --decorate
+  undo = reset --soft HEAD~1

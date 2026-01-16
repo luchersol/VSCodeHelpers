@@ -1,0 +1,11 @@
+#!/bin/sh
+# This hook enforces a maximum commit message length.
+# Keeps commit history readable and consistent.
+
+COMMIT_MSG_FILE="$1"
+MAX_LENGTH=72
+
+if [ $(head -n 1 "$COMMIT_MSG_FILE" | wc -c) -gt $MAX_LENGTH ]; then
+  echo "❌ Commit message subject exceeds ${MAX_LENGTH} characters."
+  exit 1
+fi
